@@ -15,16 +15,26 @@
     </head>
     <body>
 
-        <div class="nav" id="navbar">
+        <div class="navbar">
             
-            <div class="logo">
-                <a class="text" href="./index.html" style="margin-left: 0">pascalschlaak</a>
+            <div class="nav" id="navbar">
+
+                <div class="logo">
+                    <a class="text" href="./index.html" style="margin-left: 0">pascalschlaak</a>
+                </div>
+                        
+                <div class="hamburger" onclick="open_nav(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
             </div>
-            
-            <div class="hamburger" onclick="open_nav(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+
+            <div class="nav_links" id="my_nav_links">
+                <a href="#project_3">projects</a>
+                <a href="#about">about</a>
+                <a href="#contact">contact</a>
             </div>
 
         </div>
@@ -56,8 +66,9 @@
 
         </div>
         
-        <footer>
-            <p>&copy; 2019 - Pascal Schlaak<br>Privacy policy</p>
+        <footer id="footer">
+            <p>imprint</p>
+            <p>privacy policy</p>
         </footer>
         
     </body>

@@ -16,17 +16,28 @@ a {
   color: black;
 }
 
+.navbar {
+
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+
+  background-color: white;
+
+}
+
+
 .nav {
 
   width: auto;
-  height: 12vh;
+  height: 6vh;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 
-  padding: 0 7.5vw 0 7.5vw;
+  padding: 0 7.5vw 2vh 7.5vw;
 
   background-color: white;
 
@@ -64,11 +75,38 @@ a {
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
+.nav_links {
+
+  position: fixed;
+  z-index:999;
+
+  width: 100vw;
+
+  font-weight: 600;
+  
+  display: flex;
+  flex-direction: column;
+
+  padding: 1vh 0 1vh 7.5vw;
+
+  background-color: gainsboro;
+
+}
+
+.nav_links a {
+  padding: 1vh 0 1vh 0;
+  color: white;
+}
+
+.navbar .nav_links {
+  display: none;
+}
+
 /** --- Hello World Container --- **/
 .container_hello_world {
   
   width: auto;
-  height: 78vh;
+  height: 80vh;
   
   margin: 0 7.5vw 0 7.5vw;
   padding: 0 3.75vw 0 3.75vw;
@@ -136,15 +174,16 @@ i {
 
 footer {
   
-  width: 100vw;
+  width: 100%;
   height: auto;
 
   padding: 7.5vw 7.5vw 7.5vw 7.5vw;
 
-  background-color: black;
+  background-color: gainsboro;
 
-  color: whitesmoke;
+  color: white;
   font-size: 0.7em;
+  font-weight: 500;
 
 }
 
