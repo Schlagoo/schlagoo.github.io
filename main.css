@@ -77,13 +77,17 @@ nav {
     border-bottom: 0.25vw solid transparent;
 }
 
-.nav-container a:hover {
+/*.nav-container a:hover {
     border-bottom: 0.25vw solid black;
     transition: all 1.5s ease;
-}
+}*/
 
 .nav-container a.active {
     border-bottom: 0.25vw solid black;
+}
+
+.icon {s
+    
 }
 
 /**
@@ -101,8 +105,8 @@ nav {
 
 .hello-text {
     font-weight: 800;
-    font-size: 5vw;
-    margin-left: 10vh;
+    font-size: calc(20px + 5.5vw);
+    margin: 0 5vw 0 5vw;
     background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;   
@@ -119,14 +123,14 @@ nav {
 
 .hello-text2 {
     font-weight: 800;
-    font-size: 5vw;
-    margin-left: 10vh;
+    font-size: calc(20px + 5.5vw);
+    margin-left: 5vw;
     /*background: linear-gradient(to right, #0d8aa0 0%, #3B258E 100%);*/
     background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;   
     overflow: hidden;
-    white-space: nowrap;
+    word-wrap: break-word;
     animation: typing2 2.0s steps(40, end);
 }
 
@@ -197,8 +201,8 @@ nav {
     color: whitesmoke;
 }
 
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
     .nav-text {
       visibility: hidden;
     }
-  }
+}*/
