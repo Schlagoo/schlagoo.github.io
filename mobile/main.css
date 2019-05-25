@@ -57,7 +57,7 @@ a {
   height: 3px;
   margin: 3px 0;
   background-color: black;
-  transition: 0.4s;
+  transition: 0.3s;
 
 }
 
@@ -73,6 +73,20 @@ a {
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
   transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.rechange .bar1 {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.rechange .bar2 {
+  opacity: 1;
+}
+
+.rechange .bar3 {
+  -webkit-transform: rotate(0deg) translate(0px, 0px) ;
+  transform: rotate(0deg) translate(0px, 0px);
 }
 
 .nav_links {
@@ -106,7 +120,7 @@ a {
 .container_hello_world {
   
   width: auto;
-  height: 80vh;
+  height: 89vh;
   
   margin: 0 7.5vw 0 7.5vw;
   padding: 0 3.75vw 0 3.75vw;
@@ -146,11 +160,13 @@ i {
 }
 
 .container_projects {
+
+  position: relative;
  
   width: auto;
   height: auto;
   
-  margin: 0 7.5vw 0 7.5vw;
+  margin: 0 11.25vw 0 11.25vw;
   padding: 5vh 0 10vh 0;
   
   display: flex;
@@ -161,15 +177,63 @@ i {
 
 .project {
 
-  width: 85vw;
+  position: relative;
+
+  width: auto;
   height: 60vw;
 
-  margin: 0 0 7.5vw 0;
+  margin: 0 0 11.25vw 0;
 }
 
 .project img {
   width: 100%;
   height: 100%;
+}
+
+.overlay {
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  
+  height: 100%;
+  width: 100%;
+
+  opacity: 0;
+  transition: .3s ease;
+
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.overlay_text {
+
+  position: absolute;
+  
+  bottom: 10%;
+  left: 10%;
+  
+  font-size: 2em;
+  opacity: 1;
+
+  color: white;
+
+  margin: 0;
+
+  opacity: 0;
+  transition: .3s ease;
+
+}
+
+.project:hover .overlay {
+  opacity: 0.35;
+}
+
+.project:hover .overlay_text {
+  opacity: 1;
 }
 
 footer {
@@ -179,11 +243,63 @@ footer {
 
   padding: 7.5vw 7.5vw 7.5vw 7.5vw;
 
-  background-color: gainsboro;
+  background-color: black;
 
-  color: white;
+  color: whitesmoke;
   font-size: 0.7em;
   font-weight: 500;
+
+}
+
+
+/**
+* PROJECT 1, 2, 3
+**/
+
+.project_content {
+
+  margin: 12vh 11.25vw 11.25vw 11.25vw;
+
+  width: 77.5vw;
+  height: auto;
+
+}
+
+.project_content img {
+
+  margin-top: 11.25vw;
+
+  width: 100%;
+
+}
+
+.project_header {
+  
+  width: 100%;
+  height: auto;
+
+}
+
+.project_header img {
+
+  width: 100%;
+
+}
+
+.project_header_1 {
+
+  margin-top: 11.2vw;
+
+  color: black;
+
+}
+
+.project_information {
+
+  font-size: 0.7em;
+  font-weight: 400;
+
+  text-align: justify;
 
 }
 

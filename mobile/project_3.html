@@ -1,0 +1,80 @@
+<html lang="en"></html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="./main.css">
+
+        <script type="text/javascript" src="./main.js"></script>
+
+        <title>pascalschlaak - projects</title>
+
+    </head>
+    <body>
+
+        <div class="navbar">
+            
+            <div class="nav" id="navbar">
+
+                <div class="logo">
+                    <a class="text" href="./index.html" style="margin-left: 0">pascalschlaak</a>
+                </div>
+                        
+                <div class="hamburger" id="ham" onclick="open_nav(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+            </div>
+
+            <div class="nav_links" id="my_nav_links">
+                <a href="#break" onclick="close_nav()">projects</a>
+                <a href="#about">about</a>
+                <a href="#contact">contact</a>
+            </div>
+
+        </div>
+
+        <div class="project_content">
+
+            <div class="project_header">
+                <img src="./Images/project_3_header.jpg" alt="UI">
+            </div>
+
+            <h1 class="project_header_1">Head unit interface</h1>
+
+            <p class="project_information" style="margin-top: 11.25vw">In this lecture our task was to build a user interface within a internet of things (IoT) use case.
+                For that matter we had to build a interdisciplinary team consisting of at least one IoT-design student.
+                However our IoT-design partner ended her education whereby we needed to design everything by ourselfs.</p>
+            <p class="project_information">The idea we finally realized was a user interface by which a electric car driver can easily find a charging station.
+                Our added value should be a search algorithm to find the best charging station suited for the current situation.
+                Existing systems observe purely technical aspects needed for charging a car. Same applies for filters within the applicatons.
+                We wanted to recognice the drivers and passengers needs by user inputs i.e. if a person needs to go to the toilet
+                our systems pays attention and looks for a suitable charging station. For displaying this informations in a car we use
+                car interfaces like Apple CarPlay or Android Auto.</p>
+            <p class="project_information">At the top the user should be able to specify his situation by non technical situational requierements.
+                This can be done by selecting a filter everyone should be able to personalize. Multiple filter can be selected to find
+                the best charging station. At the bottom suitable charging stations are listed to get informations about them. At first
+                only technical information will be shown. For further information the user needs to click on a charging station to
+                get all details.</p>
+
+            <img src="./Images/filter.jpg">
+
+            <p class="project_information" style="margin-top: 11.25vw">At this view every detail is shown to the user this means technical parameters and situation dependent requierements
+                depending on the selected filters.</p>
+
+            <img src="./Images/details.jpg">
+
+        </div>
+
+        <footer id="footer">
+            <p>imprint</p>
+            <p>privacy policy</p>
+        </footer>
+        
+    </body>
+</html>
