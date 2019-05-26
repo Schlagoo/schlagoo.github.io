@@ -289,12 +289,16 @@ footer {
 
   padding: 7.5vh 7.5vw 7.5vh 7.5vw;
 
-  background-color: black;
+  background-color: whitesmoke;
 
-  color: whitesmoke;
+  color: gray;
   font-size: 0.5em;
   font-weight: 500;
 
+}
+
+footer p {
+  margin: 0;
 }
 
 
@@ -350,10 +354,6 @@ footer {
 
 }
 
-footer p {
-  margin: 0;
-}
-
 @media screen and (max-width: 1200px) {
   
   .container_projects {
@@ -362,3 +362,23 @@ footer p {
 
   }  
 }
+
+/**
+* ABOUT SECTION
+**/
+.about_information {
+
+  font-size: 0.5em;
+  font-weight: 400;
+
+}
+
+.about_content {
+
+  margin: 12vh 11.25vw 15vh 11.25vw;
+
+  width: 77.5vw;
+  height: 60vh;
+
+}
+
