@@ -1,20 +1,28 @@
-// $(document).ready(function(){    
+/**
+ * Function to open navbar
+ */
+function open_nav(x) {
 
-//     var scroll_pos = 0;
-//     // var topPos = document.getElementById("project-1").offsetTop;
+  x.classList.toggle("change");
+    
+  var y = document.getElementById("my_nav_links");
 
-//     $(document).scroll(function() { 
-//         scroll_pos = $(this).scrollTop();
+  if (y.style.display === "flex") {
+    y.style.display = "none";
+  } else {
+    y.style.display = "flex";
+  }
+}
 
-//         if(scroll_pos > 50) {
-//             $("#project-1").css("border-bottom","4px solid black");
-//             //$("nav").css('background-color', 'black');
-//             // $("nav").css('color', 'white');
-//             // $("nav a").css('color', 'white');
-//         } else {
-//             // $("nav").css('background-color', 'white');
-//             // $("nav").css('color', 'black');
-//             // $("nav a").css('color', 'black'); 
-//         }
-//     });
-// });
+function close_nav() {
+
+  var h = document.getElementById("ham");
+  h.classList.toggle("rechange");
+  
+  var y = document.getElementById("my_nav_links");
+  if (y.style.display === "flex") {
+    y.style.display = "none";
+  } else {
+    y.style.display = "flex";
+  }
+}

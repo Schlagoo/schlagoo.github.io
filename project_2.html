@@ -1,79 +1,85 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="project_2.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
-    <script type="text/javascript" src="./main.js"></script>
-    <title>pascalschlaak - portfolio</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="name-container">
-                <a class="text" style="margin-left: 0" href="./index.html">pascalschlaak</a>
-            </div>
-            <div class="nav-container">
-                <a href="./index.html#project-1" class="text nav-text" id="project_1">projects</a>
-                <a href="./about.html" class="text nav-text">about</a>
-                <a href="#contact" class="text nav-text" style="margin-right: 0">contact</a>
-            </div>
-        </nav>
-    </header>
+<html lang="en"></html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <section id="project_1">
-        <div class="container" id="title" style="padding-bottom: 15vh;">
-            <div class="project">
-                <img src="./Images/Csm.png" alt="UI">
-            </div>
-            <h1 class="headline">Containership madness</h1>
-            <div class="container-information" style="margin-top: -1vw;">
-                <div class="information-text">
-                    <p>In this lecture our task simply was to visualize data.
-                        For that matter we needed to search for suited data which can be visualized in a fancy way.
-                        We had some ideas and finally agreed on containership pollution.</p>
-                    <p>The idea we finally realized was a storytelling interface where we could visualize our research.
-                        We wanted to show the audience how bad pollution of container ships is compared to daily used things like cars.
-                        For that we created a website where we can illustrate facts.
-                        In summary we seperated our story in five facts. With every fact we tell a something about container ship pollution or compare things against eachother.
-                        A visitor can read our story by scrolling through those facts.</p>
-                   <p>After our research we began to sketch some mockups. In summary we hat five iterations in our design.
-                       During designing we also got ourselves into typography by meeting some helpful people.
-                       At the end we began to implement everything in our website. Therefor we used GSAP for some professional animations.
-                   </p> 
-                   <p>In the following you can see our facts as pictures.</p>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="./main.css">
+
+        <script type="text/javascript" src="./main.js"></script>
+
+        <title>pascalschlaak - projects</title>
+
+    </head>
+    <body>
+
+        <div class="navbar">
+            
+            <div class="nav" id="navbar">
+
+                <div class="logo">
+                    <a class="text" href="./index.html" style="margin-left: 0">pascalschlaak</a>
                 </div>
-                <div class="side-information">
-                    <h4>Project partner</h4>
-                    <p>Tim Weise</p>
-                    <h4 style="margin-top:5vh;">Lecture</h4>
-                    <p>Data Visualization</p>
-                    <h4 style="margin-top:5.5vh;">Tools</h4>
-                    <p>Illustrator, Photoshop, InDesign<br>Html, CSS, Javascript, GSAP</p>
+                        
+                <div class="mobile_nav" id="ham" onclick="open_nav(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
                 </div>
+
+                <div class="standard_nav">
+                        <a href="#break"><p class="nav_items">projects</p></a>
+                        <a href="./about.html"><p class="nav_items">about</p></a>
+                        <a href="#contact"><p class="nav_items">contact</p></a>
+                    </div>
+
             </div>
-            <div class="image-container">
-                <img src="./Images/fact_1.png">
-                <img src="./Images/fact_2.png">
-                <img src="./Images/fact_3.png">
-                <img src="./Images/fact_4.png">
-                <img src="./Images/fact_5.png">
+
+            <div class="nav_links" id="my_nav_links">
+                <a href="#break" onclick="close_nav()">projects</a>
+                <a href="#about">about</a>
+                <a href="#contact">contact</a>
             </div>
+
         </div>
-    </section>
-    <footer id="contact">
-        <div class="footer" id="contact">
-            <p class="text footer-text" style="margin-left: 7.5vw; margin-top: 5vh">Contact: schlaak.pascal@gmail.com<br>LinkedIn: Pascal Schlaak</p>
-            <p class="text footer-text rig">&copy; 2018 - Pascal Schlaak<br>Pivacy policy</p>
+
+        <div class="project_content">
+
+            <div class="project_header">
+                <img src="./Images/project_2_header.jpg" alt="UI">
+            </div>
+
+            <h1 class="project_header_1">containership madness</h1>
+
+            <p class="project_information" style="margin-top:11.25vw">In this lecture our task simply was to visualize data.
+                For that matter we needed to search for suited data which can be visualized in a fancy way.
+                We had some ideas and finally agreed on containership pollution.</p>
+            <p class="project_information">The idea we finally realized was a storytelling interface where we could visualize our research.
+                We wanted to show the audience how bad pollution of container ships is compared to daily used things like cars.
+                For that we created a website where we can illustrate facts.
+                In summary we seperated our story in five facts. With every fact we tell a something about container ship pollution or compare things against eachother.
+                A visitor can read our story by scrolling through those facts.</p>
+           <p class="project_information">After our research we began to sketch some mockups. In summary we hat five iterations in our design.
+               During designing we also got ourselves into typography by meeting some helpful people.
+               At the end we began to implement everything in our website. Therefor we used GSAP for some professional animations.
+           </p> 
+           <p class="project_information">In the following you can see our facts as pictures.
+           </p>
+
+           <img src="./Images/fact_1.png">
+           <img src="./Images/fact_2.png">
+           <img src="./Images/fact_3.png">
+           <img src="./Images/fact_4.png">
+           <img src="./Images/fact_5.png">
+
         </div>
-    </footer>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-</body>
+
+        <footer id="footer">
+            <p>imprint</p>
+            <p>privacy policy</p>
+        </footer>
+        
+    </body>
 </html>
