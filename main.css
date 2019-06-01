@@ -7,7 +7,7 @@ html, body {
 
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: calc(1em + 0.5vw);
+  font-size: calc(1em + 0.25vw);
 
 }
 
@@ -70,12 +70,6 @@ a {
 
 }
 
-.mobile_nav {
-
-  margin-right: 0;
-}
-
-
 .bar1, .bar2, .bar3 {
 
   width: 27px;
@@ -129,19 +123,33 @@ a {
   display: flex;
   flex-direction: column;
 
-  padding: 1vh 0 1vh 5vw;
-
   background-color: black;
 
 }
 
 .nav_links a {
-  padding: 1vh 0 1vh 0;
-  color: whitesmoke;
+  padding: 2vh 0 2vh 5vw;
+  color: gainsboro;
 }
 
 .navbar .nav_links {
   display: none;
+}
+
+.nav_links a:hover {
+
+  background-color: gainsboro;
+  color: black;
+  transition: all 0.5s ease-in;
+
+}
+
+.split {
+
+  width: auto;
+
+  background-color: gainsboro;
+
 }
 
 /** --- Hello World Container --- **/
@@ -173,7 +181,7 @@ a {
 .text_hello_world_2 {
 
   font-weight: 800;
-  font-size: calc(1.4em + 1vw);
+  font-size: calc(1.5em + 1vw);
   margin: 0;
 
   background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
@@ -281,7 +289,7 @@ i {
   bottom: 10%;
   left: 10%;
   
-  font-size: 1.5em;
+  font-size: calc(1.5em + 1vw);
   opacity: 1;
 
   color: white;
@@ -418,6 +426,12 @@ footer p {
   
     font-size: 20px;
   
+  }
+
+  .nav_links {
+
+    font-size: 20px;
+
   }
   
   .bar1, .bar2, .bar3 {

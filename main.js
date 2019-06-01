@@ -17,7 +17,7 @@ function open_nav(x) {
 function close_nav() {
 
   var h = document.getElementById("ham");
-  h.classList.toggle("rechange");
+  h.classList.remove("change");
   
   var y = document.getElementById("my_nav_links");
   if (y.style.display === "flex") {
