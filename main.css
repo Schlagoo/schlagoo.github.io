@@ -96,20 +96,6 @@ a {
   transform: rotate(45deg) translate(-0.475em, -0.475em);
 }
 
-.rechange .bar1 {
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-}
-
-.rechange .bar2 {
-  opacity: 1;
-}
-
-.rechange .bar3 {
-  -webkit-transform: rotate(0deg) translate(0px, 0px) ;
-  transform: rotate(0deg) translate(0px, 0px);
-}
-
 .nav_links {
 
   position: fixed;
@@ -128,7 +114,7 @@ a {
 }
 
 .nav_links a {
-  padding: 2vh 0 2vh 5vw;
+  padding: 16px 0 16px 5vw;
   color: gainsboro;
 }
 
@@ -144,14 +130,6 @@ a {
 
 }
 
-.split {
-
-  width: auto;
-
-  background-color: gainsboro;
-
-}
-
 /** --- Hello World Container --- **/
 .container_hello_world {
   
@@ -164,6 +142,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  background-color: white;
   
 }
 
@@ -240,6 +220,8 @@ i {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
 
+  background-color: white;
+
 }
 
 .project {
@@ -248,7 +230,7 @@ i {
 
   position: relative;
 
-  overflow: hidden
+  overflow: hidden;
 
 }
 
@@ -321,18 +303,25 @@ footer {
   
   width: 100%;
 
-  padding: 7.5vh 7.5vw 7.5vh 7.5vw;
+  padding: 7.5vh 5vw 7.5vh 5vw;
 
   background-color: whitesmoke;
 
-  color: gray;
-  font-size: 0.5em;
+  font-size: 0.75em;
   font-weight: 500;
 
 }
 
 footer p {
+  
   margin: 0;
+
+}
+
+footer a {
+
+  color: gray;
+
 }
 
 
@@ -342,7 +331,7 @@ footer p {
 
 .project_content {
 
-  margin: 12vh 11.25vw 15vh 11.25vw;
+  margin: 0 11.25vw 15vh 11.25vw;
 
   width: 77.5vw;
   height: auto;
@@ -372,8 +361,6 @@ footer p {
 
 .project_header_1 {
 
-  margin-top: 11.2vw;
-
   font-size: 1.5em;
   color: black;
 
@@ -381,28 +368,66 @@ footer p {
 
 .project_information {
 
-  font-size: 0.5em;
+  font-size: 1em;
   font-weight: 400;
 
   text-align: justify;
 
 }
+
 /**
 * ABOUT SECTION
 **/
-.about_information {
-
-  font-size: 0.5em;
-  font-weight: 400;
-
-}
-
-.about_content {
+.container_auto {
 
   margin: 12vh 11.25vw 15vh 11.25vw;
 
-  width: 77.5vw;
-  height: 60vh;
+  width: auto;
+  height: 100vh;
+
+  position: relative;
+
+  font-weight: 600;
+
+}
+
+.overflow_text {
+
+  z-index: 998;
+  
+  position: absolute;
+  top: 10%;
+  left: 0;
+
+  width: 50vw;
+
+}
+
+.overflow_text p {
+
+  font-size: 2em;
+  font-weight: 700;
+
+  color: #BF945C;
+    
+}
+
+.container_img {
+  
+  position: absolute;
+
+  z-index: -1;
+
+  right: 0;
+
+  width: 75%;
+
+}
+
+.container_img img {
+
+  width: 100%;
+  height: auto;
 
 }
 
@@ -428,7 +453,7 @@ footer p {
   
   }
 
-  .nav_links {
+  .nav_links a {
 
     font-size: 20px;
 
