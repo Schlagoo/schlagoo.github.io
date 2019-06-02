@@ -383,7 +383,7 @@ footer a {
   margin: 12vh 11.25vw 15vh 11.25vw;
 
   width: auto;
-  height: 100vh;
+  height: 75vh;
 
   position: relative;
 
@@ -408,15 +408,13 @@ footer a {
   font-size: 2em;
   font-weight: 700;
 
-  color: #BF945C;
+  color: #000000;
     
 }
 
 .container_img {
   
   position: absolute;
-
-  z-index: -1;
 
   right: 0;
 
@@ -431,6 +429,44 @@ footer a {
 
 }
 
+.container_text {
+
+  margin: 0 11.25vw 15vh 11.25vw;
+
+  font-size: 1em;
+  font-weight: 500;
+
+  text-align: justify;
+
+}
+
+.container_contact {
+
+  position: relative;
+  overflow: hidden;
+
+  margin: 0 11.25vw 15vh 11.25vw;
+
+  width: auto;
+  height: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+
+  background-color: white;
+
+}
+
+.icon {
+
+  width: auto;
+  height: auto;
+
+  margin: 2vw 2vw 2vw 2vw;
+
+}
+
 /** RESPONSIVE - LAYOUT**/
 @media screen and (max-width: 1200px) {
   
@@ -438,7 +474,8 @@ footer a {
 
     grid-template-columns: 1fr;
 
-  }  
+  }
+
 }
 
 @media screen and (max-width: 950px) {
@@ -472,6 +509,12 @@ footer a {
 
   .standard_nav {
     display: none;
+  }
+
+  .container_contact {
+
+    grid-template-columns: repeat(2, 2fr);
+
   }
 
 }
