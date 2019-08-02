@@ -7,7 +7,7 @@ html, body {
 
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: calc(1em + 0.15vw + 0.1vh);
+  font-size: calc(1rem + 0.15vw + 0.1vh);
 
   background-color: #ffffff;
 
@@ -215,8 +215,7 @@ i {
   width: auto;
   height: auto;
   
-  margin: 0 18vw 0 18vw;
-  padding: 0 0 15vh 0;
+  margin: 0 18vw 13vh 18vw;
   
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -301,39 +300,13 @@ i {
 
 }
 
-footer {
-  
-  width: 100%;
-
-  padding: 7.5vh 5vw 7.5vh 5vw;
-
-  background-color: whitesmoke;
-
-  font-size: 0.75em;
-  font-weight: 500;
-
-}
-
-footer p {
-  
-  margin: 0;
-
-}
-
-footer a {
-
-  color: gray;
-
-}
-
-
 /**
 * PROJECT 1, 2, 3
 **/
 
 .project_content {
 
-  margin: 7.5vh 20vw 0 20vw;
+  margin: 7.5vh 20vw 15vh 20vw;
 
   width: auto;
   height: auto;
@@ -369,12 +342,9 @@ footer a {
 }
 
 .project_information {
-
-  font-size: 0.8em;
   font-weight: 400;
 
   text-align: justify;
-
 }
 
 .project_content img {
@@ -386,7 +356,7 @@ footer a {
 **/
 .container_auto {
 
-  margin: 20vh 20vw 7.5vh 20vw;
+  margin: 20vh 20vw 15vh 20vw;
 
   width: auto;
   height: auto;
@@ -476,21 +446,54 @@ footer a {
 }
 
 .connect {
-  margin: 0 20vw 7.5vw 20vw;
+  margin: 0 20vw 15vh 20vw;
 }
 
 .about_img {
   margin-right: 5vw;
 }
 
+footer {
+  width: calc(100% - 10vw);
+
+  padding: 5vw;
+
+  background-color: whitesmoke;
+
+  font-size: 0.75em;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+footer p {
+  
+  margin: 0;
+
+}
+
+footer a {
+
+  color: gray;
+
+}
+
+.icon_footer {
+  max-height: 4vh;
+  padding-left: 1vw;
+
+}
+
 /** RESPONSIVE - LAYOUT**/
 @media screen and (max-width: 1350px) {
   .project_content {
-    margin: 7.5vh 11vw 0 11vw;
+    margin: 7.5vh 11vw 15vh 11vw;
   }
 
   .container_auto {
-    margin: 20vh 11.25vw 7.5vh 11.25vw;
+    margin: 20vh 11.25vw 15vh 11.25vw;
   }
 
   .about_img {
@@ -498,7 +501,7 @@ footer a {
   }
 
   .connect {
-    margin: 0 11.25vw 7.5vw  11.25vw;
+    margin: 0 11.25vw 15vh 11.25vw;
   }
 
   .container_hello_world {
@@ -506,7 +509,7 @@ footer a {
   }
 
   .container_projects {
-    margin: 0 11.25vw 0 11.25vw;
+    margin: 0 11.25vw 13vh 11.25vw;
   }
 
   .container_text {

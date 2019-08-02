@@ -5,7 +5,7 @@ function open_nav(x) {
 
   x.classList.toggle("change");
     
-  var y = document.getElementById("my_nav_links");
+  var y = document.getElementById("mobile-links");
 
   if (y.style.display === "flex") {
     y.style.display = "none";
@@ -16,10 +16,10 @@ function open_nav(x) {
 
 function close_nav() {
 
-  var h = document.getElementById("ham");
+  var h = document.getElementById("hamburger");
   h.classList.remove("change");
   
-  var y = document.getElementById("my_nav_links");
+  var y = document.getElementById("mobile-links");
   if (y.style.display === "flex") {
     y.style.display = "none";
   } else {
