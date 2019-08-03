@@ -395,10 +395,17 @@ ABOUT AREA
     margin: 0 20vw 15vh 20vw;
 }
 
-.about_img {
-    margin-right: 5vw;
-}
+.skills {
+    padding: 2.5rem;
+    margin: 3.5vh 0;
 
+    background-color: #F5F5F5;
+    border-radius: 3px;
+
+    font-weight: 800;
+    font-style: italic;
+    word-spacing: 2rem;
+}
 
 /*
 FOOTER AREA
@@ -502,9 +509,28 @@ RESPONSIVE AREA
     .icon-grid {
         grid-template-columns: repeat(2, 2fr);
     }
-
+    
     .overflow-text {
-        top: 0%;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+        font-size: 2.4rem;
+        margin: 0;
+
+        color: #ffffff;
+        background: url(./imgs/profile_picture.jpg) 0px -1000px no-repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .about {
+        margin: 80px 11.25vw 3.5vh 11.25vw;
+    }
+
+    .about img {
+        display: none;
     }
 }
   
