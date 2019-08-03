@@ -443,7 +443,6 @@ footer a {
     padding-right: 1vw;
 }
 
-
 /*
 RESPONSIVE AREA
 */
@@ -521,7 +520,7 @@ RESPONSIVE AREA
 
         color: #ffffff;
         background: url(./imgs/profile_picture.jpg) 0px -1000px no-repeat;
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
