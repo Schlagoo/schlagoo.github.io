@@ -6,13 +6,14 @@ html, body {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: calc(1rem + 0.15vw + 0.1vh);
+    color: #181818;
 
     background-color: #ffffff;
 }
 
 a {
     text-decoration: none;
-    color: #000000;
+    color: #181818;
 }
 
 h4 {
@@ -42,7 +43,7 @@ header {
     justify-content: space-between;
     align-items: center;
   
-    padding: 16px 5vw 16px 5vw;
+    padding: 24px 5vw 24px 5vw;
   
     background-color: #ffffff;
     color: #000000;
@@ -111,6 +112,11 @@ header {
 .links:hover {
     background-color: #F5F5F5;
     border-radius: 3px;  
+}
+
+.clicked {
+    background-color: #F5F5F5;
+    border-radius: 3px;
 }
 
 .mobile-dropout {
@@ -279,7 +285,7 @@ PROJECT GRID AREA
 .overlay-text {
     position: absolute;
     
-    bottom: 15%;
+    bottom: 10%;
     left: 10%;
     
     font-size: calc(1.5rem + 1.5vw);
