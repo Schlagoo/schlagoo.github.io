@@ -520,7 +520,7 @@ RESPONSIVE AREA
 
         color: #ffffff;
         background: url(./imgs/profile_picture.jpg) 0px -1000px no-repeat;
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
