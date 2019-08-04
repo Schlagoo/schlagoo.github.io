@@ -2,11 +2,11 @@
     <head>  
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400:500,600,700,800" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css"> 
-        <script type="text/javascript" src="./main.js"></script>     
+        <script type="text/javascript" src="./main.js"></script>   
         <title>pascalschlaak - portfolio</title>       
     </head>
     <body>
@@ -16,7 +16,7 @@
                 <div class="container-links">
                     <a href="./index.html#break"><p class="links clicked">projects</p></a>
                     <a href="./about.html"><p class="links">about</p></a>
-                    <a href="./project_1.html#contact"><p class="links">contact</p></a>
+                    <a href="./project_5.html#contact"><p class="links">contact</p></a>
                 </div>
                 <div class="mobile-header" id="hamburger" onclick="open_nav(this)">
                     <div class="bar1"></div>
@@ -27,25 +27,27 @@
             <div class="mobile-dropout" id="mobile-links">
                 <a href="./index.html#break" onclick="close_nav()">project</a>
                 <a href="./about.html">about</a>
-                <a href="./project_1.html#contact">contact</a>
+                <a href="./project_5.html#contact">contact</a>
             </div>
         </header>
     <body>
         <section id="project-1">
             <div class="project-header">
-                <img src="./imgs/project_1/project_1_header.jpg" alt="UI">
+                <img src="./imgs/project_5/project_5_header.png" alt="UI">
             </div>
             <div class="container project-text">
-                <h1>User experience</h1>
-                <p class="text">In my second design course we tried to understand the journey a user is making to 
-                    understand a product. To understand the process of discovering a product, we observed different people at 
-                    trying to understand applications and products in so called "user tests". To protocol the results and the
-                    behavior of all people, we designed a user journey map to visualize strengths and weaknesses while trying 
-                    to solve our tasks.
+                <h1>Whatsapp data analysis</h1>
+                <p class="text">In my freetime I wanted to analyse an old  <strong>Whatsapp</strong> group chat and compare it with its new one to see things like
+                    difference in activity. Whatsapp offers you to download group chats as .txt-files. I wrote 
+                    a <strong>Python</strong> script to read this data in and analyse all messages  on things I was interested in. For example I wanted
+                     to know who is writing the most messages and words and when everyone is the most active to find the perfect
+                      question time.
                 </p>
-                <p class="text"> In the following image you can see our final "user journey map".
-                </p>
-                <img src="./imgs/project_1/user_experience.jpg">
+                <div class="grid">
+                    <img src="./imgs/project_5/number_messages_by_name.jpg" alt="Message counter">
+                    <img src="./imgs/project_5/group_chat_acitivity_by_time.png" alt="Activity by time">
+                </div>
+                <p class="text">You can find the complete code on my <a href="https://github.com/Schlagoo/whatsapp_data_analysis" style="color: #0366d6">Github repository</a>!</p>
             </div>
         </section>
     <footer>
