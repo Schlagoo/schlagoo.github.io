@@ -524,6 +524,10 @@ RESPONSIVE AREA
         -webkit-text-fill-color: transparent;
     }
 
+    .grid {
+        grid-template-columns: repeat(1, 2fr);
+    }
+
     .about {
         margin: 80px 11.25vw 3.5vh 11.25vw;
     }

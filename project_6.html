@@ -38,18 +38,23 @@
             <div class="container project-text">
                 <h1>Stock data analysis</h1>
                 <p class="text">Since I'm interested in stocks, I wanted to dive deeper into stock analysis.
-                    My goal in this private project was to build an stock visualization I can later automate, to send myself
-                    daily summaries of stock performances. Therefor I searched for an stock-data API, I can retrieve their
+                    My goal in this project was to build an stock visualization I can later automate, to send myself
+                    daily summaries of stock performances.
+                </p>
+                <p class="text">Therefor I searched for an stock-data API, I can retrieve their
                     values from the current day, week, ... I found the <strong>Alpha Vantage API</strong>, that was not deprecated and can
                     retrieve realtime stock data like: open, close, low, high. To send the plotted summary via e-mail I used
                     the <strong>SMTP</strong> protocol to send data to my personal e-mail. For automation reasons, the <strong>Python</strong>
                     script will wait to plot and send data at 19:00 o'clock, when stock market is closing. To run by itself I built a 
-                    <strong>Docker</strong> image to run my script in a container instance. For visualising data I used a so called
-                    candlestick graph to present all data in a compact way. In the following you can see a generated plot of the apple stock
-                    on 30 July 2019.
+                    <strong>Docker</strong> image to run my script in a container instance. For visualizing data I used a so called
+                    candlestick graph to present all data in a compact way. In the following you can see generated plots of
+                    Apple and Walt Disney on 30 July 2019.
                 </p>
-                <img src="./imgs/project_6/example_plot.png" alt="Example plot apple stock">
-                <p class="text">You can find the code in my <a href="https://github.com/Schlagoo/stock_data_analysis" style="color: #0366d6">Github repository</a>!</p>
+                <div class="grid">
+                    <img src="./imgs/project_6/example_plot_apple.png" alt="Example plot apple stock">
+                    <img src="./imgs/project_6/example_plot_disney.png" alt="Example plot apple stock">
+                </div>
+                <p class="text">You can find the complete code in my <a href="https://github.com/Schlagoo/stock_data_analysis" style="color: #0366d6">Github repository</a>!</p>
             </div>
         </section>
     <footer>
