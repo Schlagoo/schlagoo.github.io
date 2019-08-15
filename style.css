@@ -337,6 +337,11 @@ PROJECT AREA
     width: 100%;
 }
 
+.tools {
+    color: #BEBEBE;
+    font-style: italic;
+}
+
 .project-text img {
     margin: 2.5vh 0;
 }
