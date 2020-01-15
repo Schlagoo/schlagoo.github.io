@@ -18,11 +18,12 @@ a {
 
 h1 {
     font-size: 3.6rem;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 h2 {
     font-size: 2.8rem;
+    font-weight: 700;
 }
 
 h4 {
@@ -243,7 +244,7 @@ PROJECT GRID AREA
     width: auto;
     height: auto;
     
-    margin: 0 20vw 15vh 20vw;
+    margin: 0 24vw 15vh 24vw;
 
     background-color: #ffffff;
 }
@@ -381,6 +382,8 @@ ABOUT AREA
     font-family: 'Muli', sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
     
     text-align: left;
 }
@@ -410,6 +413,25 @@ ABOUT AREA
     font-weight: 800;
     font-style: italic;
     word-spacing: 2rem;
+}
+
+.bold {
+    font-weight: 700; 
+    padding: 0 0 3vh 0; 
+    margin: 0;
+}
+
+.section {
+    background-color: #F8F8F8;
+    border-radius: 3px;
+    padding: 2vw 2.5vw;
+    margin: 5vh 0;
+}
+
+code {
+    padding: 0.4rem;
+    background-color: #F2F2F2;
+    border-radius: 3px;
 }
 
 /*
@@ -457,11 +479,11 @@ RESPONSIVE AREA
     }
 
     .container {
-        margin: 0 11.25vw 13vh 11.25vw;
+        margin: 0 7.5vw 13vh 7.5vw;
     }
 
     .container-text {
-        margin: 0 11.25vw 7.5vh 11.25vw;
+        margin: 0 7.5vw 7.5vh 7.5vw;
     }
 }
 

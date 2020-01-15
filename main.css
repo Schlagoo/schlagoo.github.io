@@ -486,6 +486,11 @@ footer a {
 
 }
 
+#map {
+  height: 50vh;
+  width: 100%;
+}
+
 /** RESPONSIVE - LAYOUT**/
 @media screen and (max-width: 1350px) {
   .project_content {
