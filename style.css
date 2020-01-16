@@ -432,6 +432,7 @@ code {
     padding: 0.4rem;
     background-color: #F2F2F2;
     border-radius: 3px;
+    font-size: 1.6rem;
 }
 
 .facts-grid {
@@ -441,7 +442,6 @@ code {
 
     width: 100%;
 
-    text-align: center;
     justify-content: center;
 
     margin-top: 5vh;
