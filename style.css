@@ -45,7 +45,7 @@ header {
     width: calc(100% - 10vw);
     min-height: 24px;
 
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-weight: 800;
   
     display: flex;
@@ -384,7 +384,7 @@ ABOUT AREA
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.2px;
-    
+    word-break: break-all,
     text-align: left;
 }
 
@@ -432,6 +432,35 @@ code {
     padding: 0.4rem;
     background-color: #F2F2F2;
     border-radius: 3px;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: calc(2vw + 1.75vh);
+
+    width: 100%;
+
+    text-align: center;
+    justify-content: center;
+
+    margin-top: 5vh;
+}
+
+.facts-grid div {
+    padding: 2vw;
+}
+
+.fact{
+    /* text-align: center;     */
+
+    background-color: #F8F8F8;
+    border-radius: 3px;
+}
+
+.fact1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 /*
@@ -553,6 +582,15 @@ RESPONSIVE AREA
 
     .grid {
         grid-template-columns: repeat(1, 2fr);
+    }
+
+    .facts-grid {
+        grid-template-columns: repeat(1, 3fr);
+    }
+
+    .fact1 {
+        grid-column-start: 1;
+        grid-column-end: 1;
     }
 
     .about {

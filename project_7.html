@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="./style.css">
         <script type="text/javascript" src="./main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <link rel="stylesheet" href="./code.css">
         <title>pascalschlaak - portfolio</title>       
     </head>
     <body>
@@ -31,85 +33,153 @@
                 <a href="./project_5.html#contact">contact</a>
             </div>
         </header>
-    <body>
+    <p>
         <section id="project-1">
-            <div class="project-header">
+            <!-- <div class="project-header">
                 <img src="./imgs/project_7/project_7_header.jpg" alt="UI">
-            </div>
-            <div class="container project-text">
-                <h1>NYPD shooting incident data</h1>
+            </div> -->
+            <div class="container project-text" style="margin-top: 20vh;">
+                <h1>New York shooting incident data</h1>
                 <p class="text">
                     After finishing my bachelors thesis I wanted to continue improving my data analytics skills. Therefore I was looking for 
                     datasets that where open source, offered a big amount of data and interesting to analyize. Although there were plenty of options I
-                    decided to work with data reporting NYPD shooting incidents between the year 2006 to 2018. The dataset was published at 
+                    decided to work with data reporting New York shooting incidents between the year 2006 to 2018. The dataset was published at 
                     <a href="https://catalog.data.gov/dataset/nypd-shooting-incident-data-historic" style="color: #0366d6">data.gov</a> for public
                     access and use containing labels like:
                 </p>
                 <ul>
-                    <li>INCIDENT_KEY</li>
-                    <li>OCCUR_DATE</li>
-                    <li>OCCUR_TIME</li>
-                    <li>LOCATION_DESC</li>
-                    <li>STATISTICAL_MURDER_FLAG</li>
-                    <li>PERP_AGE_GROUP</li>
-                    <li>PERP_SEX</li>
-                    <li>VIC_AGE_GROUP</li>
-                    <li>VIC_SEX</li>
-                    <li>Latitude</li>
-                    <li>Longitude</li>
+                    <li>Identification number</li>
+                    <li>Occur date and time</li>
+                    <li>Location by longitude and latitude</li>
+                    <li>Statistical murder flag</li>
+                    <li>Age group and gender of perpetrators</li>
+                    <li>Age group and gender of victims</li>
                 </ul>
                 <p class="text" style="margin-bottom: 0px">
                     As programming language I wanted to use <code>Python 3</code> again due to its rapid development speed. Also I was looking forward to exploring
                     more of the functionality the data analysis library <code>Pandas</code> offers. For data visualization I used <code>Matplotlib</code> by which I was able to
-                    plot data in suited ways. The dataset itself can be downloaded in different formats like <code>CSV, JSON</code> and contains 20660 entries. <code>Pandas</code>
+                    plot data in suited ways. Nevertheless for publishing my results on my website I switched to <code>Chart.js</code>. The dataset itself can be downloaded in different formats like <code>CSV, JSON</code> and contains 20.660 entries. <code>Pandas</code>
                     offers multiple functions to read files in <code>DataFrames</code>. I was able to read the dataset from a <code>CSV</code> file into a newly declared <code>DataFrame</code>
                     by calling the <code>read_csv()</code> function and passing the files path. In the following you can see some interesting results I was able to 
                     extract from the dataset.
                 </p>
+                <pre class="prettyprint text fact">
+                    <code class="lang-python">
+    # Read data from csv in DataFrame
+    data = pd.read_csv(PATH_TO_DATA)</code>
+                </pre>
                 <h2 style="padding-top: 2.5vh;"><span style="color: #DCDCDC;">#</span> Extracting general knowledge</h2>
                 <p class="text">
-                    To get a general understanding of all columns and their meaning, I created different functionality to display any informations
+                    To get a general understanding of all columns and their meanings, I created different functionality to display any informations
                     like the number of shooting incidents recorded by NYPD since 2006. Below chart visualizes the number of shooting incidents
                     from 2006 until 2018. You can see how the overall number of incidents generally decreased with time.
                 </p>
-                <section class="section">
+                <div class="section">
                     <p class="text bold">Shooting incidents by year</p>
                     <canvas id="plot_years"></canvas>
-                </section>
+                </div>
                 <p class="text">
-                    Thurder more I calculated the likelyhood to die in those shootings by calculating all entries where the <code>STATISTICAL_MURDER_FLAG</code>
-                    was set <code>True</code> and dividing the result by the length of the dataset. I also tried to describe a perpetrator and victim by gender
-                    and age group. Unfortunally there is a high number of unknown pepatrators whereby I was not able to exactly specify perpetrators. This could
-                    be if a high percentage of perpetrators wasn't caught but it's just a hunch. Nevertheless you can see this details below.
+                    Thurder more I calculated the likelyhood to die in shootings by counting the number of all entries where the <code>STATISTICAL_MURDER_FLAG</code>
+                    was set <code>True</code> and dividing the result by the length of the dataset.
                 </p>
-                <p class="section text" style="margin-bottom: 0; text-align: center;"><span style="font-size: 3.6rem; font-weight: 700; margin: 0;">19.091 %</span> &ensp; general murder rate</p>
-                <section class="grid">
-                    <div class="section text" style="text-align: center;"><span style="font-size: 3.6rem; font-weight: 700; margin: 0;">Male, 18-24 y/o<br></span>Perpetrator</div>
-                    <div class="section text" style="text-align: center;"><span style="font-size: 3.6rem; font-weight: 700; margin: 0;">Male, 25-44 y/o<br></span>Victim</div>
-                </section>
+                <pre class="prettyprint text fact">
+                    <code class="lang-python">
+    # Check if murder flag is true
+    for entry in data:
+        if entry:
+            murder_counter += 1
+
+    # Calculate and return percentile of murder by incidents
+    murder_rate = round((murder_counter / len(data)) * 100, 3)</code>
+                </pre>
+                <p class="text">    
+                    I also tried to describe a perpetrator and victim by gender and age group. Unfortunally there is a high number of unknown pepatrators whereby I was not able to exactly specify perpetrators. This could
+                    be if a high percentage of perpetrators were not caught but it's just a hunch. Nevertheless you can see some facts below.
+                </p>
+                <div class="facts-grid">
+                    <div class="text fact"><span style="font-size: 2.6rem; font-weight: 700; margin: 0; color: #bf2828;">~ 19.091 %</span><br>General murder rate</div>
+                    <div class="text fact"><span style="font-size: 2.6rem; font-weight: 700; margin: 0; color: #bf2828;">Male, 18-24 y/o<br></span>Perpetrators</div>
+                    <div class="text fact"><span style="font-size: 2.6rem; font-weight: 700; margin: 0; color: #bf2828;">Male, 25-44 y/o<br></span>Victims</div>
+                </div>
                 <h2 style="padding-top: 2.5vh;"><span style="color: #DCDCDC;">#</span> Investigation of recent incidents</h2>
                 <p class="text">
                     After extracting general information of the whole dataset, I wanted to explore current data. For this purpose I kept myself busy
-                    by analyzing every entry which were added in 2018 and display newest recordings. This could be realized by iterating through the
+                    by analyzing every entry which was added in 2018 and displays newest recordings. This could be realized by iterating through the
                     dataset line by line and checking if the column <code>OCCUR_DATE</code> inherits 2018 as specified year. To reduce computation
                     power needed to process the <code>DataFrame</code>, a copy containing all entries from 2018 was created. Below are several gathered
                     informations refering to newest data.
                 </p>
-                <section class="section">
-                    <p class="text bold">Location of reported NYPD shooting incidents in 2018</p>
+                <pre class="prettyprint text fact">
+                    <code class="lang-python">
+    # Filter data by year and append row new DataFrame
+    for index, row in data.iterrows():
+        if ("/" + str(year)) in str(row["OCCUR_DATE"]):
+            altered_data = altered_data.append(row, ignore_index = True)
+        
+    # Define min and max longitude, latitude
+    bounding_box = [-74.24930372699998, -73.70308204399998, 40.51158633800003, 40.910818945000074]
+    # Get background image
+    image_map = plt.imread(r"../data/map.png")
+    
+    # Plot data
+    plt.scatter(altered_data["Longitude"], altered_data["Latitude"], c="r", alpha=0.2, zorder=1)
+    ...</code>
+                </pre>
+                <p class="text">
+                    To find certain shooting hotspots I took all incident locations from every entry in 2018 by longitude and latitude. This allowed
+                    myself to plot every incident on the map of New York. Every red dot displays an incident, whereas transparency decreases
+                    when multiple incidents happended at the same location. As you can see there are two main hotspots for criminal activity:
+                </p>
+                <ul>
+                    <li>Harlem / The Bronx</li>
+                    <li>Brooklyn</li>
+                </ul>
+                <div class="section">
+                    <p class="text bold">Locations of reported New York shooting incidents in 2018</p>
                     <div id="map" style="width: 100%; ">
                         <img src="./imgs/project_7/nypd_shootings_2018.jpg" alt="Reported shootings in NY (2018)" style="margin: 0;">
                     </div>
-                </section>
-                <section class="section">
+                </div>
+                <p class="text">
+                    I next wondered if shooting incidents depend on seasonal conditions. This should be visible by analyzing the number of incidents
+                    on a monthly base. As you can see in the following chart there are definitely more incidents in warmer months than in autumn/winter except
+                    January. This might correlate with drive for change at the beginning of every new year but still a hunch.
+                </p>
+                <div class="section">
                     <p class="text bold">New York shooting incidents in 2018 by month</p>
                     <canvas id="plot_months"></canvas>
-                </section>
-                <section class="section">
+                </div>
+                <p class="text">
+                    Next to seasonal dependencies, I wanted to get the most likely daytime for shooting incidents. I excepted it to be at night but
+                    still wanted to check my thesis.
+                </p>
+                <pre class="prettyprint text fact">
+                    <code class="lang-python">
+    # Count shootings per hour of day
+    for entry in data:
+        hour, _, _ = entry.split(":")
+        if int(hour) not in hour_counters:
+            hour_counters[int(hour)] = 0
+        else:
+            hour_counters[int(hour)] += 1
+    
+    # Sort dict by hours
+    sorted_hour_counters = OrderedDict(sorted(hour_counters.items()))
+    
+    # Plot shootings by month
+    plt.plot(sorted_hour_counters.keys(), sorted_hour_counters.values())
+    ...</code>
+                </pre>
+                <p class="text">    
+                    As you can see there's definitely an uptrend after lunch peaking at 9pm. There's clearly a
+                    higher number of incidents between 8pm and 4am.
+                </p>
+                <div class="section">
                     <p class="text bold">New York shooting incidents in 2018 by daytime</p>
                     <canvas id="plot_daytime"></canvas>
-                </section>
-                <p class="text">You can find the complete code on my <a href="https://github.com/Schlagoo/nypd_crime_data_analytics" style="color: #0366d6">Github repository</a>!</p>
+                </div>
+                <p class="text">In total a pretty interesting dataset. Looking forward to practice my data analytics skills with new datasets.
+                    You can find the complete code I developed for this dataset on my <a href="https://github.com/Schlagoo/nypd_crime_data_analytics" style="color: #0366d6">Github repository</a>!</p>
             </div>
         </section>
     <footer>
@@ -125,15 +195,14 @@
 
         // General ----------------------------------------------------------------------------------------------------------
         // Shootings per year plot
-        // Months plot
         var ye = document.getElementById("plot_years").getContext("2d");
         var plot_daytime = new Chart(ye, {
             type: 'bar',
             data: {
                 labels: ["2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"],
                 datasets: [{
-                    //backgroundColor: "rgb(250, 200, 200)",
-                    borderColor: "rgb(250, 51, 51)",
+                    backgroundColor: "rgb(202, 103, 103)",
+                    borderColor: "rgb(191, 40, 40)",
                     borderWidth: 2,
                     data: [2054, 1886, 1957, 1827, 1909, 1938, 1716, 1338, 1463, 1433, 1207, 968, 950]
                 }]
@@ -158,7 +227,7 @@
                 }
             }
         });
-        
+
         // 2018 ------------------------------------------------------------------------------------------------------------- 
         // Months plot
         var me = document.getElementById("plot_months").getContext("2d");
@@ -168,8 +237,8 @@
                 labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                 datasets: [{
                     label: "Hour of day",
-                    //backgroundColor: "rgb(250, 200, 200)",
-                    borderColor: "rgb(250, 51, 51)",
+                    backgroundColor: "rgb(202, 103, 103)",
+                    borderColor: "rgb(191, 40, 40)",
                     borderWidth: 2,
                     data: [88, 41, 56, 68, 98, 90, 114, 91, 81, 82, 71, 71]
                 }]
@@ -202,8 +271,8 @@
             data: {
                 labels: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
                 datasets: [{
-                    //backgroundColor: "rgb(250, 200, 200)",
-                    borderColor: "rgb(250, 51, 51)",
+                    backgroundColor: "rgb(202, 103, 103)",
+                    borderColor: "rgb(191, 40, 40)",
                     borderWidth: 2,
                     data: [68, 55, 51, 50, 50, 24, 15, 12, 8, 9, 5, 21, 23, 13, 26, 23, 40, 28, 40, 51, 75, 92, 78, 70]
                 }]
@@ -221,6 +290,7 @@
                 }
             }
         });
+
     </script>
     </body>
 </html>
