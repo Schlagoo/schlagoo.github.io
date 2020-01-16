@@ -3,7 +3,7 @@ html, body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 
-    font-family: 'Muli', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 62.5%;
     color: #383838;
@@ -18,12 +18,12 @@ a {
 
 h1 {
     font-size: 3.6rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h2 {
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h4 {
@@ -45,18 +45,21 @@ header {
     width: calc(100% - 10vw);
     min-height: 24px;
 
-    font-size: 2.2rem;
-    font-weight: 800;
+    font-size: 2rem;
+    font-weight: 600;
   
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   
-    padding: 24px 5vw 24px 5vw;
+    padding: 24px 5vw;
   
     background-color: #ffffff;
     color: #000000;
+
+    /* border: 1px solid #DCDCDC; */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.12);
 }
 
 .container-links {
@@ -66,13 +69,6 @@ header {
     align-items: center;
   
     opacity: 1;
-}
-
-.links {
-    padding: 1vw 1.5vw 1vw 1.5vw;
-    margin: 0;
-
-    transition: all 0.5s ease;
 }
 
 .links:hover {
@@ -114,7 +110,7 @@ header {
 }
 
 .links {
-    padding: 1vw 1.5vw 1vw 1.5vw;
+    padding: .75vw 1.25vw;
     margin: 0;
     transition: all 0.5s ease;
 }
@@ -425,7 +421,6 @@ ABOUT AREA
     background-color: #F8F8F8;
     border-radius: 3px;
     padding: 2vw 2.5vw;
-    margin: 5vh 0;
 }
 
 code {
@@ -443,8 +438,6 @@ code {
     width: 100%;
 
     justify-content: center;
-
-    margin-top: 5vh;
 }
 
 .facts-grid div {
