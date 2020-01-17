@@ -13,7 +13,7 @@ html, body {
 
 a {
     text-decoration: none;
-    color: #181818;
+    color: #383838;
 }
 
 h1 {
@@ -56,9 +56,8 @@ header {
     padding: 24px 5vw;
   
     background-color: #ffffff;
-    color: #000000;
+    color: #383838;
 
-    /* border: 1px solid #DCDCDC; */
     box-shadow: 0 2px 3px rgba(0,0,0,0.12);
 }
 
@@ -257,16 +256,44 @@ PROJECT GRID AREA
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: calc(2vw + 1.75vh);
+    grid-gap: calc(1.25vw + 1.25vh);
+
+    justify-content: center;
+}
+
+.fine-line {
+    width: 100%;
+    height: 1px;
+    
+    margin: 7.5vh 0;
+
+    background-color: #DCDCDC;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: calc(1vw + 1vh);
+
+    margin: 2vw 0;
 
     justify-content: center;
 }
 
 .project {
-    font-family: "Montserrat", "sans-serif";
+    min-height: 10vw;
+
+    padding: calc(1vw + 2vh);
 
     position: relative;
     overflow: hidden;
+
+    /* background-color: #F8F8F8; */
+}
+
+.border {
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
 }
 
 .project img { 
@@ -277,19 +304,43 @@ PROJECT GRID AREA
     transition: 0.4s ease;
 }
 
-.overlay {
-    position: absolute;
+.topic {
+    font-size: 1.6rem;
+    font-weight: 500;
 
-    top: 0;
-    left: 0;
+    color: #5f6368;
+
+    margin-top: 0;
+}
+
+.description {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+
+    color: #5f6368;
+
+    margin-top: 0;
+}
+
+.continue {
+    margin-top: 2vh;
+
+    color: #BEBEBE;
+
+    float: right;
+}
+
+.overlay {
 
     height: 100%;
     width: 100%;
 
-    opacity: 0.5;
-    transition: .3s ease;
+    /* opacity: 0.5;
+    transition: .3s ease; */
 
-    background-color: #F5F5F5;
+    background-color: #ffffff;
 }
 
 .overlay-text {
@@ -298,29 +349,30 @@ PROJECT GRID AREA
     bottom: 10%;
     left: 10%;
     
-    font-size: calc(1.8rem + 1.5vw);
+    font-size: calc(1.2rem + 1.25vw);
     opacity: 1;
 
-    color: #ffffff;
+    color: #383838;
+    font-weight: 600;
 
     margin: 0;
 
-    opacity: 1;
-    transition: transform .5s ease;
+    /* opacity: 1;
+    transition: transform .5s ease; */
 }
 
-.project:hover .overlay {
+/* .project:hover .overlay {
     opacity: 0.25;
 }
 
 .project:hover .overlay-text {
     opacity: 0;
-}
+} */
 
-.project:hover img {
+/* .project:hover img {
     -webkit-transform: scale(1.025);
     transform: scale(1.025);
-}
+} */
 
 /*
 PROJECT AREA
@@ -375,12 +427,12 @@ ABOUT AREA
 }
 
 .text {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.2px;
-    word-break: break-all,
+    word-break: break-all;
     text-align: left;
 }
 
@@ -575,6 +627,10 @@ RESPONSIVE AREA
 
     .grid {
         grid-template-columns: repeat(1, 2fr);
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(1, 3fr);
     }
 
     .facts-grid {
