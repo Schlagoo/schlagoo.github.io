@@ -2,8 +2,7 @@
     <head>  
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css"> 
@@ -13,40 +12,97 @@
     <body>
         <header>
             <div class="navbar">
-                <a href="./index.html">pascalschlaak</a>
-                <div class="container-links">
-                    <a href="./index.html#break"><p class="links">projects</p></a>
-                    <a href="./about.html"><p class="links">about</p></a>
-                    <a href="./index.html#contact"><p class="links">contact</p></a>
+                <a href="./index.html" style="font-size: 2rem;"></a>
+                <div class="links" onclick="handle_menu()">
+                    <div class="fas fa-bars fa-2x"></div>
                 </div>
-                <div class="mobile-header" id="hamburger" onclick="open_nav(this)">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
-            </div>
-            <div class="mobile-dropout" id="mobile-links">
-                <a href="./index.html#break" onclick="close_nav()">projects</a>
-                <a href="./about.html">about</a>
-                <a href="./index.html#contact">contact</a>
             </div>
         </header>
-        <section id="hello-world">
-            <div class="container-helloWorld">
-                <p class="text-helloWorld1 gradient" id="one">Hello World!</p>
-                <p class="text-helloWorld2 gradient" id="two">Have a look at my projects!</p>
+        <div class="navbar-opened" id="menu">
+            <div class="menu">
+                <div class="fas fa-times fa-5x close-icon" onclick="handle_menu()" id="close-button"></div>
+                <p class="text-huge" style="color: #383838; margin: 10vh 5vw 5vh 5vw;">Menu</p>
+                <a href="./index.html#projects"><p class="menu-text" onclick="handle_menu()">Projects</p></a>
+                <a href="./about.html"><p class="menu-text" style="margin-bottom: 15vh">About me</p></a>
+                <footer>
+                    <div class="fine-line" id="contact"></div>
+                    <div class="flex-row">
+                        <div id="row">
+                            <p class="text bold">SOCIAL MEDIA</p>
+                            <div style="display: flex; flex-direction: row">
+                                <div style="margin-right: 2.5vw;">
+                                    <a href="https://github.com/Schlagoo"><p class="text">Github</p></a>
+                                <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><p class="text">LinkedIn</p></a>
+                                </div>
+                                <div>
+                                    <a href="https://www.facebook.com/pascal.schlaak.65"><p class="text">Facebook</p></a>
+                                    <a href="https://www.instagram.com/schlagoo/"><p class="text">Instagram</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>              
             </div>
-            <div class="down-arrow">
-                <a href="#break"><i class="fas fa-chevron-down fa-3x"></i></a>
-                <div id="break"></div>
+        </div>
+        <section id="hello-world" class="container-wide">
+            <div class="helloWorld-text">
+                <p class="text-huge">Hello World!</p>
+                <p class="text">
+                    My name is Pascal Schlaak, I'm a software engineering student at the
+                    university of Aalen, currently finishing my bachelors degree.
+                </p>
+                <div class="interests">
+                    <div class="icon">
+                        <img src="./imgs/icons/machine_learning.png" alt="Machine Learning">
+                    </div>
+                    <div>
+                        <p class="text bold" style="padding: 0">Machine Learning</p>
+                        <p class="text" style="margin-top: .5vh;">
+                            I'm very interested in Data Science. I like to build, train, test and validate neural networks especially CNNs.
+                            In my bachelors thesis I developed an architecture to predict welding faults in BMWs electric powertrain production.
+                        </p>
+                    </div>
+                </div>
+                <div class="interests">
+                    <div class="icon">
+                        <img src="./imgs/icons/data_analytics.png" alt="Data Analytics">
+                    </div>
+                    <div>
+                        <p class="text bold" style="padding: 0">Data Analytics</p>
+                        <p class="text" style="margin-top: .5vh;">
+                            In my spare time I like to deal with large datasets and try to find and visualize interesting information. 
+                            I have published some interesting results of my projects right here on my website.
+                        </p>
+                    </div>
+                </div>
+                <div class="interests">
+                    <div class="icon">
+                        <img src="./imgs/icons/cloud_computing.png" alt="Cloud Computing">
+                    </div>
+                    <div>
+                        <p class="text bold" style="padding: 0">Cloud Computing</p>
+                        <p class="text" style="margin-top: .5vh;">
+                            I have deepened my knowledge of the Internet of Things and Cloud Computing through my Bachelor's degree. 
+                            I like to use powerful centralized ressources to process my algorithms particularly when working on innovative projects.
+                        </p>
+                    </div>
+                </div>
+                <p class="text">
+                    Feel free to have a look at my projects below and to connect with me through social media or e-mail!
+                </p>
+            </div>
+            <div id="code">
+                <img src="./imgs/background_code.svg">
             </div>
         </section>
-        <section class="container" id="projects">
-            <div class="fine-line"></div>
+        <div class="down-arrow">
+            <a href="#projects"><i class="fas fa-chevron-down fa-3x"></i></a>
+        </div>
+        <section class="container" id="projects" style="margin-bottom: 0;">
+            <!-- <div class="fine-line"></div> -->
             <h1>Projects</h1>
             <p class="text">
                 Have a look at some projects I made either in my free time as well as in university.
-
             </p>
             <div class="project-grid">
                 <a href="./project_7.html">
@@ -128,14 +184,63 @@
                 </a>
             </div>
         </section>
+        <section class="container" id="technologies" style="margin-bottom: 30vh;">
+            <div class="fine-line"></div>
+            <h1>Technologies</h1>
+            <p class="text">
+                Have a look at some technologies I like to work with.
+            </p>
+            <div class="project-grid" style="justify-items: center; align-items: center; grid-gap: calc(1.5vw + 2vh);">
+                <a href="https://www.tensorflow.org/">
+                <img src="./imgs/technologies/tensorflow.svg" alt="Tensorflow">
+                </a>
+                <a href="https://www.docker.com/">
+                    <img src="./imgs/technologies/docker.png" alt="Docker">
+                </a>
+                <a href="https://www.python.org/">
+                    <img src="./imgs/technologies/python.svg" alt="Python">
+                </a>
+                <a href="https://azure.microsoft.com/">
+                    <img src="./imgs/technologies/azure.svg" alt="Azure">
+                </a>
+                <a href="https://www.djangoproject.com/">
+                    <img src="./imgs/technologies/django.png" alt="Django">
+                </a>
+                <a href="https://www.archlinux.org/">
+                    <img src="./imgs/technologies/arch_linux.svg" alt="Arch Linux">
+                </a>
+            </div>
+        </section>
         <footer>
-            <a href="./imprint.html"><p>Imprint</p></a>
-            <a href="./privacy_policy.html"><p>Privacy policy</p></a>
-            <div class="split-line" id="contact"></div>
-            <a href="https://github.com/Schlagoo"><img src="./imgs/icons/github.png" alt="github" class="icons-footer"></a>
-            <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><img src="./imgs/icons/linkedin.png" alt="github" class="icons-footer"></a>
-            <a href="https://www.facebook.com/pascal.schlaak.65"><img src="./imgs/icons/facebook.png" alt="github" class="icons-footer"></a>
-            <a href="schlaak.pascal@gmail.com"><img src="./imgs/icons/email.png" alt="github" class="icons-footer"></a>
+            <div class="fine-line" id="contact"></div>
+            <div class="flex-row">
+                <div id="row">
+                    <p class="text bold">LEGAL INFORMATION</p>
+                    <a href="./imprint.html"><p>Imprint</p></a>
+                    <a href="./privacy_policy.html"><p>Privacy policy</p></a>
+                </div>
+                <div id="row">
+                    <p class="text bold">SOCIAL MEDIA</p>
+                    <div style="display: flex; flex-direction: row">
+                        <div style="margin-right: 2.5vw;">
+                            <a href="https://github.com/Schlagoo"><p class="text">Github</p></a>
+                        <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><p class="text">LinkedIn</p></a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/pascal.schlaak.65"><p class="text">Facebook</p></a>
+                            <a href="https://www.instagram.com/schlagoo/"><p class="text">Instagram</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="row">
+                    <p class="text bold">CONTACT</p>
+                    <p class="text">
+                        I am happy about everyone who wants to get in contact with me. 
+                        You can reach me through my social media channels or via 
+                        <a href="schlaak.pascal@gmail.com">e-mail</a>.
+                    </p>                
+                </div>
+            </div>
         </footer>
     </body>
 </html>

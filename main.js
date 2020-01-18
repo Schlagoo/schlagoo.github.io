@@ -1,28 +1,15 @@
-/**
- * Function to open navbar
- */
-function open_nav(x) {
+// Functionality to handle navbar
 
-  x.classList.toggle("change");
-    
-  var y = document.getElementById("mobile-links");
+function handle_menu() {
+  /**
+   * Function to handle navbar overlay menu
+   */
 
-  if (y.style.display === "flex") {
-    y.style.display = "none";
-  } else {
-    y.style.display = "flex";
-  }
-}
+  var menu = document.getElementById("menu");
 
-function close_nav() {
-
-  var h = document.getElementById("hamburger");
-  h.classList.remove("change");
-  
-  var y = document.getElementById("mobile-links");
-  if (y.style.display === "flex") {
-    y.style.display = "none";
-  } else {
-    y.style.display = "flex";
-  }
+    if (menu.style.display === "none") {
+      menu.style.display = "block";
+    } else {
+      menu.style.display = "none";
+    }
 }
