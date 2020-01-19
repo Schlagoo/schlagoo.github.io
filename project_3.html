@@ -2,12 +2,14 @@
     <head>  
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400:500,600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link rel="stylesheet" href="./style.css"> 
-        <script type="text/javascript" src="./main.js"></script>     
+        <link rel="stylesheet" href="./style.css">
+        <script type="text/javascript" src="./main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <link rel="stylesheet" href="./code.css">
         <title>pascalschlaak - portfolio</title>       
     </head>
     <body>
@@ -53,7 +55,7 @@
                 <img src="./imgs/project_3/project_3_header.jpg" alt="UI">
             </div>
             <div class="container project-text">
-                <h1>Head unit interface</h1>
+                <h1>Head unit charging station navigation</h1>
                 <p class="text">In this lecture our task was to build an user interface within an Internet of Things (IoT) use case.
                     For that matter we had to build an interdisciplinary team consisting of at least one IoT-design student.
                     However our IoT-design partner quit her education whereby we needed to design everything by ourselfs.</p>
@@ -70,11 +72,20 @@
                     only technical information will be shown. For further information the user needs to click on a charging station to
                     get all details.
                 </p>
-                <img src="./imgs/project_3/filter.jpg">
+                <div class="section">
+                    <p class="text bold">Landing page with personal filters and suited charging stations</p>
+                    <img src="./imgs/project_3/filter.jpg" style="margin: 0;">
+                </div>
                 <p class="text">At this view every detail is shown to the user this means technical parameters and situation dependent requirements
                     depending on the selected filters.
                 </p>
-                <img src="./imgs/project_3/details.jpg">
+                <div class="section">
+                    <p class="text bold">Detail view of suites charging stations</p>
+                    <img src="./imgs/project_3/details.jpg" style="margin: 0;">
+                </div>
+                <p class="text">
+                    For our final pitch we developed a web based prototype to show working parts of the functionality.
+                </p>
             </div>
         </section>
         <footer>

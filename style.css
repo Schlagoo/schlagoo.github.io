@@ -416,22 +416,6 @@ PROJECT GRID AREA
     background-color: #ffffff;
 }
 
-.overlay-text {
-    position: absolute;
-    
-    bottom: 10%;
-    left: 10%;
-    
-    font-size: calc(1.2rem + 1.25vw);
-    opacity: 1;
-
-    color: #383838;
-    font-weight: 600;
-
-    margin: 0;
-}
-
-
 /*
 PROJECT AREA
 */
@@ -451,6 +435,8 @@ PROJECT AREA
 
 .project-text img {
     margin: 2.5vh 0;
+
+    border-radius: 5px;
 }
 
 /*
@@ -534,7 +520,7 @@ ABOUT AREA
 
 code {
     padding: 0.4rem;
-    background-color: #F2F2F2;
+    background-color: #F8F8F8;
     border-radius: 3px;
     font-size: 1.6rem;
 }

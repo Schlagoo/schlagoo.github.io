@@ -2,12 +2,14 @@
     <head>  
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400:500,600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link rel="stylesheet" href="./style.css"> 
-        <script type="text/javascript" src="./main.js"></script>   
+        <link rel="stylesheet" href="./style.css">
+        <script type="text/javascript" src="./main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <link rel="stylesheet" href="./code.css">
         <title>pascalschlaak - portfolio</title>       
     </head>
     <body>
@@ -47,24 +49,119 @@
                 </footer>              
             </div>
         </div>
-    <body>
+    <p>
         <section id="project-1">
             <div class="project-header">
                 <img src="./imgs/project_6/project_6_header.jpg" alt="UI">
             </div>
             <div class="container project-text">
-                <h1>Stock data analysis</h1>
+                <h1>Stock performance summary</h1>
                 <p class="text">Since I'm interested in stocks, I wanted to dive deeper into stock analysis.
                     My goal in this project was to build an stock visualization I can later automate, to send myself
                     daily summaries of stock performances.
                 </p>
                 <p class="text">Therefor I searched for an stock-data API, I can retrieve their
-                    values from the current day, week, ... I found the <strong>Alpha Vantage API</strong>, that was not deprecated and can
+                    values from the current day, week, ... I found the <code>Alpha Vantage API</code>, that was not deprecated and can
                     retrieve realtime stock data like: open, close, low, high. To send the plotted summary via e-mail I used
-                    the <strong>SMTP</strong> protocol to send data to my personal e-mail. For automation reasons, the <strong>Python</strong>
+                    the <code>SMTP</code> protocol to send data to my personal e-mail. 
+                </p>
+                <pre class="prettyprint text fact">
+                    <code class="lang-py">
+    # Define message content
+    msg = MIMEMultipart()
+    msg["Subject"] = "Daily summary stocks"
+    msg["From"] = "<sender>"
+    msg["To"] = "<receiver>"
+
+    # Append every plot to e-mail
+    for plot in plot_names:
+        # Read image of current plot
+        img_data = open(plot, "rb").read()
+        image = MIMEImage(img_data, name=os.path.basename(plot))
+        msg.attach(image)
+
+    # Open connection
+    s = smtplib.SMTP("smtp.gmail.com", 587)
+    s.ehlo()
+    # Secure connection
+    s.starttls()
+    s.ehlo()
+    s.login("<e-mail>", "<pw>")
+    s.sendmail(msg["From"], msg["To"], msg.as_string())
+    s.quit()
+
+    print("E-Mail sent!")</code>
+                </pre>
+                <p class="text">    
+                    For automation reasons, the <code>Python</code>
                     script will wait to plot and send data at 19:00 o'clock, when stock market is closing. To run by itself I built a 
-                    <strong>Docker</strong> image to run my script in a container instance. For visualizing data I used a so called
-                    candlestick graph to present all data in a compact way. In the following you can see generated plots of
+                    <code>Docker</code> image to run my script in a container instance. 
+                </p>
+                <pre class="prettyprint text fact">
+                    <code class="lang-xml">
+    # Create python image
+    FROM python:3
+    
+    # Set working directory
+    WORKDIR /usr/src/app
+    
+    # Copy requirements .txt-file
+    COPY requirements.txt ./
+    
+    # Install required python packages
+    RUN pip3 install --no-cache-dir -r requirements.txt
+    
+    # Copy files to current working directory
+    COPY . .
+    
+    # Run script
+    CMD [ "python3", "./stock_analysis.py" ]</code>
+                </pre>
+                <p class="text">    
+                    For visualizing data I used a so called
+                    candlestick graph to present all data in a compact way.
+                </p>
+                <pre class="prettyprint text fact">
+                    <code class="lang-py">
+    data_indexes = []
+    # Get date needed for saving plot to file
+    plot_date = str((current_data.index)[0])
+    # Parse timestamps
+    for i in current_data.index:
+        i = parser.parse(i)
+        data_indexes.append(mdates.date2num(i))
+
+    # Create plot
+    _, ax = plt.subplots()
+
+    # Create candlesticks from data
+    candlestick_ohlc(ax, zip(data_indexes, current_data["1. open"], current_data["2. high"], 
+    current_data["3. low"], current_data["4. close"]), width=1./(24*60)*3, colorup="g", 
+    colordown="r")
+
+    # Plot hours as x-ticks and autoscale
+    ax.xaxis_date()
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%H-%M"))
+    plt.autoscale()
+    # Add grid lines
+    plt.grid(b=True, axis="y", color="0.15", linewidth="0.1")
+    # Set axis labels and title
+    plt.xlabel("Time [hours]")
+    plt.ylabel("Stock price [USD]")
+    plt.title("Stock: " + stock_symbol)
+    
+    # Check if plot should be showed or saved
+    if save_plot == 0:
+        plt.show()
+    elif save_plot == 1:
+        plot_name = plot_date[0:10] + "_" + stock_symbol.lower() + ".png"
+        plt.savefig(plot_name, dpi=400)
+        plt.close()
+    else:
+        print("\nError: Wrong save_plot value! Should be 0 or 1 see help() of function!")</code>
+                </pre>
+                <p class="text">    
+                    In the following you can see generated plots of
                     Apple and Walt Disney on 30 July 2019.
                 </p>
                 <div class="grid">
