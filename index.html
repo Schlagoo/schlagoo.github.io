@@ -10,7 +10,7 @@
         <title>pascalschlaak - portfolio</title>       
     </head>
     <body>
-        <header>
+        <header style="position: absolute;">
             <div class="navbar">
                 <a href="./index.html" style="font-size: 2rem;"></a>
                 <div class="links" onclick="handle_menu()">
@@ -18,10 +18,12 @@
                 </div>
             </div>
         </header>
-        <div class="navbar-opened" id="menu">
+        <div class="navbar-opened" id="menu" style="display: none;">
+            <div class="blurred" onclick="handle_menu()"></div>
             <div class="menu">
                 <div class="fas fa-times fa-5x close-icon" onclick="handle_menu()" id="close-button"></div>
                 <p class="text-huge" style="color: #383838; margin: 10vh 5vw 5vh 5vw;">Menu</p>
+                <a href="./index.html"><p class="menu-text" onclick="handle_menu()">Home</p></a>
                 <a href="./index.html#projects"><p class="menu-text" onclick="handle_menu()">Projects</p></a>
                 <a href="./about.html"><p class="menu-text" style="margin-bottom: 15vh">About me</p></a>
                 <footer>
@@ -111,7 +113,7 @@
                         <h2 style="font-size: 2.4rem;">New York shooting incident data</h2>
                         <p class="description">
                             Functionality to discover shooting incident data
-                            reported by NYPD, extract interesting facts and visualize them.
+                            reported by NYPD and visualize interesting facts.
                         </p>
                         <div class="fas fa-arrow-right fa-3x continue"></div>
                     </div>
@@ -119,10 +121,10 @@
                 <a href="./project_6.html">
                     <div class="project border" id="project-6">     
                         <div><code class="topic">Data Analytics</code>&emsp;<code class="topic">Docker</code></div>
-                        <h2 style="font-size: 2.4rem;">Stock performance summary publisher</h2>
+                        <h2 style="font-size: 2.4rem;">Stock performance summary</h2>
                         <p class="description">
-                            Functionality to generate candlestick graphs of daily stock
-                            performances and publish via SMTP.                
+                            Functionality to generate candlestick graphs of stock
+                            performance and publish via SMTP.                
                         </p>
                         <div class="fas fa-arrow-right fa-3x continue"></div>
                     </div>

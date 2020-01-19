@@ -13,24 +13,40 @@
     <body>
         <header>
             <div class="navbar">
-                <a href="./index.html">pascalschlaak</a>
-                <div class="container-links">
-                    <a href="./index.html#break"><p class="links clicked">projects</p></a>
-                    <a href="./about.html"><p class="links">about</p></a>
-                    <a href="./project_1.html#contact"><p class="links">contact</p></a>
+                <a href="./index.html" style="font-size: 2rem;"></a>
+                <div class="links" onclick="handle_menu()">
+                    <div class="fas fa-bars fa-2x"></div>
                 </div>
-                <div class="mobile-header" id="hamburger" onclick="open_nav(this)">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
-            </div>
-            <div class="mobile-dropout" id="mobile-links">
-                <a href="./index.html#break" onclick="close_nav()">projects</a>
-                <a href="./about.html">about</a>
-                <a href="./project_1.html#contact">contact</a>
             </div>
         </header>
+        <div class="navbar-opened" id="menu" style="display: none;">
+            <div class="blurred" onclick="handle_menu()"></div>
+            <div class="menu">
+                <div class="fas fa-times fa-5x close-icon" onclick="handle_menu()" id="close-button"></div>
+                <p class="text-huge" style="color: #383838; margin: 10vh 5vw 5vh 5vw;">Menu</p>
+                <a href="./index.html"><p class="menu-text" onclick="handle_menu()">Home</p></a>
+                <a href="./index.html#projects"><p class="menu-text" onclick="handle_menu()">Projects</p></a>
+                <a href="./about.html"><p class="menu-text" style="margin-bottom: 15vh">About me</p></a>
+                <footer>
+                    <div class="fine-line" id="contact"></div>
+                    <div class="flex-row">
+                        <div id="row">
+                            <p class="text bold">SOCIAL MEDIA</p>
+                            <div style="display: flex; flex-direction: row">
+                                <div style="margin-right: 2.5vw;">
+                                    <a href="https://github.com/Schlagoo"><p class="text">Github</p></a>
+                                <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><p class="text">LinkedIn</p></a>
+                                </div>
+                                <div>
+                                    <a href="https://www.facebook.com/pascal.schlaak.65"><p class="text">Facebook</p></a>
+                                    <a href="https://www.instagram.com/schlagoo/"><p class="text">Instagram</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>              
+            </div>
+        </div>
     <body>
         <section id="project-1">
             <div class="project-header">
@@ -49,14 +65,36 @@
                 <img src="./imgs/project_1/user_experience.jpg">
             </div>
         </section>
-    <footer>
-            <a href="./imprint.html"><p>Imprint</p></a>
-            <a href="./privacy_policy.html"><p>Privacy policy</p></a>
-            <div class="split-line" id="contact"></div>
-            <a href="https://github.com/Schlagoo"><img src="./imgs/icons/github.png" alt="github" class="icons-footer"></a>
-            <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><img src="./imgs/icons/linkedin.png" alt="github" class="icons-footer"></a>
-            <a href="https://www.facebook.com/pascal.schlaak.65"><img src="./imgs/icons/facebook.png" alt="github" class="icons-footer"></a>
-            <a href="schlaak.pascal@gmail.com"><img src="./imgs/icons/email.png" alt="github" class="icons-footer"></a>
+        <footer>
+            <div class="fine-line" id="contact"></div>
+            <div class="flex-row">
+                <div id="row">
+                    <p class="text bold">LEGAL INFORMATION</p>
+                    <a href="./imprint.html"><p>Imprint</p></a>
+                    <a href="./privacy_policy.html"><p>Privacy policy</p></a>
+                </div>
+                <div id="row">
+                    <p class="text bold">SOCIAL MEDIA</p>
+                    <div style="display: flex; flex-direction: row">
+                        <div style="margin-right: 2.5vw;">
+                            <a href="https://github.com/Schlagoo"><p class="text">Github</p></a>
+                        <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><p class="text">LinkedIn</p></a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/pascal.schlaak.65"><p class="text">Facebook</p></a>
+                            <a href="https://www.instagram.com/schlagoo/"><p class="text">Instagram</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="row">
+                    <p class="text bold">CONTACT</p>
+                    <p class="text">
+                        I am happy about everyone who wants to get in contact with me. 
+                        You can reach me through my social media channels or via 
+                        <a href="schlaak.pascal@gmail.com">e-mail</a>.
+                    </p>                
+                </div>
+            </div>
         </footer>
     </body>
 </html>
