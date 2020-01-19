@@ -1,5 +1,6 @@
 html, body {    
     margin: 0;
+    max-width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 
@@ -13,10 +14,6 @@ html, body {
 
 a {
     text-decoration: none;
-    color: #383838;
-}
-
-a:hover {
     color: #383838;
 }
 
@@ -88,7 +85,6 @@ header {
 
 
 .navbar-opened {
-
     width: 100vw;
     height: 100vh;
 
@@ -328,7 +324,7 @@ PROJECT GRID AREA
 }
 
 #projects {
-    padding-top: 15vh;
+    padding: 15vh 0;
 }
 
 .project-grid {
@@ -405,15 +401,42 @@ PROJECT GRID AREA
     float: right;
 }
 
-.overlay {
+#about-me {
+    min-height: 50vh;
 
-    height: 100%;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
-    /* opacity: 0.5;
-    transition: .3s ease; */
+    margin: 0;
+    padding: 0 24vw;
 
-    background-color: #ffffff;
+    background-color: #F2F2F2;
+}
+
+#about-me h1 {
+    font-weight: 500;
+    color: #5f6368;
+}
+
+.forward-button {
+    width: auto;
+    height: auto;
+
+    padding: 0 1.25vw;
+    background-color: #2575fc;
+    border-radius: 5px;
+
+    transition: 0.1s ease;
+}
+
+.forward-button:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.forward-button a {
+    color: #ffffff;
 }
 
 /*
@@ -571,7 +594,11 @@ footer a {
 
 footer p {
     color: #5f6368;
-  }
+}
+
+footer p:hover {
+    color: #383838;
+}
 
 footer .fine-line {
     width: 100%;
@@ -590,7 +617,7 @@ footer .bold {
 }
 
 .flex-row #row {
-    width: 33%;
+    width: 32%;
 }
 
 /*
@@ -611,6 +638,10 @@ RESPONSIVE AREA
 
     .container {
         margin: 0 7.5vw 13vh 7.5vw;
+    }
+
+    #about-me {
+        padding: 5vh 7.5vw;
     }
 
     .container-text {
@@ -666,6 +697,21 @@ RESPONSIVE AREA
     .container-wide {
         height: auto;
         padding: 15vh 7.5vw 0 7.5vw;
+    }
+
+    .overflow-text {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+        font-size: 2.4rem;
+        margin: 0;
+
+        color: #ffffff;
+        background: url(./imgs/profile_picture.jpg) 0px -1000px no-repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .grid {
