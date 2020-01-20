@@ -529,6 +529,66 @@ ABOUT AREA
     word-spacing: 2rem;
 }
 
+#history {
+    width: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 15vh 0;
+}
+
+.timeline-container {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.timestamp {
+    width: 5vw;
+    height: auto;
+
+    text-align: right;
+}
+
+.timestamp p {
+    margin: 0;
+}
+
+.timeline {
+    width: 5px;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0 3vw;
+    padding-bottom: 15px;
+    align-self: stretch;
+
+    background-color: #DCDCDC;
+}
+
+.dot {
+    position: absolute;
+    transform: translate(-7.5px, 50%);
+
+    height: 20px; 
+    width: 20px;
+    border-radius: 50%;
+    
+    background-color: #DCDCDC;
+}
+
+.timeline-element {
+    width: 30vw;
+    height: auto;
+
+    padding: calc(1vw + 2vh);
+    margin: 2.5vh 0;
+}
+
 .bold {
     font-weight: 600; 
     padding: 0 0 3vh 0; 
@@ -737,6 +797,18 @@ RESPONSIVE AREA
 
     .about img {
         display: none;
+    }
+
+    .timestamp {
+        display: none;
+    }
+
+    .timeline-element {
+        width: 100%;
+    }
+
+    .timeline {
+        margin-left: 0;
     }
 
     footer {
