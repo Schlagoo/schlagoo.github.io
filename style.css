@@ -535,7 +535,7 @@ ABOUT AREA
     display: flex;
     flex-direction: column;
 
-    padding: 15vh 0;
+    margin-top: 15vh;
 }
 
 .timeline-container {
@@ -567,7 +567,7 @@ ABOUT AREA
     padding-bottom: 15px;
     align-self: stretch;
 
-    background-color: #DCDCDC;
+    background-color: #2575fc;
 }
 
 .dot {
@@ -578,11 +578,11 @@ ABOUT AREA
     width: 20px;
     border-radius: 50%;
     
-    background-color: #DCDCDC;
+    background-color: #2575fc;
 }
 
 .timeline-element {
-    width: 30vw;
+    width: 60%;
     height: auto;
 
     padding: calc(1vw + 2vh);
