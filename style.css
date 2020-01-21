@@ -159,7 +159,7 @@ header {
 }
 
 .close-icon:hover {
-    color: #2575fc;
+    color: #BEBEBE;
 }
 
 .menu-text {
@@ -169,15 +169,26 @@ header {
 
     letter-spacing: 0.2px;
 
-    margin: 0 5vw;
-    padding: 2vh 1.25vw;
+    padding-right: 1.25vw;
 
     transition: all 0.5s ease;
 }
 
-.menu-text:hover {
+.menu-icons:hover {
     background-color: #F2F2F2;
     border-radius: 5px;  
+}
+
+.menu-icons {
+    align-items: center;
+    margin: 0 5vw;
+}
+
+.menu-icons img {
+    width: 20px;
+    height: 20px;
+
+    padding: 0 20px 0 1.25vw;
 }
 
 /*
@@ -529,6 +540,36 @@ ABOUT AREA
     word-spacing: 2rem;
 }
 
+.about-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+#about-text {
+    margin: 0 2.5vw 0 0;
+    width: 85vw;
+}
+
+#profile-image {
+    text-align: right;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+
+    background-color: #DCDCDC;
+    border-radius: 5px;
+}
+
+.skill-level {
+    height: 100%;
+    width: 0;
+
+    background-color: #2575fc;
+    border-radius: 5px 0 0 5px;
+}
+
 #history {
     width: auto;
 
@@ -733,9 +774,9 @@ RESPONSIVE AREA
         font-size: 20px;
     }
 
-
     .menu .fine-line {
-        width: 90vw;   
+        width: 90vw; 
+        margin: 30px 0;  
     }
   
     .links a {
@@ -795,7 +836,11 @@ RESPONSIVE AREA
         margin: 80px 11.25vw 3.5vh 11.25vw;
     }
 
-    .about img {
+    #about-text {
+        width: 100%;
+    }
+
+    #profile-image {
         display: none;
     }
 

@@ -26,9 +26,24 @@
             <div class="menu">
                 <div class="fas fa-times fa-5x close-icon" onclick="handle_menu()" id="close-button"></div>
                 <p class="text-huge" style="color: #383838; margin: 10vh 5vw 5vh 5vw;">Menu</p>
-                <a href="./index.html"><p class="menu-text" onclick="handle_menu()">Home</p></a>
-                <a href="./index.html#projects"><p class="menu-text" onclick="handle_menu()">Projects</p></a>
-                <a href="./about.html"><p class="menu-text" style="margin-bottom: 15vh">About me</p></a>
+                <a href="./index.html">
+                    <div class="flex-row menu-icons">
+                        <img src="./imgs/icons/home.png" alt="Home">
+                        <p class="menu-text" onclick="handle_menu()">Home</p>
+                    </div>
+                </a>
+                <a href="./index.html#projects">
+                    <div class="flex-row menu-icons">
+                        <img src="./imgs/icons/project.png" alt="Projects">
+                        <p class="menu-text" onclick="handle_menu()">Projects</p>
+                    </div>
+                </a>
+                <a href="./about.html">
+                    <div class="flex-row menu-icons">
+                        <img src="./imgs/icons/about.png" alt="About">
+                        <p class="menu-text" onclick="handle_menu()">About me</p>
+                    </div>
+                </a>
                 <footer>
                     <div class="fine-line" id="contact"></div>
                     <div class="flex-row">
@@ -49,13 +64,11 @@
                 </footer>              
             </div>
         </div>
-        <section id="about">
-            <div class="container about about-margin">
-                    <p class="overflow-text">Hello! My name is Pascal Schlaak. I currently finished my bachelors thesis at BMW in munich.</p>
-                <img src="./imgs/profile_picture.jpg" alt="profile picture">
-            </div>
-            <div class="container text">
-                <p>After school I wanted to start study something in the field of computer science or design. 
+        <section class="container" id="about-myself" style="margin-top: 20vh;">
+            <h1>About me</h1>
+            <div class="about-flex">
+                <div class="text" id="about-text">
+                    After school I wanted to start study something in the field of computer science or design. 
                     Because of my inquisitive in new technologies I decided to sign up for a new course named 
                     "Internet of Things" at the University of Aalen. As the first vintage we started to shape our courses 
                     while working on innovative topics. In my fifth semester i had the chance to be an intern at Daimler AG 
@@ -64,17 +77,12 @@
                     topics and took another chance to work as an software developer intern at 
                     BMW Group in the field of machine learning and cloud computing, mainly building an infrastructure for an 
                     edge computing solution. Starting september i will continue working on this topic in my bachelor thesis.
-                </p>
-                <p class="text">I'm always into new topics and tools. In the following you can see some things I like!</p>
-                <p class="skills text">
-                    #python  #machine-learning  #cloud-computing  #edge-computing  #azure 
-                     #internet-of-things  #data-science #user-interface-design  #web-development  #django 
-                     #java #databases  #linux  #c<span style="color: #BEBEBE">[love-hate]</span>  #arduino
-                </p>
-                <p class="text">Feel free to contact me for exciting projects or to stay connected! You can find my social media profiles
-                    and e-mail in the footer of my website!
-                </p>
+                </div>
+                <div id="profile-image">
+                    <img src="./imgs/profile_picture_square.jpg" alt="profile picture" style="border-radius: 5px; width: 80%;">
+                </div>
             </div>
+            
         </section>
         <section class="container" id="skills">
             <div class="fine-line"></div>
@@ -84,9 +92,101 @@
                 my skills I'm passionate about as much as I can, be it in lectures at university or in
                 my free-time. Here are some skills I'm confident with.
             </p>
+            <div class="project-grid">
+                <div>
+                    <p class="text">Python</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">Java</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">C</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">Tensorflow</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">Pandas</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">Django</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">Docker</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">Cloud Computing</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">Edge Computing</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">JavaScript</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">HTML</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">CSS</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">SQL</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">Git</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text">Linux</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="container" id="history">
-            <div class="fine-line"></div>
+            <div class="fine-line" style="margin-top: 0;"></div>
             <h1>Resume</h1>
             <p class="text" style="margin-top: 0;">Have a look at some interesting points in my life. 
                 I am very interested in the automotive industry. 

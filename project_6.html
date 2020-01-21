@@ -26,9 +26,24 @@
             <div class="menu">
                 <div class="fas fa-times fa-5x close-icon" onclick="handle_menu()" id="close-button"></div>
                 <p class="text-huge" style="color: #383838; margin: 10vh 5vw 5vh 5vw;">Menu</p>
-                <a href="./index.html"><p class="menu-text" onclick="handle_menu()">Home</p></a>
-                <a href="./index.html#projects"><p class="menu-text" onclick="handle_menu()">Projects</p></a>
-                <a href="./about.html"><p class="menu-text" style="margin-bottom: 15vh">About me</p></a>
+                <a href="./index.html">
+                    <div class="flex-row menu-icons">
+                        <img src="./imgs/icons/home.png" alt="Home">
+                        <p class="menu-text" onclick="handle_menu()">Home</p>
+                    </div>
+                </a>
+                <a href="./index.html#projects">
+                    <div class="flex-row menu-icons">
+                        <img src="./imgs/icons/project.png" alt="Projects">
+                        <p class="menu-text" onclick="handle_menu()">Projects</p>
+                    </div>
+                </a>
+                <a href="./about.html">
+                    <div class="flex-row menu-icons">
+                        <img src="./imgs/icons/about.png" alt="About">
+                        <p class="menu-text" onclick="handle_menu()">About me</p>
+                    </div>
+                </a>
                 <footer>
                     <div class="fine-line" id="contact"></div>
                     <div class="flex-row">
@@ -49,7 +64,6 @@
                 </footer>              
             </div>
         </div>
-    <p>
         <section id="project-1">
             <div class="project-header">
                 <img src="./imgs/project_6/project_6_header.jpg" alt="UI">
