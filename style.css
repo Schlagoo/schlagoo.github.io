@@ -386,6 +386,7 @@ PROJECT GRID AREA
 .topic {
     font-size: 1.6rem;
     font-weight: 500;
+    line-height: 1.5;
 
     color: #5f6368;
 
@@ -802,12 +803,12 @@ RESPONSIVE AREA
          font-size: 20px;
     }
 
-    .project-header {
-        margin-top: 24px;
-    }
-
     .icon-grid {
         grid-template-columns: repeat(2, 2fr);
+    }
+
+    .icon-grid img {
+        height: 50px;
     }
 
     .icon {
@@ -840,6 +841,11 @@ RESPONSIVE AREA
 
     .project-grid {
         grid-template-columns: repeat(1, 3fr);
+        grid-gap: 20px;
+    }
+
+    .project {
+        padding: 30px;
     }
 
     .facts-grid {
@@ -869,10 +875,16 @@ RESPONSIVE AREA
 
     .timeline-element {
         width: 100%;
+        padding: 30px;
     }
 
     .timeline {
         margin-left: 0;
+        margin-right: 30px;
+    }
+
+    .forward-button {
+        padding: 0 10px;
     }
 
     footer {
