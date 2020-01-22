@@ -467,6 +467,10 @@ PROJECT AREA
     font-style: italic;
 }
 
+.project-text {
+    margin-top: 17.5vh;
+}
+
 .project-text img {
     margin: 2.5vh 0;
 
@@ -518,7 +522,7 @@ ABOUT AREA
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 4vw;
 
-    margin-top: 7.5vh;
+    margin-top: 10vh;
 }
 
 .icon-grid img {
@@ -758,6 +762,10 @@ RESPONSIVE AREA
 
     .container-text {
         margin: 0 7.5vw 7.5vh 7.5vw;
+    }
+
+    .project-text {
+        margin-top: 17.5vh;
     }
 }
 
