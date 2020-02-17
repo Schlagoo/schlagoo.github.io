@@ -1,0 +1,111 @@
+<html lang="en">
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style.css">
+        <script type="text/javascript" src="./main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <link rel="stylesheet" href="./code.css">
+        <title>pascalschlaak - portfolio</title>     
+        <link rel="icon" type="image/png" href="./imgs/icons/portfolio.png">      
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <a href="./index.html" style="font-size: 2rem;"></a>
+                <div class="links" onclick="handle_menu()">
+                    <div class="fas fa-bars fa-2x"></div>
+                </div>
+            </div>
+        </header>
+        <div class="navbar-opened" id="menu" style="display: none;">
+            <div class="blurred" onclick="handle_menu()"></div>
+            <div class="menu">
+                <div class="fas fa-times fa-5x close-icon" onclick="handle_menu()" id="close-button"></div>
+                <p class="text-huge" style="color: #383838; margin: 10vh 5vw 5vh 5vw;">Menu</p>
+                <a href="./index.html">
+                    <div class="flex-row menu-icons">
+                        <img src="./imgs/icons/home.png" alt="Home">
+                        <p class="menu-text" onclick="handle_menu()">Home</p>
+                    </div>
+                </a>
+                <a href="./index.html#projects">
+                    <div class="flex-row menu-icons">
+                        <img src="./imgs/icons/project.png" alt="Projects">
+                        <p class="menu-text" onclick="handle_menu()">Projects</p>
+                    </div>
+                </a>
+                <a href="./about.html">
+                    <div class="flex-row menu-icons">
+                        <img src="./imgs/icons/about.png" alt="About">
+                        <p class="menu-text" onclick="handle_menu()">About me</p>
+                    </div>
+                </a>
+                <footer>
+                    <div class="fine-line" id="contact"></div>
+                    <div class="flex-row">
+                        <div id="row">
+                            <p class="text bold">SOCIAL MEDIA</p>
+                            <div style="display: flex; flex-direction: row">
+                                <div style="margin-right: 2.5vw;">
+                                    <a href="https://github.com/Schlagoo"><p class="text">Github</p></a>
+                                <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><p class="text">LinkedIn</p></a>
+                                </div>
+                                <div>
+                                    <a href="https://www.facebook.com/pascal.schlaak.65"><p class="text">Facebook</p></a>
+                                    <a href="https://www.instagram.com/schlagoo/"><p class="text">Instagram</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>              
+            </div>
+        </div>
+    <body>
+        <section id="project-3">
+            <div class="container project-text" style="height: 100vh;">
+                <h1>Which dog breed are you?</h1>
+                <p class="text">I'm currently working on a project, where a user should be able to upload a picture of his face and receives one of 65 dog breeds which is the most similar to his face shape.
+                    Therefore I'm building a CNN to classify dog breeds by an own generated dataset inheriting around 12.000 images. I already designed and developed the user interface created with <code>Django</code> in <code>Python 3</code>, as well as the dataset and an simple CNN, which I'm going to improve next.
+                    You can view my current status by clicking the following link!
+                </p>
+                <a href="http://django-env.ehphrishcj.us-east-1.elasticbeanstalk.com" style="color: #2575fc;"><p class="text">Link to website</p></a>
+            </div>
+        </section>
+        <footer>
+            <div class="fine-line" id="contact"></div>
+            <div class="flex-row">
+                <div id="row">
+                    <p class="text bold">LEGAL INFORMATION</p>
+                    <a href="./imprint.html"><p>Imprint</p></a>
+                    <a href="./privacy_policy.html"><p>Privacy policy</p></a>
+                </div>
+                <div id="row">
+                    <p class="text bold">SOCIAL MEDIA</p>
+                    <div style="display: flex; flex-direction: row">
+                        <div style="margin-right: 2.5vw;">
+                            <a href="https://github.com/Schlagoo"><p class="text">Github</p></a>
+                        <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><p class="text">LinkedIn</p></a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/pascal.schlaak.65"><p class="text">Facebook</p></a>
+                            <a href="https://www.instagram.com/schlagoo/"><p class="text">Instagram</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="row">
+                    <p class="text bold">CONTACT</p>
+                    <p class="text">
+                        I am happy about everyone who wants to get in contact with me. 
+                        You can reach me through my social media channels or via 
+                        <a href="mailto:schlaak.pascal@gmail.com">e-mail</a>.
+                    </p>                
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
