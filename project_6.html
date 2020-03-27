@@ -6,79 +6,31 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css">
-        <script type="text/javascript" src="./main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>  
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
         <link rel="stylesheet" href="./code.css">
-        <title>pascalschlaak - portfolio</title>       
-        <link rel="icon" type="image/png" href="./imgs/icons/portfolio.png">    
+        <title>Pascal Schlaak | Portfolio</title>
+        <link rel="icon" type="image/png" href="./imgs/icons/logo_small.svg">
     </head>
     <body>
-        <header>
-            <div class="navbar">
-                <a href="./index.html" style="font-size: 2rem;"></a>
-                <div class="links" onclick="handle_menu()">
-                    <div class="fas fa-bars fa-2x"></div>
-                </div>
-            </div>
-        </header>
-        <div class="navbar-opened" id="menu" style="display: none;">
-            <div class="blurred" onclick="handle_menu()"></div>
-            <div class="menu">
-                <div class="fas fa-times fa-5x close-icon" onclick="handle_menu()" id="close-button"></div>
-                <p class="text-huge" style="color: #383838; margin: 10vh 5vw 5vh 5vw;">Menu</p>
-                <a href="./index.html">
-                    <div class="flex-row menu-icons">
-                        <img src="./imgs/icons/home.png" alt="Home">
-                        <p class="menu-text" onclick="handle_menu()">Home</p>
-                    </div>
-                </a>
-                <a href="./index.html#projects">
-                    <div class="flex-row menu-icons">
-                        <img src="./imgs/icons/project.png" alt="Projects">
-                        <p class="menu-text" onclick="handle_menu()">Projects</p>
-                    </div>
-                </a>
-                <a href="./about.html">
-                    <div class="flex-row menu-icons">
-                        <img src="./imgs/icons/about.png" alt="About">
-                        <p class="menu-text" onclick="handle_menu()">About me</p>
-                    </div>
-                </a>
-                <footer>
-                    <div class="fine-line" id="contact"></div>
-                    <div class="flex-row">
-                        <div id="row">
-                            <p class="text bold">SOCIAL MEDIA</p>
-                            <div style="display: flex; flex-direction: row">
-                                <div style="margin-right: 2.5vw;">
-                                    <a href="https://github.com/Schlagoo"><p class="text">Github</p></a>
-                                <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><p class="text">LinkedIn</p></a>
-                                </div>
-                                <div>
-                                    <a href="https://www.facebook.com/pascal.schlaak.65"><p class="text">Facebook</p></a>
-                                    <a href="https://www.instagram.com/schlagoo/"><p class="text">Instagram</p></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>              
-            </div>
-        </div>
-        <section id="project-6">
-            <div class="container project-text">
-                <h1>Stock performance summary</h1>
-                <p class="text">Since I'm interested in stocks, I wanted to dive deeper into stock analysis.
-                    My goal in this project was to build an stock visualization I can later automate, to send myself
-                    daily summaries of stock performances.
-                </p>
-                <p class="text">Therefor I searched for an stock-data API, I can retrieve their
-                    values from the current day, week, ... I found the <code>Alpha Vantage API</code>, that was not deprecated and can
-                    retrieve realtime stock data like: open, close, low, high. To send the plotted summary via e-mail I used
-                    the <code>SMTP</code> protocol to send data to my personal e-mail. 
-                </p>
-                <pre class="prettyprint text fact">
-                    <code class="lang-py">
+        <div id="app">
+            <navbar-normal></navbar-normal>
+            <navbar-small></navbar-small>
+            <section id="project-6">
+                <div class="container project-text">
+                    <h1>Stock performance summary</h1>
+                    <p class="text">Since I'm interested in stocks, I wanted to dive deeper into stock analysis.
+                        My goal in this project was to build an stock visualization I can later automate, to send myself
+                        daily summaries of stock performances.
+                    </p>
+                    <p class="text">Therefor I searched for an stock-data API, I can retrieve their
+                        values from the current day, week, ... I found the <code>Alpha Vantage API</code>, that was not deprecated and can
+                        retrieve realtime stock data like: open, close, low, high. To send the plotted summary via e-mail I used
+                        the <code>SMTP</code> protocol to send data to my personal e-mail. 
+                    </p>
+                    <pre class="prettyprint text fact">
+                        <code class="lang-py">
     # Define message content
     msg = MIMEMultipart()
     msg["Subject"] = "Daily summary stocks"
@@ -103,14 +55,14 @@
     s.quit()
 
     print("E-Mail sent!")</code>
-                </pre>
-                <p class="text">    
-                    For automation reasons, the <code>Python</code>
-                    script will wait to plot and send data at 19:00 o'clock, when stock market is closing. To run by itself I built a 
-                    <code>Docker</code> image to run my script in a container instance. 
-                </p>
-                <pre class="prettyprint text fact">
-                    <code class="lang-xml">
+                    </pre>
+                    <p class="text">    
+                        For automation reasons, the <code>Python</code>
+                        script will wait to plot and send data at 19:00 o'clock, when stock market is closing. To run by itself I built a 
+                        <code>Docker</code> image to run my script in a container instance. 
+                    </p>
+                    <pre class="prettyprint text fact">
+                        <code class="lang-xml">
     # Create python image
     FROM python:3
     
@@ -128,13 +80,13 @@
     
     # Run script
     CMD [ "python3", "./stock_analysis.py" ]</code>
-                </pre>
-                <p class="text">    
-                    For visualizing data I used a so called
-                    candlestick graph to present all data in a compact way.
-                </p>
-                <pre class="prettyprint text fact">
-                    <code class="lang-py">
+                    </pre>
+                    <p class="text">    
+                        For visualizing data I used a so called
+                        candlestick graph to present all data in a compact way.
+                    </p>
+                    <pre class="prettyprint text fact">
+                        <code class="lang-py">
     data_indexes = []
     # Get date needed for saving plot to file
     plot_date = str((current_data.index)[0])
@@ -171,48 +123,20 @@
         plt.close()
     else:
         print("\nError: Wrong save_plot value! Should be 0 or 1 see help() of function!")</code>
-                </pre>
-                <p class="text">    
-                    In the following you can see generated plots of
-                    Apple and Walt Disney on 30 July 2019.
-                </p>
-                <div class="grid">
-                    <img src="./imgs/project_6/example_plot_apple.png" alt="Example plot apple stock">
-                    <img src="./imgs/project_6/example_plot_disney.png" alt="Example plot walt disney stock">
-                </div>
-                <p class="text">You can find the complete code on my <a href="https://github.com/Schlagoo/stock_data_analysis" style="color: #0366d6">Github repository</a>!</p>
-            </div>
-        </section>
-        <footer>
-            <div class="fine-line" id="contact"></div>
-            <div class="flex-row">
-                <div id="row">
-                    <p class="text bold">LEGAL INFORMATION</p>
-                    <a href="./imprint.html"><p>Imprint</p></a>
-                    <a href="./privacy_policy.html"><p>Privacy policy</p></a>
-                </div>
-                <div id="row">
-                    <p class="text bold">SOCIAL MEDIA</p>
-                    <div style="display: flex; flex-direction: row">
-                        <div style="margin-right: 2.5vw;">
-                            <a href="https://github.com/Schlagoo"><p class="text">Github</p></a>
-                        <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><p class="text">LinkedIn</p></a>
-                        </div>
-                        <div>
-                            <a href="https://www.facebook.com/pascal.schlaak.65"><p class="text">Facebook</p></a>
-                            <a href="https://www.instagram.com/schlagoo/"><p class="text">Instagram</p></a>
-                        </div>
+                    </pre>
+                    <p class="text">    
+                        In the following you can see generated plots of
+                        Apple and Walt Disney on 30 July 2019.
+                    </p>
+                    <div class="grid">
+                        <img src="./imgs/project_6/example_plot_apple.png" alt="Example plot apple stock">
+                        <img src="./imgs/project_6/example_plot_disney.png" alt="Example plot walt disney stock">
                     </div>
+                    <p class="text">You can find the complete code on my <a href="https://github.com/Schlagoo/stock_data_analysis" style="color: #0366d6">Github repository</a>!</p>
                 </div>
-                <div id="row">
-                    <p class="text bold">CONTACT</p>
-                    <p class="text">
-                        I am happy about everyone who wants to get in contact with me. 
-                        You can reach me through my social media channels or via 
-                        <a href="mailto:schlaak.pascal@gmail.com">e-mail</a>.
-                    </p>                
-                </div>
-            </div>
-        </footer>
+            </section>
+            <footer-portfolio></footer-portfolio>
+        </div>
+        <script type="text/javascript" src="./main.js"></script>
     </body>
 </html>

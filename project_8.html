@@ -5,178 +5,103 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
-        <script type="text/javascript" src="./main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>>
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <script src="https://unpkg.com/aos@2.2/dist/aos.js"></script>
         <link rel="stylesheet" href="./code.css">
-        <title>pascalschlaak - portfolio</title>     
-        <link rel="icon" type="image/png" href="./imgs/icons/portfolio.png">      
+        <title>Pascal Schlaak | Portfolio</title>
+        <link rel="icon" type="image/png" href="./imgs/icons/logo_small.svg">        
     </head>
     <body>
-        <header>
-            <div class="navbar">
-                <a href="./index.html" style="font-size: 2rem;"></a>
-                <div class="links" onclick="handle_menu()">
-                    <div class="fas fa-bars fa-2x"></div>
-                </div>
-            </div>
-        </header>
-        <div class="navbar-opened" id="menu" style="display: none;">
-            <div class="blurred" onclick="handle_menu()"></div>
-            <div class="menu">
-                <div class="fas fa-times fa-5x close-icon" onclick="handle_menu()" id="close-button"></div>
-                <p class="text-huge" style="color: #383838; margin: 10vh 5vw 5vh 5vw;">Menu</p>
-                <a href="./index.html">
-                    <div class="flex-row menu-icons">
-                        <img src="./imgs/icons/home.png" alt="Home">
-                        <p class="menu-text" onclick="handle_menu()">Home</p>
-                    </div>
-                </a>
-                <a href="./index.html#projects">
-                    <div class="flex-row menu-icons">
-                        <img src="./imgs/icons/project.png" alt="Projects">
-                        <p class="menu-text" onclick="handle_menu()">Projects</p>
-                    </div>
-                </a>
-                <a href="./about.html">
-                    <div class="flex-row menu-icons">
-                        <img src="./imgs/icons/about.png" alt="About">
-                        <p class="menu-text" onclick="handle_menu()">About me</p>
-                    </div>
-                </a>
-                <footer>
-                    <div class="fine-line" id="contact"></div>
-                    <div class="flex-row">
-                        <div id="row">
-                            <p class="text bold">SOCIAL MEDIA</p>
-                            <div style="display: flex; flex-direction: row">
-                                <div style="margin-right: 2.5vw;">
-                                    <a href="https://github.com/Schlagoo"><p class="text">Github</p></a>
-                                <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><p class="text">LinkedIn</p></a>
-                                </div>
-                                <div>
-                                    <a href="https://www.facebook.com/pascal.schlaak.65"><p class="text">Facebook</p></a>
-                                    <a href="https://www.instagram.com/schlagoo/"><p class="text">Instagram</p></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>              
-            </div>
-        </div>
-    <body>
-        <section id="project-3">
-            <div class="container project-text">
-                <h1>Which dog breed are you?</h1>
-                <p class="text">
-                    At the beginning of 2020 I started another project in my freetime. I wanted to create a fullstack solution using some sort of machine learning algorithm.
-                    My final idea intherited a web interface an user should be able to upload selfies with which my algotihm predicts a dog breed most similar to the users facial features.
-                    Short: A user should be able to find out which dog breed they are most similar to.
-                </p>
-                <p class="text">
-                    Therefore I needed an architecture where a user can upload a picture through a web interace, I can predict uploaded pictures in a back-end solution and visualize results through a web interface back to the user.
-                </p>
-                <div class="border" style="padding: 0 20px;">
-                    <h4>Current status: <span style="color: #2575fc;">Offline</span></h4>
-                    <p class="text">Used up Amazon student credit for Elastic-Beanstalk service...</p>
-                </div>
-                <h2 style="padding-top: 2.5vh;"><span style="color: #DCDCDC;">#</span> Front-end</h2>
-                <p class="text">
-                    Since I gained much experience with <code>Django</code> in my time at BMW, I wanted to build my web interface with this framework in <code>Python</code>.
-                    I wanted to build a up to date, simple and responsive website a user should intuitively be able to use.
-                </p>
-                <img src="./imgs/project_8/whidobree_1.png" alt="Whidobree landing page" style="margin: 0;">
-                <p class="text">
-                    As you can see above, I designed this landing page quite minimalistic. A user should instantly see what this website is about and what he needs to do.
-                    To upload an picture I created a custom file form to read images and write them to the back-end storage for thurder processing.
-                </p>
-                <img src="./imgs/project_8/whidobree_2.png" alt="Whidobree landing page" style="margin: 0;">
-                <p class="text">
-                    After choosing a file, the user just needs to press start to initialize processing handled by back-end functionality.
-                </p>
-                <img src="./imgs/project_8/whidobree_3.png" alt="Whidobree landing page" style="margin: 0;">
-                <p class="text">
-                    After generating results, the user can see which dog breed he's most likely to by getting the breeds name, prediction accuracy of this breed as well as an example picture.
-                    If an user is not satisfied with its current results he can try to upload annother picture.
-                </p>
-                <h2 style="padding-top: 2.5vh;"><span style="color: #DCDCDC;">#</span> Back-end</h2>
-                <p class="text">
-                    To predict dog breeds by images I built a Convolutional neural network trained on an own generated dataset inheriting around 12.000 Bing-images of 65 different dog breeds.
-                    Due to this high number of dog breeds and some random pictures in Bings search history general performance is quite bad like expected (currently around 40% of test accuracy). I'm using <code>Tensorflow 2 (Keras)</code> as machine learning library in <code>Python</code>.
-                    I'm currently still working on the models architecture on Colab to try some new things I didn't do before.
-                </p>
-                <p class="text">
-                    General back-end functionality to predict the current image is quite simple. Back-end functionality will be triggered if an valid file (image) was uploaded through the file form.
-                </p>
-                <pre class="prettyprint text fact">
-                    <code class="lang-python">
-    # Resize image
-    processed_image = cv2.resize(image, (150, 150))
-    # Reshape image (needed for model input shape)
-    processed_image = np.array(processed_image).reshape(-1, 150, 150, 3)
-    # Convert data to float32
-    processed_image = np.array(processed_image, dtype=np.float32)
-    # Normalize data
-    processed_image /= 255
-    # Load model
-    model = load_model("media/model.h5")
-    # Predict current image
-    prediction = model.predict(processed_image)
-    # Get class and probability
-    index = np.argmax(prediction[0])
-    probability = round(float(prediction[0][index]), 2) * 100
-    # Get breed name
-    breed = CATEGORIES[index]</code>
-                </pre>
-                <p class="text">
-                    After generating prediction, probability and breed name the result page will be rendered and context filled with information.
-                </p>
-                <pre class="prettyprint text fact">
-                    <code class="lang-python">
-    context = {
-        "probability": probability,
-        "breed": breed,
-        ...
-        "image_path_dog": image_path_dog,
-    }
-
-    return HttpResponse(template_result.render(context, request))</code>
-                </pre>
-                <p class="text">
-                    I published my solution through Amazons Elastic-Beanstalk service using my student credit and free tier virtual machines which had just enough performance to process predictions.
-                </p>                
-            </div>
-        </section>
-        <footer>
-            <div class="fine-line" id="contact"></div>
-            <div class="flex-row">
-                <div id="row">
-                    <p class="text bold">LEGAL INFORMATION</p>
-                    <a href="./imprint.html"><p>Imprint</p></a>
-                    <a href="./privacy_policy.html"><p>Privacy policy</p></a>
-                </div>
-                <div id="row">
-                    <p class="text bold">SOCIAL MEDIA</p>
-                    <div style="display: flex; flex-direction: row">
-                        <div style="margin-right: 2.5vw;">
-                            <a href="https://github.com/Schlagoo"><p class="text">Github</p></a>
-                        <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><p class="text">LinkedIn</p></a>
-                        </div>
-                        <div>
-                            <a href="https://www.facebook.com/pascal.schlaak.65"><p class="text">Facebook</p></a>
-                            <a href="https://www.instagram.com/schlagoo/"><p class="text">Instagram</p></a>
-                        </div>
-                    </div>
-                </div>
-                <div id="row">
-                    <p class="text bold">CONTACT</p>
+        <div id="app">
+            <navbar-normal></navbar-normal>
+            <navbar-small></navbar-small>
+            <section id="project-3">
+                <div class="container project-text">
+                    <h1>Which dog breed are you?</h1>
                     <p class="text">
-                        I am happy about everyone who wants to get in contact with me. 
-                        You can reach me through my social media channels or via 
-                        <a href="mailto:schlaak.pascal@gmail.com">e-mail</a>.
+                        At the beginning of 2020 I started another project in my freetime. I wanted to create a fullstack solution using some sort of machine learning algorithm.
+                        My final idea intherited a web interface an user should be able to upload selfies with which my algotihm predicts a dog breed most similar to the users facial features.
+                        Short: A user should be able to find out which dog breed they are most similar to.
+                    </p>
+                    <p class="text">
+                        Therefore I needed an architecture where a user can upload a picture through a web interace, I can predict uploaded pictures in a back-end solution and visualize results through a web interface back to the user.
+                    </p>
+                    <div class="border" style="padding: 0 20px;">
+                        <h4>Current status: <span style="color: #2575fc;">Offline</span></h4>
+                        <p class="text">Used up Amazon student credit for Elastic-Beanstalk service...</p>
+                    </div>
+                    <h2 style="padding-top: 2.5vh;"><span style="color: #DCDCDC;">#</span> Front-end</h2>
+                    <p class="text">
+                        Since I gained much experience with <code>Django</code> in my time at BMW, I wanted to build my web interface with this framework in <code>Python</code>.
+                        I wanted to build a up to date, simple and responsive website a user should intuitively be able to use.
+                    </p>
+                    <img src="./imgs/project_8/whidobree_1.png" alt="Whidobree landing page" style="margin: 0;" data-aos="fade-up">
+                    <p class="text">
+                        As you can see above, I designed this landing page quite minimalistic. A user should instantly see what this website is about and what he needs to do.
+                        To upload an picture I created a custom file form to read images and write them to the back-end storage for thurder processing.
+                    </p>
+                    <img src="./imgs/project_8/whidobree_2.png" alt="Whidobree landing page" style="margin: 0;" data-aos="fade-up">
+                    <p class="text">
+                        After choosing a file, the user just needs to press start to initialize processing handled by back-end functionality.
+                    </p>
+                    <img src="./imgs/project_8/whidobree_3.png" alt="Whidobree landing page" style="margin: 0;" data-aos="fade-up">
+                    <p class="text">
+                        After generating results, the user can see which dog breed he's most likely to by getting the breeds name, prediction accuracy of this breed as well as an example picture.
+                        If an user is not satisfied with its current results he can try to upload annother picture.
+                    </p>
+                    <h2 style="padding-top: 2.5vh;"><span style="color: #DCDCDC;">#</span> Back-end</h2>
+                    <p class="text">
+                        To predict dog breeds by images I built a Convolutional neural network trained on an own generated dataset inheriting around 12.000 Bing-images of 65 different dog breeds.
+                        Due to this high number of dog breeds and some random pictures in Bings search history general performance is quite bad like expected (currently around 40% of test accuracy). I'm using <code>Tensorflow 2 (Keras)</code> as machine learning library in <code>Python</code>.
+                        I'm currently still working on the models architecture on Colab to try some new things I didn't do before.
+                    </p>
+                    <p class="text">
+                        General back-end functionality to predict the current image is quite simple. Back-end functionality will be triggered if an valid file (image) was uploaded through the file form.
+                    </p>
+                    <pre class="prettyprint text fact">
+                        <code class="lang-python">
+        # Resize image
+        processed_image = cv2.resize(image, (150, 150))
+        # Reshape image (needed for model input shape)
+        processed_image = np.array(processed_image).reshape(-1, 150, 150, 3)
+        # Convert data to float32
+        processed_image = np.array(processed_image, dtype=np.float32)
+        # Normalize data
+        processed_image /= 255
+        # Load model
+        model = load_model("media/model.h5")
+        # Predict current image
+        prediction = model.predict(processed_image)
+        # Get class and probability
+        index = np.argmax(prediction[0])
+        probability = round(float(prediction[0][index]), 2) * 100
+        # Get breed name
+        breed = CATEGORIES[index]</code>
+                    </pre>
+                    <p class="text">
+                        After generating prediction, probability and breed name the result page will be rendered and context filled with information.
+                    </p>
+                    <pre class="prettyprint text fact">
+                        <code class="lang-python">
+        context = {
+            "probability": probability,
+            "breed": breed,
+            ...
+            "image_path_dog": image_path_dog,
+        }
+
+        return HttpResponse(template_result.render(context, request))</code>
+                    </pre>
+                    <p class="text">
+                        I published my solution through Amazons Elastic-Beanstalk service using my student credit and free tier virtual machines which had just enough performance to process predictions.
                     </p>                
                 </div>
-            </div>
-        </footer>
+            </section>
+            <footer-portfolio></footer-portfolio>
+        </div>
+        <script type="text/javascript" src="./main.js"></script>
     </body>
 </html>

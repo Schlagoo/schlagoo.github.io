@@ -3,140 +3,64 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css"> 
-        <script type="text/javascript" src="./main.js"></script>     
-        <title>pascalschlaak - portfolio</title>   
-        <link rel="icon" type="image/png" href="./imgs/icons/portfolio.png">        
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <title>Pascal Schlaak | Portfolio</title>
+        <link rel="icon" type="image/png" href="./imgs/icons/logo_small.svg">      
     </head>
     <body>
-        <header>
-            <div class="navbar">
-                <a href="./index.html" style="font-size: 2rem;"></a>
-                <div class="links" onclick="handle_menu()">
-                    <div class="fas fa-bars fa-2x"></div>
+        <div id="app">
+            <navbar-normal></navbar-normal>
+            <navbar-small></navbar-small>
+            <section id="imprint">
+                <div class="container" style="padding-top:20vh">
+                    <h2>Imprint </h2>
+                    <h4>Data according to &sect; 5 TMG</h4>
+                    <p class="text">Pascal Schlaak<br />
+                        Egaustraße 9<br />
+                        73432 Aalen
+                    </p>
+                    <h4>Contact</h4>
+                    <p class="text">Telephone: +491632599606<br />
+                        E-mail: schlaak.pascal@gmail.com
+                    </p>
+                    <h4>Liability for content </h4>
+                    <p class="text">As a service provider, we are responsible for our own content on these pages in accordance with the general laws
+                        pursuant to &sect; 7 para.1 TMG. According to &sect;&sect; 8 to 10 TMG, however, we as a service provider are
+                        not obliged to monitor transmitted or stored third-party information or to search for circumstances that
+                        indicate illegal activity.
+                    </p>
+                    <p class="text"> Obligations to remove or block the use of information according to the general laws remain unaffected. A
+                        liability in this respect is only possible from the time of knowledge of a concrete violation of the law. As
+                        soon as we become aware of such legal infringements, we will remove these contents immediately.
+                    </p>
+                    <h4>Liability for links</h4>
+                    <p class="text">Our offer contains links to external websites of third parties over whose contents we have no influence.
+                        Therefore, we cannot accept any liability for these external contents. The respective provider or operator of
+                        the pages is always responsible for the contents of the linked pages. The linked pages were checked for possible
+                        legal violations at the time of linking. Illegal contents were not recognisable at the time of linking.
+                    </p>
+                    <p class="text">A permanent control of the contents of the linked pages is, however, not reasonable without concrete evidence of
+                        an infringement. If we become aware of any legal infringements, we will remove such links immediately.
+                    </p>
+                    <h4>Copyright</h4>
+                    <p class="text">The content and works on these pages created by the site operators are subject to German copyright law. The
+                        reproduction, processing, distribution and any kind of exploitation outside the limits of copyright law require
+                        the written consent of the respective author or creator. Downloads and copies of this website are only permitted
+                        for private, non-commercial use. If the contents of this website have not been created by the operator, the
+                        copyrights of third parties are respected. In particular, contents of third parties are marked as such. Should
+                        you nevertheless become aware of a copyright infringement, please inform us accordingly. As soon as we become
+                        aware of any legal infringements, we will remove such content immediately.
+                    </p>
+                    <a href="https://www.e-recht24.de/impressum-generator.html">
+                        <p class="text" style="color: #BEBEBE">e-recht24</p>
+                    </a>
                 </div>
-            </div>
-        </header>
-        <div class="navbar-opened" id="menu" style="display: none;">
-            <div class="blurred" onclick="handle_menu()"></div>
-            <div class="menu">
-                <div class="fas fa-times fa-5x close-icon" onclick="handle_menu()" id="close-button"></div>
-                <p class="text-huge" style="color: #383838; margin: 10vh 5vw 5vh 5vw;">Menu</p>
-                <a href="./index.html">
-                    <div class="flex-row menu-icons">
-                        <img src="./imgs/icons/home.png" alt="Home">
-                        <p class="menu-text" onclick="handle_menu()">Home</p>
-                    </div>
-                </a>
-                <a href="./index.html#projects">
-                    <div class="flex-row menu-icons">
-                        <img src="./imgs/icons/project.png" alt="Projects">
-                        <p class="menu-text" onclick="handle_menu()">Projects</p>
-                    </div>
-                </a>
-                <a href="./about.html">
-                    <div class="flex-row menu-icons">
-                        <img src="./imgs/icons/about.png" alt="About">
-                        <p class="menu-text" onclick="handle_menu()">About me</p>
-                    </div>
-                </a>
-                <footer>
-                    <div class="fine-line" id="contact"></div>
-                    <div class="flex-row">
-                        <div id="row">
-                            <p class="text bold">SOCIAL MEDIA</p>
-                            <div style="display: flex; flex-direction: row">
-                                <div style="margin-right: 2.5vw;">
-                                    <a href="https://github.com/Schlagoo"><p class="text">Github</p></a>
-                                <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><p class="text">LinkedIn</p></a>
-                                </div>
-                                <div>
-                                    <a href="https://www.facebook.com/pascal.schlaak.65"><p class="text">Facebook</p></a>
-                                    <a href="https://www.instagram.com/schlagoo/"><p class="text">Instagram</p></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>              
-            </div>
+            </section>
+            <footer-portfolio></footer-portfolio>
         </div>
-        <section id="imprint">
-            <div class="container" style="margin-top:20vh">
-                <h2>Imprint </h2>
-                <h4>Data according to &sect; 5 TMG</h4>
-                <p class="text">Pascal Schlaak<br />
-                    Egaustraße 9<br />
-                    73432 Aalen
-                </p>
-                <h4>Contact</h4>
-                <p class="text">Telephone: +491632599606<br />
-                    E-mail: schlaak.pascal@gmail.com
-                </p>
-                <h4>Liability for content </h4>
-                <p class="text">As a service provider, we are responsible for our own content on these pages in accordance with the general laws
-                    pursuant to &sect; 7 para.1 TMG. According to &sect;&sect; 8 to 10 TMG, however, we as a service provider are
-                    not obliged to monitor transmitted or stored third-party information or to search for circumstances that
-                    indicate illegal activity.
-                </p>
-                <p class="text"> Obligations to remove or block the use of information according to the general laws remain unaffected. A
-                    liability in this respect is only possible from the time of knowledge of a concrete violation of the law. As
-                    soon as we become aware of such legal infringements, we will remove these contents immediately.
-                </p>
-                <h4>Liability for links</h4>
-                <p class="text">Our offer contains links to external websites of third parties over whose contents we have no influence.
-                    Therefore, we cannot accept any liability for these external contents. The respective provider or operator of
-                    the pages is always responsible for the contents of the linked pages. The linked pages were checked for possible
-                    legal violations at the time of linking. Illegal contents were not recognisable at the time of linking.
-                </p>
-                <p class="text">A permanent control of the contents of the linked pages is, however, not reasonable without concrete evidence of
-                    an infringement. If we become aware of any legal infringements, we will remove such links immediately.
-                </p>
-                <h4>Copyright</h4>
-                <p class="text">The content and works on these pages created by the site operators are subject to German copyright law. The
-                    reproduction, processing, distribution and any kind of exploitation outside the limits of copyright law require
-                    the written consent of the respective author or creator. Downloads and copies of this website are only permitted
-                    for private, non-commercial use. If the contents of this website have not been created by the operator, the
-                    copyrights of third parties are respected. In particular, contents of third parties are marked as such. Should
-                    you nevertheless become aware of a copyright infringement, please inform us accordingly. As soon as we become
-                    aware of any legal infringements, we will remove such content immediately.
-                </p>
-                <a href="https://www.e-recht24.de/impressum-generator.html">
-                    <p class="text" style="color: #BEBEBE">e-recht24</p>
-                </a>
-            </div>
-        </section>
-        <footer>
-            <div class="fine-line" id="contact"></div>
-            <div class="flex-row">
-                <div id="row">
-                    <p class="text bold">LEGAL INFORMATION</p>
-                    <a href="./imprint.html"><p>Imprint</p></a>
-                    <a href="./privacy_policy.html"><p>Privacy policy</p></a>
-                </div>
-                <div id="row">
-                    <p class="text bold">SOCIAL MEDIA</p>
-                    <div style="display: flex; flex-direction: row">
-                        <div style="margin-right: 2.5vw;">
-                            <a href="https://github.com/Schlagoo"><p class="text">Github</p></a>
-                        <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><p class="text">LinkedIn</p></a>
-                        </div>
-                        <div>
-                            <a href="https://www.facebook.com/pascal.schlaak.65"><p class="text">Facebook</p></a>
-                            <a href="https://www.instagram.com/schlagoo/"><p class="text">Instagram</p></a>
-                        </div>
-                    </div>
-                </div>
-                <div id="row">
-                    <p class="text bold">CONTACT</p>
-                    <p class="text">
-                        I am happy about everyone who wants to get in contact with me. 
-                        You can reach me through my social media channels or via 
-                        <a href="mailto:schlaak.pascal@gmail.com">e-mail</a>.
-                    </p>                
-                </div>
-            </div>
-        </footer>
+        <script type="text/javascript" src="./main.js"></script>
     </body>
 </html>
