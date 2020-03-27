@@ -4,7 +4,7 @@
     border: 0 !important;
   }
 
-  .prettyprint * {
+.prettyprint * {
     background-color: #f8f8f8;
   }
   
@@ -121,4 +121,12 @@
       color: #900;
     }
   }
+
+@media screen and (max-width: 1200px) {
+    
+  pre.prettyprint {
+    overflow-y: scroll;
+    width: 90vw;
+  }
   
+} 
