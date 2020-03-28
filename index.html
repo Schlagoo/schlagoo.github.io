@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sen:800" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -17,23 +17,21 @@
             <navbar-normal></navbar-normal>
             <navbar-small></navbar-small>
             <section id="hello-world" class="container-wide">
-                <div class="helloWorld-text" data-aos="fade-right">
+                <div class="helloWorld-text">
                     <p class="text-huge">Hello World!</p>
                     <p class="text">
-                        My name is Pascal. I am a student at the University of Applied Sciences in Aalen, just starting my master studies
+                        My name is Pascal. I'm a student at the University of Applied Sciences in Aalen, just starting my master studies
                          in Machine Learning and Data Analytics. Feel free to have a look at my projects below and connect with me!
                     </p>
                     <div class="flex" id="contact-icons-start">
-                        <a href="https://github.com/Schlagoo"><img src="./imgs/icons/contact/github_light.png" alt="Github" id="icon-contact"></a>
-                        <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><img src="./imgs/icons/contact/linkedin_light.png" alt="LinkedIn" id="icon-contact"></a>
-                        <a href="https://www.instagram.com/schlagoo/"><img src="./imgs/icons/contact/instagram_light.png" alt="Instagram" id="icon-contact"></a>
-                        <a href="https://www.facebook.com/pascal.schlaak.65"><img src="./imgs/icons/contact/facebook_light.png" alt="Facebook" id="icon-contact"></a>
-                        <a href="mailto:schlaak.pascal@gmail.com"><img src="./imgs/icons/contact/email_light.png" alt="E-Mail" id="icon-contact"></a>
+                        <a href="https://github.com/Schlagoo"><div class="icon-contact" id="icon-github"></div></a>
+                        <a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><div class="icon-contact" id="icon-linkedin"></div></a>
+                        <a href="mailto:schlaak.pascal@gmail.com"><div class="icon-contact" id="icon-email"></div></a>
+                        <a href="https://www.instagram.com/schlagoo/"><div class="icon-contact" id="icon-instagram"></div></a>
+                        <a href="https://www.facebook.com/pascal.schlaak.65"><div class="icon-contact" id="icon-facebook"></div></a>
                     </div>
                 </div>
-                <div id="code">
-                    <img src="./imgs/background_coding.svg">
-                </div>
+                <div id="background"><img src="./imgs/background_coding.svg"></div>
                 <div id="clouds" data-aos="fade-right" data-aos-delay="100"><img src="./imgs/cloud.svg" id="cloud-1"></div>
                 <div id="clouds" data-aos="fade-down" data-aos-delay="250"><img src="./imgs/cloud.svg" id="cloud-2"></div>
                 <div id="clouds" data-aos="fade-left" data-aos-delay="400"><img src="./imgs/cloud.svg" id="cloud-3"></div>
@@ -58,7 +56,7 @@
                                 During my time at BMW, I was involved in the development of an architecture for predicting welding defects in the production of electric drives.
                             </p>
                         </div>
-                        <div class="icon flex flex-center">
+                        <div class="icon-interest flex flex-center">
                             <img src="./imgs/icons/interests/machine_learning.svg" alt="Machine Learning">
                         </div>
                     </div>
@@ -66,7 +64,7 @@
                 <div id="interest-da"  data-aos="fade-up-left">
                     <img src="./imgs/dots.png" id="dots" style="right:0; transform: translate(0, -25px);">
                     <div class="grid onexthree shadow radius">
-                        <div class="icon flex flex-center">
+                        <div class="icon-interest flex flex-center">
                             <img src="./imgs/icons/interests/data_analytics.svg" alt="Data Analytics">
                         </div>
                         <div class="twocolumns-second">
@@ -88,7 +86,7 @@
                                 I like to use centralized approaches to processing logic, especially when working on innovative projects.
                             </p>
                         </div>
-                        <div class="icon flex flex-center">
+                        <div class="icon-interest flex flex-center">
                             <img src="./imgs/icons/interests/cloud_computing.svg" alt="Cloud Computing">
                         </div>
                     </div>
@@ -96,7 +94,7 @@
                 <div  id="interest-wd" data-aos="fade-up-left">
                     <img src="./imgs/dots.png" id="dots" style="right:0; transform: translate(0, -25px);">
                     <div class="grid onexthree shadow radius">
-                        <div class="icon flex flex-center">
+                        <div class="icon-interest flex flex-center">
                             <img src="./imgs/icons/interests/web_development.svg" alt="Web Development">
                         </div>
                         <div class="twocolumns-second">
@@ -122,7 +120,7 @@
                 <div class="project-grid" data-aos="fade-up">
                     <a href="./project_9.html">
                         <div class="project" id="project-7">
-                            <div><code class="topic">Web</code></div>
+                            <div><code class="topic">JavaScript</code>&emsp;<code class="topic">Vue.js</code></div>
                             <h2 style="font-size: 2.4rem;">Web-based quiz during COVID-19 quarantine</h2>
                             <p class="description">Since I can't meet my friends through COVID-19, I developed a web-based quiz to entertain over the Internet.</p>
                             <div class="fas fa-arrow-right fa-3x continue"></div>
@@ -130,7 +128,7 @@
                     </a>
                     <a href="./project_8.html" data-aos="fade-up" data-aos-delay="100">
                         <div class="project" id="project-7">
-                            <div><code class="topic">Web</code>&emsp;<code class="topic">Machine Learning</code></div>
+                            <div><code class="topic">Django</code>&emsp;<code class="topic">Keras</code>&emsp;<code class="topic">Python</code>&emsp;<code class="topic">AWS</code></div>
                             <h2 style="font-size: 2.4rem;">ML Web App: Which dog breed are you?</h2>
                             <p class="description">Django web app for predicting the most similar dog breed of a human based on image data.</p>
                             <div class="fas fa-arrow-right fa-3x continue"></div>
@@ -138,7 +136,7 @@
                     </a>
                     <a href="./project_7.html" data-aos="fade-up" data-aos-delay="200">
                         <div class="project" id="project-7">
-                            <div><code class="topic">Data Analytics</code>&emsp;<code class="topic">Pandas</code></div>
+                            <div><code class="topic">Pandas</code>&emsp;<code class="topic">Matplotlib</code>&emsp;<code class="topic">Python</code>&emsp;<code class="topic">Chart.js</code></div>
                             <h2 style="font-size: 2.4rem;">Visualizing NY shooting incident data</h2>
                             <p class="description">Analysis and visualization of gunfights in New York published by NYPD with Pandas in Python.</p>
                             <div class="fas fa-arrow-right fa-3x continue"></div>
@@ -146,7 +144,7 @@
                     </a>
                     <a href="./project_6.html" data-aos="fade-up">
                         <div class="project" id="project-6">
-                            <div><code class="topic">Data Analytics</code>&emsp;<code class="topic">Docker</code></div>
+                            <div><code class="topic">Alpha Vantage API</code>&emsp;<code class="topic">Matplotlib</code>&emsp;<code class="topic">Python</code>&emsp;<code class="topic">Docker</code></div>
                             <h2 style="font-size: 2.4rem;">Stock performance summary automation</h2>
                             <p class="description">Automated query, generation and publication of candlestick graphs of stock performances.</p>
                             <div class="fas fa-arrow-right fa-3x continue"></div>
@@ -154,7 +152,7 @@
                     </a>
                     <a href="./project_5.html" data-aos="fade-up" data-aos-delay="100">
                         <div class="project" id="project-5">
-                            <div><code class="topic">Data Analytics</code>&emsp;<code class="topic">Python</code></div>
+                            <div><code class="topic">Matplotlib</code>&emsp;<code class="topic">Python</code>&emsp;<code class="topic">Chart.js</code></div>
                             <h2 style="font-size: 2.4rem;">WhatsApp chat history analysis & visualization</h2>
                             <p class="description">Visualize WhatsApp group chat activity by analyzing exported chat histories in Python.</p>
                             <div class="fas fa-arrow-right fa-3x continue"></div>
@@ -162,7 +160,7 @@
                     </a>
                     <a href="https://github.com/Schlagoo/keras_convnet_cifar100_fruits" data-aos="fade-up" data-aos-delay="200">
                         <div class="project" id="project-4">
-                            <div><code class="topic">Machine Learning</code>&emsp;<code class="topic">Keras</code></div>
+                            <div><code class="topic">Keras</code>&emsp;<code class="topic">Python</code></div>
                             <h2 style="font-size: 2.4rem;">CNN Classifier for prediction of fruit labels</h2>
                             <p class="description">Convolutional Neural Network for detection and prediction of fruits of the CIFAR-100 data set. </p>
                             <div class="fas fa-arrow-right fa-3x continue"></div>
@@ -170,7 +168,7 @@
                     </a>
                     <a href="./project_3.html" data-aos="fade-up">
                         <div class="project" id="project-3">
-                            <div><code class="topic">Visual Design</code>&emsp;<code class="topic">Adobe CC</code></div>
+                            <div><code class="topic">jQuery</code>&emsp;<code class="topic">JavaScript</code>&emsp;<code class="topic">Adobe CC</code></div>
                             <h2 style="font-size: 2.4rem;">Charging station head unit interface</h2>
                             <p class="description">Head unit interface for selecting suitable electrical charging stations based on personal circumstances.</p>
                             <div class="fas fa-arrow-right fa-3x continue"></div>
@@ -178,7 +176,7 @@
                     </a>
                     <a href="./project_2.html" data-aos="fade-up" data-aos-delay="100">
                         <div class="project" id="project-2">
-                            <div><code class="topic">Data Visualization</code>&emsp;<code class="topic">Web</code></div>
+                            <div><code class="topic">GSAP</code>&emsp;<code class="topic">JavaScript</code>&emsp;<code class="topic">Adobe CC</code></div>
                             <h2 style="font-size: 2.4rem;">Visualization of container ship pollution</h2>
                             <p class="description">Visualization of the pollution of container ships and comparison with other means of transport.</p>
                             <div class="fas fa-arrow-right fa-3x continue"></div>
@@ -186,7 +184,7 @@
                     </a>
                     <a href="./project_1.html" data-aos="fade-up" data-aos-delay="200">
                         <div class="project" id="project-1">
-                            <div><code class="topic">User Experience</code>&emsp;<code class="topic">Adobe CC</code></div>
+                            <div><code class="topic">Adobe CC</code></div>
                             <h2 style="font-size: 2.4rem;">GoPro pairing setup user experience</h2>
                             <p class="description">Documentation and visualization of the user experience when pairing a GoPro with a smartphone.</p>
                             <div class="fas fa-arrow-right fa-3x continue"></div>
@@ -194,7 +192,7 @@
                     </a>
                 </div>
             </section>
-            <div class="fine-line" style="margin: 0 20vw;"></div>
+            <div class="fine-line"></div>
             <section class="container" id="about-me">
                 <h1 style="margin-top: 0;">You want to know more about me?</h1>
                 <a href="./about.html" class="button"><p class="text" style="margin: 0;">Click here</p></a>

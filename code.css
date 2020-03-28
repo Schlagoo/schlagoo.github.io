@@ -8,6 +8,9 @@
     background-color: #f8f8f8;
   }
   
+pre.prettyprint {
+  width: 100%;
+}
   
 .pln {
     color: #333;
@@ -125,8 +128,8 @@
 @media screen and (max-width: 1200px) {
     
   pre.prettyprint {
-    overflow-y: scroll;
     width: 90vw;
+    overflow-x: scroll;
   }
   
 } 
