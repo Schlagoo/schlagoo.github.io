@@ -29,3 +29,24 @@ function handle_menu() {
 }
 
 AOS.init();
+
+function show_description(idx) {
+    
+  /**
+  * Function to show description of clicked job
+  * idx = name of clicked element
+  */
+
+  var elements = ["in-outdoorshop", "master", "bachelor", "bmw", "daimler", "mapal", "cadflex", "abitur", "forum"];
+
+  // Set color to standard and remove all description-elements
+  for (var i = 0; i < elements.length; i++) {
+    document.getElementById(elements[i]).style.color = "#5f6368";
+    document.getElementById('description-' + elements[i]).style.display = "none";
+  }
+
+  // Highlight element in work-history and display description
+  document.getElementById(idx).style.color = "#2F58F7";
+  document.getElementById('description-' + idx).style.display = "block";
+  
+}

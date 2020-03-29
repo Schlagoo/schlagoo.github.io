@@ -285,6 +285,13 @@ code {
     justify-content: flex-start;
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .flex {
     display: flex;
     align-items: center;
@@ -321,6 +328,10 @@ code {
     width: 25vw;
 }
 
+.helloWorld-text h1 {
+    margin: 0 0 0.5em;
+}
+
 #contact-icons-start {
     margin: 40px 0 0 0;
 }
@@ -334,8 +345,6 @@ code {
     font-size: calc(3.2rem + 2.25vw);
     font-weight: 800;
 
-    margin: 0 0 0.5em;
-
     background-image: linear-gradient(90deg, #31B1E7 0%, #268CF5 35%, #2F58F7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -344,12 +353,6 @@ code {
 .icon-contact {
     width: 30px;
     height: 30px;
-    /* margin-top: 5px; */
-    transition: 0.3s ease-in-out;
-}
-
-.icon-contact:hover {
-    transform: translate(0, -5px);
 }
 
 #icon-github {
@@ -578,7 +581,7 @@ PROJECT GRID AREA
 
     color: #5f6368;
 
-    margin-top: 0;
+    margin: 0 10px 0 0;
 }
 
 .description {
@@ -665,7 +668,7 @@ ABOUT AREA
     left: 0;
     width: 0;
     height: 100%;
-    background: #1074e7;
+    background: linear-gradient(90deg, #31B1E7 0%, #268CF5 35%, #2F58F7 100%);;
     color: #ffffff;
     transition: all .35s ease-in-out;
   }
@@ -887,6 +890,63 @@ ABOUT AREA
     padding: 2vw 2.5vw;
 }
 
+#work {
+    padding-top: 15vh;
+}
+
+#work-history {
+    margin: 0 25px 25px 0;
+}
+
+#work-history p:hover {
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+    color: #2F58F7;
+}
+
+#work-description div h2 {
+    margin: 0;
+    font-size: 2.4rem;
+}
+
+.bullet-point {
+    color: #2575fc;
+}
+
+
+#work-description div:not(#description-in-outdoorshop) {
+    display: none;
+    padding: 50px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+#description-in-outdoorshop {
+    display: block;
+    padding: 50px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+#in-outdoorshop {
+    color: #2F58F7;
+}
+
+li {
+    padding: 0.5em;
+}
+
+li span {
+    padding-top: 0.125em;
+}
+
+.light {
+    color: #BEBEBE;
+    padding-right: 15px;
+}
+
+.flex-column .fine-line {
+    width: 100%;
+}
+
 /*
 FOOTER AREA
 */
@@ -1032,6 +1092,10 @@ RESPONSIVE AREA
         display: none;
     }
 
+    .twocolumns-second {
+        grid-column-start: 1;
+    }
+
     .facts-grid {
         grid-template-columns: repeat(1, 3fr);
     }
@@ -1061,6 +1125,30 @@ RESPONSIVE AREA
     .timeline {
         margin-left: 0;
         margin-right: 30px;
+    }
+
+    #work-history {
+        margin-right: 0;
+        border-bottom: 1px solid #DCDCDC;
+    }
+
+    #work-history p {
+        padding: 0 10px;
+        white-space: nowrap;
+    }
+
+
+    #description-in-outdoorshop, #work-description div:not(#description-in-outdoorshop) {
+        padding: 25px;
+    }
+
+    .flex-column {
+        flex-direction: row;
+        overflow-x: scroll;
+    }
+
+    .flex-column .fine-line {
+        display: none;
     }
 
     .forward-button {

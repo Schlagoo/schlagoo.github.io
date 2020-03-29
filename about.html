@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="https://unpkg.com/aos@2.2/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.2.0/dist/aos.js"></script>
     <link rel="stylesheet" href="./code.css">
     <title>Pascal Schlaak | Portfolio</title>
     <link rel="icon" type="image/png" href="./imgs/icons/logo_small.svg">
@@ -24,7 +24,7 @@
             <div class="helloWorld-text">
                 <h1>My name's Schlaak,<br>Pascal Schlaak.</h1>
                 <p class="text">
-                    I'm a 23 year old software developing Bond fanatic who's deepening his knowledge in Data Science.
+                    I'm a 23 year old software developing James Bond fanatic who's deepening his knowledge in Data Science.
                     I recently finished my Bachelor of Engineering degree focussing on <a
                         href="https://www.hs-aalen.de/de/courses/66-internet-der-dinge" style="color: #2575fc;">IoT</a>
                     at <a href="https://www.bmw.de/de/home.html" style="color: #2575fc;">BMW</a> in Munich.
@@ -41,11 +41,125 @@
             <div id="bond"><img src="./imgs/bond.svg" data-aos="fade-left" data-aos-delay="200"></div>
         </section>
         <div class="down-arrow" id="about-arrow">
-            <a href="#interests"><i class="fas fa-chevron-down fa-3x"></i></a>
+            <a href="#work"><i class="fas fa-chevron-down fa-3x"></i></a>
         </div>
-        <section class="container" id="interests">
+        <section class="container" id="work">
+            <h1>Resume</h1>
+            <p class="text">Take a look at some of my most interesting business relationships that I have had during my short career. 
+                As you can see, I like the automotive industry, but I would love to get more insights into big tech companies and work together on innovative projects.</p>
+            <div class="grid onexthree" style="padding: 0; margin: 7.5vh 0 0 0;">
+                <div class="flex-column" id="work-history" data-aos="fade-up">
+                    <div class="fine-line" style="margin: 0"></div>
+                    <p class="text" id="in-outdoorshop" onclick="show_description(this.id)">In-Outdoorshop</p>
+                    <div class="fine-line" style="margin: 0"></div>
+                    <p class="text" id="master" onclick="show_description(this.id)">Master studies</p>
+                    <div class="fine-line" style="margin: 0"></div>
+                    <p class="text" id="bmw" onclick="show_description(this.id)">BMW Group</p>
+                    <div class="fine-line" style="margin: 0"></div>
+                    <p class="text" id="daimler" onclick="show_description(this.id)">Daimler AG</p>
+                    <div class="fine-line" style="margin: 0"></div>
+                    <p class="text" id="bachelor" onclick="show_description(this.id)">Bachelor studies</p>
+                    <div class="fine-line" style="margin: 0"></div>
+                    <p class="text" id="mapal" onclick="show_description(this.id)">Mapal Dr. Kress AG</p>
+                    <div class="fine-line" style="margin: 0"></div>
+                    <p class="text" id="cadflex" onclick="show_description(this.id)">CADflex</p>
+                    <div class="fine-line" style="margin: 0"></div>
+                    <p class="text" id="abitur" onclick="show_description(this.id)">Abitur</p>
+                    <div class="fine-line" style="margin: 0"></div>
+                    <p class="text" id="forum" onclick="show_description(this.id)">Technikforum</p>
+                    <div class="fine-line" style="margin: 0"></div>
+                </div>
+                <div class="twocolumns-second" id="work-description" data-aos="fade-up" data-aos-delay="100">
+                    <div class="border" id="description-in-outdoorshop">
+                        <h2>Part-time worker <span style="color: #2575fc;">@ In-Outdoorshop</span></h2>
+                        <p class="text light"><i class="fas fa-map-marker-alt fa-1x light"></i>January - March 2020, Aalen</p>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Supporting my father with online sales on Amazon by creating and editing product photos, develop new articles and supporting in daily business.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Improving online presence by refactoring existing websites.</li>
+                        </ul>
+                    </div>
+                    <div class="border" id="description-master">
+                        <h2>Master studies <span style="color: #2575fc;">@ Machine Learning & Data Analytics</span></h2>
+                        <p class="text light"><i class="fas fa-map-marker-alt fa-1x light"></i>March 2020 - tba, Aalen</p>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>I am expanding my knowledge in the field of data science through the computer science course Machine Learning & Data Analytics at the University of Applied Sciences in Aalen.</li>
+                        </ul>
+                    </div>
+                    <div class="border" id="description-bmw">
+                        <h2>Intern & Bachelor student <span style="color: #2575fc;">@ BMW Group</span></h2>
+                        <p class="text light"><i class="fas fa-map-marker-alt fa-1x light"></i>March - December 2019, Munich</p>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Design and implementation of a Microsoft Azure Cloud and Edge Computing infrastructure for plant-level detection of quality deviations using a Convolutional Neural Network.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Development of own Microsoft Azure IoT Edge modules using Python and Docker.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Algorithms for pre-processing image data as input for a Convolutional Neural Network.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Algorithms for logging machine data via a publish-subscribe mechanism.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Design of a relational database schema for data management as well as connection to BLOB storage.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Development of CI/CD pipelines for automated deployment of Docker Containers on a Linux Edge device.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Validation of the developed Edge Computing solution against the real-time requirements of the use case.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Comparison of the developed Edge Computing solution with a Cloud Computing solution considering the requirements of the application case.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Wrote my bachelor thesis and was involved in a scientific paper.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Publication of patent for error classification of hairpin welding in electric powertrain production using a Convolutional Neural Network.</li>
+                        </ul>
+                    </div>
+                    <div class="border" id="description-daimler">
+                        <h2>Intern <span style="color: #2575fc;">@ Daimler AG</span></h2>
+                        <p class="text light"><i class="fas fa-map-marker-alt fa-1x light"></i>September 2017 - February 2018, Ulm</p>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Development of algorithms for the classification of crash simulations based on mechanical properties.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Development of an GUI based application for automated classification of multiple simulations in Java and Python.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Implementation of interfaces to connect to third party software.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Assist with paper "Towards an Automatic Evaluation of a Car Floor Module in a Pole Crash Load Case" for LS-DYNA conference by describing the software architecture for evaluating crash simulations based on mechanical properties.</li>
+                        </ul>
+                    </div>
+                    <div class="border" id="description-bachelor">
+                        <h2>Bachelor studies <span style="color: #2575fc;">@ Internet of Things</span></h2>
+                        <p class="text light"><i class="fas fa-map-marker-alt fa-1x light"></i>September 2015 - February 2020, Aalen</p>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>After a general introduction to computer science and electrical engineering I deepened my knowledge in the areas of web development and data science.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Completed my bachelor's degree with a grade of 1.8 by finishing and defending my bachelor's thesis at BMW in Munich.</li>
+                        </ul>
+                    </div>
+                    <div class="border" id="description-mapal">
+                        <h2>Holiday worker <span style="color: #2575fc;">@ Mapal Dr. Kress AG</span></h2>
+                        <p class="text light"><i class="fas fa-map-marker-alt fa-1x light"></i>September 2015, Aalen</p>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Worked full time on the production of precision tools.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Got an insight into the shift work of a larger regional company.</li>
+                        </ul>
+                    </div>
+                    <div class="border" id="description-cadflex">
+                        <h2>Part-time and holiday worker <span style="color: #2575fc;">@ CADflex</span></h2>
+                        <p class="text light"><i class="fas fa-map-marker-alt fa-1x light"></i>June 2015 - tba, Aalen</p>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Part-time and full-time work in my father's company, depending on my schedule.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Assisting in the assembly of stretchers in medical tanks, as well as in the daily business.</li>
+                        </ul>
+                    </div>
+                    <div class="border" id="description-abitur">
+                        <h2>Abitur <span style="color: #2575fc;">@ Schubart Gymnasium</span></h2>
+                        <p class="text light"><i class="fas fa-map-marker-alt fa-1x light"></i>September 2015, Aalen</p>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Achieved general qualification for university entrance.</li>
+                        </ul>
+                    </div>
+                    <div class="border" id="description-forum">
+                        <h2>Second place <span style="color: #2575fc;">@ 1. Überregionales Technikforum</span></h2>
+                        <p class="text light"><i class="fas fa-map-marker-alt fa-1x light"></i>June 2014, Heidenheim</p>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>Presentation of a tricopter that I developed and manufactured together with friends in a seminar subject.</li>
+                            <li><span class="fa-li"><i class="fas fa-chevron-right fa-1x bullet-point"></i></span>In contrast to conventional drones, this version has only three motors, so we had to develop our own chassis.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="fine-line" style="margin-bottom: 15vh;"></div>
+        <section class="container">
             <h1>Hobbies</h1>
-            <p class="text">When I'm not coding, I love to do one of the following activities.</p>
+            <p class="text">If I am not coding right now, you will probably find me at one of the following activities. 
+                If I need exercise, I like to go for a run to clear my head. When I am near the water, I love to windsurf. 
+                When I'm travelling, I always have my analogue camera with me to capture a few moments. 
+                In the evening, I like to read an Iam Flemming novel for the umpteenth time.</p>
             <div class="icon-grid">
                 <div class="hobbies" data-aos="fade-up">
                     <img src="./imgs/icons/running.png" alt="Jogging">
@@ -53,275 +167,21 @@
                 </div>
                 <div class="hobbies" data-aos="fade-up" data-aos-delay="100">
                     <img src="./imgs/icons/surfing.png" alt="Windsurfing">
-                    <p class="text">Windurfing</p>
+                    <p class="text">Windsurfing</p>
                 </div>
                 <div class="hobbies" data-aos="fade-up" data-aos-delay="200">
                     <img src="./imgs/icons/photography.png" alt="Photography">
-                    <p class="text">Analogue photography</p>
+                    <p class="text">Photography</p>
                 </div>
                 <div class="hobbies" data-aos="fade-up" data-aos-delay="300">
                     <img src="./imgs/icons/reading.png" alt="Reading">
                     <p class="text">Reading</p>
                 </div>
-
             </div>
         </section>
-        <section class="container" id="history">
-            <div class="fine-line" style="margin: 0 0 7.5vh 0;"></div>
-            <h1>Resume</h1>
-            <p class="text" style="margin-top: 0;">Have a look at some interesting points in my life.
-                I am very interested in the automotive industry.
-                That's the reason why I try to get as many impressions into the software development of OEMs as
-                possible.
-                If you're interested in specific projects I made, you can find them on my landing page.
-            </p>
-            <div class="timeline-container" style="margin-top: 2vw;">
-                <div class="timestamp">
-                    <p class="description">01/20 - 02/20</p>
-                </div>
-                <div class="timeline">
-                    <div class="dot"></div>
-                </div>
-                <div class="timeline-element border">
-                    <code class="topic">Web development</code>&emsp;<code class="topic">Photography</code>&emsp;<code
-                        class="topic">Product development</code>
-                    <h2 style="font-size: 2.4rem;">Part-time work <span style="color: #BEBEBE;">[CADflex GbR]</span>
-                    </h2>
-                    <p class="description">
-                        Refactoring two websites using web technologies, creating photographies and editing of new
-                        product articles to sell online. Also working on a new product.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-container">
-                <div class="timestamp">
-                    <p class="description timestamp">09/19 - 12/19</p>
-                </div>
-                <div class="timeline">
-                    <div class="dot"></div>
-                </div>
-                <div class="timeline-element border">
-                    <code class="topic">Software development</code>&emsp;<code
-                        class="topic">Edge Computing</code>&emsp;<code class="topic">Machine Learning</code>
-                    <h2 style="font-size: 2.4rem;">Bachelor thesis <span style="color: #BEBEBE;">[BMW Group]</span></h2>
-                    <p class="description">
-                        Wrote my bachelor thesis on the project I started as an intern at BMW Group.
-                        Finished a optimized edge computing architecture, which I deployed onto
-                        an industry pc in electric powertrain production. Could improve processing time
-                        up to 70% compared to a developed cloud computing architecture. Also developed an
-                        django user interface to visualize current production status. Implemented CI/CD pipelines
-                        to fully automated development of new algorithms.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-container">
-                <div class="timestamp">
-                    <p class="description timestamp">11/19</p>
-                </div>
-                <div class="timeline">
-                    <div class="dot"></div>
-                </div>
-                <div class="timeline-element border">
-                    <code class="topic">Patent</code>
-                    <h2 style="font-size: 2.4rem;">Error classification of hairpin welding of the stator of an electric
-                        powertrain using a convolutional neural network <span style="color: #BEBEBE;">[BMW Group]</span>
-                    </h2>
-                    <p class="description">
-                        Involved in publishing and register a patent to classify faults in stator production of electric
-                        powertrain production.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-container">
-                <div class="timestamp">
-                    <p class="description timestamp">03/19 - 08/19</p>
-                </div>
-                <div class="timeline">
-                    <div class="dot"></div>
-                </div>
-                <div class="timeline-element border">
-                    <code class="topic">Software development</code>&emsp;<code
-                        class="topic">Edge Computing</code>&emsp;<code class="topic">Machine Learning</code>
-                    <h2 style="font-size: 2.4rem;">Internship <span style="color: #BEBEBE;">[BMW Group]</span></h2>
-                    <p class="description">
-                        Got an internship at BMWs electric powertrain production where I was responsible to
-                        develop an edge computing architecture to detect production faults with Machine Learning. Was
-                        using Microsoft Azure and its IoT Edge services for developing edge computing components.
-                        Also supported the planning and implementation of a project to promote lean production at the
-                        organizational level.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-container">
-                <div class="timestamp">
-                    <p class="description">07/18 - 08/18</p>
-                </div>
-                <div class="timeline">
-                    <div class="dot"></div>
-                </div>
-                <div class="timeline-element border">
-                    <code class="topic">Photography</code>&emsp;<code class="topic">Image editing</code>
-                    <h2 style="font-size: 2.4rem;">Holiday work <span style="color: #BEBEBE;">[CADflex GbR]</span></h2>
-                    <p class="description">
-                        Working full-time in my dads company where I was responsible for online shop article photos.
-                        I was shooting suited photos and post processing them for optimal results
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-container">
-                <div class="timestamp">
-                    <p class="description timestamp">06/18</p>
-                </div>
-                <div class="timeline">
-                    <div class="dot"></div>
-                </div>
-                <div class="timeline-element border">
-                    <code class="topic">Paper</code>
-                    <h2 style="font-size: 2.4rem;">Towards an Automatic Evaluation of a Car Floor Module in a Pole Crash
-                        Load Case <span style="color: #BEBEBE;">[LS-DYNA Conference]</span></h2>
-                    <p class="description">
-                        Involved in a paper by describing our software concept to evaluate crash simulations based
-                        on mechanical criteria.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-container">
-                <div class="timestamp">
-                    <p class="description">09/17 - 02/18</p>
-                </div>
-                <div class="timeline">
-                    <div class="dot"></div>
-                </div>
-                <div class="timeline-element border">
-                    <code class="topic">Software development</code>&emsp;<code
-                        class="topic">Crash simulation</code>&emsp;<code class="topic">Data Analytics</code>
-                    <h2 style="font-size: 2.4rem;">Internship <span style="color: #BEBEBE;">[Daimler AG]</span></h2>
-                    <p class="description">
-                        Got an internship at Mercedes-Benz Cars Research and Development section at Daimler AG.
-                        Was developing algorithms to classify crash simulations based on mechanical properties.
-                        Final project consisted also of front-end interface to use algorithms by other engineers.
-                        This project got me afterwards into machine learning.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-container">
-                <div class="timestamp">
-                    <p class="description">09/15</p>
-                </div>
-                <div class="timeline">
-                    <div class="dot"></div>
-                </div>
-                <div class="timeline-element border">
-                    <code class="topic">Shift work</code>&emsp;<code class="topic">Precision tools</code>
-                    <h2 style="font-size: 2.4rem;">Holiday work <span style="color: #BEBEBE;">[Mapal Dr. Kress
-                            AG]</span></h2>
-                    <p class="description">
-                        Full-time work I persued after graduating high school. Wanted to get insights
-                        in shift working in a big regional company. Created components for making precision tools.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-container">
-                <div class="timestamp">
-                    <p class="description">02/15</p>
-                </div>
-                <div class="timeline">
-                    <div class="dot"></div>
-                </div>
-                <div class="timeline-element border">
-                    <code class="topic">Mechanical Engineering</code>&emsp;<code class="topic">Drones</code>
-                    <h2 style="font-size: 2.4rem;">18. Regionalwettbewerb Ostwürttemberg <span
-                            style="color: #BEBEBE;">[Jugend forscht]</span></h2>
-                    <p class="description">
-                        Participating in another content, where we presented our final tricopter construction.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-container">
-                <div class="timestamp">
-                    <p class="description">06/14</p>
-                </div>
-                <div class="timeline">
-                    <div class="dot"></div>
-                </div>
-                <div class="timeline-element border">
-                    <code class="topic">Mechanical Engineering</code>&emsp;<code class="topic">Drones</code>
-                    <h2 style="font-size: 2.4rem;">1. Überregionales Technikforum <span
-                            style="color: #BEBEBE;">[Heidenheim - Aalen]</span></h2>
-                    <p class="description">
-                        Presentation of a tricopter I developed with friends in high school. Instead of other drones
-                        this tricopter only consisted of 3 powertrains, whereby we needed to construct
-                        a suited chassis. Placed second.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="container" id="history">
-            <div class="fine-line" style="margin: 0 0 7.5vh 0;"></div>
-            <h1>Education</h1>
-            <p class="text" style="margin-top: 0;">
-                After graduating from high school, my passion for new technologies led me to new
-                challenges in my bachelor's degree, which I would now like to deepen in a master's
-                degree in data science.
-            </p>
-            <div class="timeline-container" style="margin-top: 2vw;">
-                <div class="timestamp">
-                    <p class="description">03/20 - tba</p>
-                </div>
-                <div class="timeline">
-                    <div class="dot"></div>
-                </div>
-                <div class="timeline-element border">
-                    <code class="topic">Master of Science</code>
-                    <h2 style="font-size: 2.4rem;">Machine Learning and Data Analytics <span
-                            style="color: #BEBEBE;">[University of Aalen]</span></h2>
-                    <p class="description">
-                        In my last semesters of my bachelors degree as well as in my internships I
-                        got myself more and more into Data Science. I was lucky enough to be accepted to study a
-                        relatively new master course in Computer Science
-                        focussing on Data Science.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-container">
-                <div class="timestamp">
-                    <p class="description">09/15 - 02/20</p>
-                </div>
-                <div class="timeline">
-                    <div class="dot"></div>
-                </div>
-                <div class="timeline-element border">
-                    <code class="topic">Bachelor of Engineering</code>
-                    <h2 style="font-size: 2.4rem;">Internet of Things <span style="color: #BEBEBE;">[University of
-                            Aalen]</span></h2>
-                    <p class="description">
-                        Since I'm very passionate about new technologies I choose to start a new study course
-                        offered by the University of Aalen called IoT. Basically it's a mix of software development,
-                        electrical engineering and some design lectures. I mainly focused on cloud computing and data
-                        science at the end of my bachelors degree.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-container">
-                <div class="timestamp">
-                    <p class="description">09/15 - 02/20</p>
-                </div>
-                <div class="timeline">
-                    <div class="dot"></div>
-                </div>
-                <div class="timeline-element border">
-                    <code class="topic">General qualification for university entrance</code>
-                    <h2 style="font-size: 2.4rem;">Abitur <span style="color: #BEBEBE;">[Schubart Gymnasium
-                            Aalen]</span></h2>
-                    <p class="description">
-                        I made my general Abitur in my hometown Aalen.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <div class="fine-line" style="margin: 0 20vw;"></div>
+        <div class="fine-line"></div>
         <section class="container" id="about-me">
-            <h1>You want to know more about my projects?</h1>
+            <h1>Would you like to see some of my interesting projects?</h1>
             <a href="./index.html#projects" class="button">
                 <p class="text" style="margin: 0;">Click here</p>
             </a>
