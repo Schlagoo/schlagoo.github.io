@@ -20,6 +20,7 @@
     <div id="app">
         <navbar-normal></navbar-normal>
         <navbar-small></navbar-small>
+        <hamburger></hamburger>
         <section id="hello-world" class="container-wide">
             <div class="helloWorld-text">
                 <h1>My name's Schlaak,<br>Pascal Schlaak.</h1>
@@ -188,6 +189,14 @@
         </section>
         <footer-portfolio></footer-portfolio>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#hamburger, #home, #proj, abo').click(function(){
+                $("#hamburger").toggleClass('open');
+            });
+        });
+    </script>
     <script type="text/javascript" src="./main.js"></script>
 </body>
 
