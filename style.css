@@ -56,7 +56,7 @@ header {
 
     background-color: #ffffff;
 
-    transition: .3s ease-in-out;
+    transition: .5s ease-in-out;
 }
 
 .navbar {
@@ -108,7 +108,7 @@ header {
     height: 22px;
     z-index: 999;
     transform: rotate(0deg);
-    transition: .3s ease-in-out;
+    transition: .5s ease-in-out;
     display: none;
 }
 
@@ -123,7 +123,7 @@ header {
     opacity: 1;
     right: 0;
     transform: rotate(0deg);
-    transition: .3s ease-in-out;
+    transition: .5s ease-in-out;
 }
 
 #hamburger span:nth-child(1) {
@@ -244,10 +244,6 @@ header {
 
     transition: color 0.2s ease-in-out;
 }
-
-/* .menu-text .text:hover {
-    color: #1074e7;
-} */
 
 #menu-contact {
     position: absolute;
