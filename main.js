@@ -1,9 +1,9 @@
 Vue.component('navbar-normal', {
-  template: '<header><div class="navbar"><a href="index.html"><img src="./imgs/icons/logo_small.svg" alt="Logo"></a><div class="links flex row" id="menu-big"><a href="index.html#projects"><p class="text" id="link">Projects</p></a><a href="#contact"><p class="text" id="link">Contact</p></a><a href="about.html"><p class="text" id="link">About</p></a><a href="https://drive.google.com/file/d/1k038_JvLfKjEPRi_qXj6cgx4dbcZyAHl/view?usp=sharing" class="button" id="resume"><p class="text" style="padding: 10px 24px; margin: 0">Resume</p></a></div></div><div class="fine-line" style="margin: 0;"></div></header>'
+  template: '<header id="navbar"><div class="navbar"><a href="index.html"><img src="./imgs/icons/logo_small.svg" alt="Logo"></a><div class="links flex row" id="menu-big"><a href="index.html#projects"><p class="text" id="link">Projects</p></a><a href="#contact"><p class="text" id="link">Contact</p></a><a href="about.html"><p class="text" id="link">About</p></a><a href="https://drive.google.com/file/d/1k038_JvLfKjEPRi_qXj6cgx4dbcZyAHl/view?usp=sharing" class="button" id="resume"><p class="text" style="padding: 10px 24px; margin: 0">Resume</p></a></div></div><div class="fine-line" style="margin: 0;"></div></header>'
 })
 
 Vue.component('navbar-small', {
-  template: '<div class="navbar-opened" id="menu" style="display: none;"><div class="blurred" onclick="handle_menu()"></div><div class="menu"><div class="menu-text align-center"><a href="./index.html"><p class="text" onclick="handle_menu()" id="home">Home</p></a><a href="./index.html#projects"><p class="text" onclick="handle_menu()" id="proj">Projects</p></a><a href="./about.html"><p class="text" onclick="handle_menu()" id="abo">About</p></a><a href="https://drive.google.com/file/d/1k038_JvLfKjEPRi_qXj6cgx4dbcZyAHl/view?usp=sharing" class="button" id="resume"><p class="text" style="padding: 16px 24px; margin: 0;">Resume</p></a></div><div id="menu-contact"><div class="fine-line"></div><div class="flex-row flex-center align-center"><a href="https://github.com/Schlagoo"><img src="./imgs/icons/contact/github_light.png" alt="Github" id="icon-contact" style="padding: 1em 8px 1em 0;"></a><a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><img src="./imgs/icons/contact/linkedin_light.png" alt="LinkedIn" id="icon-contact"></a><a href="mailto:schlaak.pascal@gmail.com"><img src="./imgs/icons/contact/email_light.png" alt="E-Mail" id="icon-contact"></a><a href="https://www.instagram.com/schlagoo/"><img src="./imgs/icons/contact/instagram_light.png" alt="Instagram" id="icon-contact"></a><a href="https://www.facebook.com/pascal.schlaak.65"><img src="./imgs/icons/contact/facebook_light.png" alt="Facebook" id="icon-contact" style="padding: 1em 0 1em 8px;"></a></div></div></div></div>'
+  template: '<div class="navbar-opened" id="menu" style="display: none;"><div class="blurred"></div><div class="menu"><div class="menu-text align-center"><a href="./index.html"><p class="text" onclick="handle_menu()" id="home">Home</p></a><a href="./index.html#projects"><p class="text" onclick="handle_menu()" id="proj">Projects</p></a><a href="./about.html"><p class="text" onclick="handle_menu()" id="abo">About</p></a><a href="https://drive.google.com/file/d/1k038_JvLfKjEPRi_qXj6cgx4dbcZyAHl/view?usp=sharing" class="button" id="resume"><p class="text" style="padding: 16px 24px; margin: 0;">Resume</p></a></div><div id="menu-contact"><div class="fine-line"></div><div class="flex-row flex-center align-center"><a href="https://github.com/Schlagoo"><img src="./imgs/icons/contact/github_light.png" alt="Github" id="icon-contact" style="padding: 1em 8px 1em 0;"></a><a href="https://www.linkedin.com/in/pascal-schlaak-845540174"><img src="./imgs/icons/contact/linkedin_light.png" alt="LinkedIn" id="icon-contact"></a><a href="mailto:schlaak.pascal@gmail.com"><img src="./imgs/icons/contact/email_light.png" alt="E-Mail" id="icon-contact"></a><a href="https://www.instagram.com/schlagoo/"><img src="./imgs/icons/contact/instagram_light.png" alt="Instagram" id="icon-contact"></a><a href="https://www.facebook.com/pascal.schlaak.65"><img src="./imgs/icons/contact/facebook_light.png" alt="Facebook" id="icon-contact" style="padding: 1em 0 1em 8px;"></a></div></div></div></div>'
 })
 
 Vue.component('hamburger', {
@@ -18,6 +18,18 @@ var app = new Vue({
     el: '#app'
 })
 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+    document.getElementById("hamburger").style.top = "20px";
+  } else {
+    document.getElementById("navbar").style.top = "-56px";
+    document.getElementById("hamburger").style.top = "-56px";
+  }
+  prevScrollpos = currentScrollPos;
+}
 
 function handle_menu() {
   /**

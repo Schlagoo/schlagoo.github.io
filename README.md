@@ -1,3 +1,3 @@
-# schlagoo.github.io
+# Personal portfolio of Pascal Schlaak (v3)
 
-My personal portfolio (v2). Click [here](https://schlagoo.github.io/) to explore!
+Click [here](https://schlagoo.github.io/) to explore!

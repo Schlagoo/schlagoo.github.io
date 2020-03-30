@@ -55,6 +55,8 @@ header {
     padding: 0 15vw;
 
     background-color: #ffffff;
+
+    transition: .3s ease-in-out;
 }
 
 .navbar {
@@ -102,11 +104,11 @@ header {
     position: fixed;
     top: 20px;
     right: 5vw;
-    width: 40px;
-    height: 28px;
+    width: 35px;
+    height: 22px;
     z-index: 999;
     transform: rotate(0deg);
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
     display: none;
 }
 
@@ -114,14 +116,14 @@ header {
     display: block;
     position: absolute;
     z-index: 999;
-    height: 4.5px;
+    height: 4px;
     width: 100%;
     background: #383838;
     border-radius: 1px;
     opacity: 1;
     right: 0;
     transform: rotate(0deg);
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 #hamburger span:nth-child(1) {
@@ -129,17 +131,16 @@ header {
 }
   
 #hamburger span:nth-child(2) {
-    top: 11px;
+    top: 9px;
     width: 80%;
 }
   
 #hamburger span:nth-child(3) {
-    top: 22px;
+    top: 18px;
 }
 
 #hamburger.open span:nth-child(1) {
     top: 11px;
-    width: 80%;
     transform: rotate(135deg);
   }
   
@@ -150,7 +151,6 @@ header {
   
 #hamburger.open span:nth-child(3) {
     top: 11px;
-    width: 80%;
     transform: rotate(-135deg);
 }
 
@@ -199,7 +199,7 @@ header {
     right: 0;
     margin-left: 25vw;
     padding: 0 10px;
-    width: calc(75vw - 20px);
+    width: 75vw;
     min-height: 100vh;
 
     background-color: #ffffff;
@@ -1025,8 +1025,6 @@ RESPONSIVE AREA
 
     .navbar {
         width: auto;
-        
-        font-size: 20px;
     }
 
     .navbar img {
@@ -1065,6 +1063,14 @@ RESPONSIVE AREA
 }
 
 @media screen and (max-width: 950px) {  
+
+    .navbar {
+        height: 56px;
+    }
+
+    .navbar img {
+        height: 24px;
+    }
     
     #menu-big {
         display: none;
@@ -1136,6 +1142,10 @@ RESPONSIVE AREA
 
     #about-text {
         width: 100%;
+    }
+
+    #about-me h1 {
+        font-size: 30px;
     }
 
     #about-arrow {
