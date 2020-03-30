@@ -123,7 +123,7 @@ header {
     opacity: 1;
     right: 0;
     transform: rotate(0deg);
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 #hamburger span:nth-child(1) {
@@ -362,7 +362,7 @@ li span {
 }
 
 .bullet-point {
-    color: #2575fc;
+    color: #2F58F7;
 }
 
 .container-wide {
@@ -698,13 +698,13 @@ ABOUT AREA
     position: relative;
     display: block;
 
-    color: #1074e7;
+    color: #2F58F7;
     
     width: auto;
     height: auto;
     background: #ffffff;
 
-    border: 1px solid #1074e7;
+    border: 1px solid #2F58F7;
     border-radius: 4px;
 
     transition: all 0.35s;
@@ -825,53 +825,6 @@ ABOUT AREA
 
 .hobbies p {
     text-align: center;
-}
-
-.connect {
-    margin: 0 20vw 15vh 20vw;
-}
-
-.skills {
-    padding: 2.5rem;
-    margin: 3.5vh 0;
-
-    background-color: #F5F5F5;
-    border-radius: 3px;
-
-    font-weight: 800;
-    font-style: italic;
-    word-spacing: 2rem;
-}
-
-.about-flex {
-    display: flex;
-    flex-direction: row;
-}
-
-#about-text {
-    margin: 0 2.5vw 0 0;
-    width: 85vw;
-}
-
-#profile-image {
-    text-align: right;
-    filter: grayscale(100%);
-}
-
-.skill-bar {
-    width: 100%;
-    height: 10px;
-
-    background-color: #DCDCDC;
-    border-radius: 5px;
-}
-
-.skill-level {
-    height: 100%;
-    width: 0;
-
-    background-color: #2575fc;
-    border-radius: 5px 0 0 5px;
 }
 
 #history {

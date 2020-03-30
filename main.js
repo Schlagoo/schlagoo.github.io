@@ -24,7 +24,7 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar").style.top = "0";
     document.getElementById("hamburger").style.top = "20px";
-  } else {
+  } else if (prevScrollpos < currentScrollPos) {
     document.getElementById("navbar").style.top = "-70px";
     document.getElementById("hamburger").style.top = "-70px";
   }
