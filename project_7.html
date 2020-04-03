@@ -2,13 +2,14 @@
     <head>  
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <script src="https://unpkg.com/aos@2.2/dist/aos.js"></script>
         <link rel="stylesheet" href="./code.css">
         <title>Pascal Schlaak | Portfolio</title>
         <link rel="icon" type="image/png" href="./imgs/icons/logo_small.svg">
@@ -20,7 +21,7 @@
             <hamburger></hamburger>
             <section id="project-7">
                 <div class="container project-text">
-                    <h1>New York shooting incident data</h1>
+                    <h1>Visualizing NY shooting incident data</h1>
                     <p class="text">
                         After finishing my bachelors thesis I wanted to continue improving my data analytics skills. Therefore I was looking for 
                         datasets that where open source, offered a big amount of data and interesting to analyize. Although there were plenty of options I
@@ -55,7 +56,7 @@
                     like the number of shooting incidents recorded by NYPD since 2006. Below chart visualizes the number of shooting incidents
                     from 2006 until 2018. You can see how the overall number of incidents generally decreased with time.
                 </p>
-                <div class="section">
+                <div class="graph">
                     <p class="text bold">Shooting incidents by year</p>
                     <canvas id="plot_years"></canvas>
                 </div>
@@ -115,7 +116,7 @@
                         <li>Harlem / The Bronx</li>
                         <li>Brooklyn</li>
                     </ul>
-                    <div class="section">
+                    <div class="graph">
                         <p class="text bold">Locations of reported New York shooting incidents in 2018</p>
                         <div id="map" style="width: 100%; ">
                             <img src="./imgs/project_7/nypd_shootings_2018.jpg" alt="Reported shootings in NY (2018)" style="margin: 0;">
@@ -126,7 +127,7 @@
                         on a monthly base. As you can see in the following chart there are definitely more incidents in warmer months than in autumn/winter except
                         January. This might correlate with drive for change at the beginning of every new year but still a hunch.
                     </p>
-                    <div class="section">
+                    <div class="graph">
                         <p class="text bold">New York shooting incidents in 2018 by month</p>
                         <canvas id="plot_months"></canvas>
                     </div>
@@ -155,7 +156,7 @@
                         As you can see there's definitely an uptrend after lunch peaking at 9pm. There's clearly a
                         higher number of incidents between 8pm and 4am.
                     </p>
-                    <div class="section">
+                    <div class="graph">
                         <p class="text bold">New York shooting incidents in 2018 by daytime</p>
                         <canvas id="plot_daytime"></canvas>
                     </div>
