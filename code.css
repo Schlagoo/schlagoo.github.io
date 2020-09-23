@@ -128,7 +128,7 @@ pre.prettyprint {
 @media screen and (max-width: 1200px) {
     
   pre.prettyprint {
-    width: 90vw;
+    width: 100%;
     overflow-x: scroll;
   }
   

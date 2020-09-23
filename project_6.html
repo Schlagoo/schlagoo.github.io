@@ -1,36 +1,45 @@
 <html lang="en">
-    <head>  
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link rel="stylesheet" href="./style.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>  
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-        <link rel="stylesheet" href="./code.css">
-        <title>Pascal Schlaak | Portfolio</title>
-        <link rel="icon" type="image/png" href="./imgs/icons/logo_small.svg">
-    </head>
-    <body>
-        <div id="app">
-            <navbar-normal></navbar-normal>
-            <navbar-small></navbar-small>
-            <hamburger></hamburger>
-            <section id="project-6">
-                <div class="container project-text">
-                    <h1>Stock performance summary automation</h1>
-                    <p class="text">Since I'm interested in stocks, I wanted to dive deeper into stock analysis.
-                        My goal in this project was to build an stock visualization I can later automate, to send myself
-                        daily summaries of stock performances.
-                    </p>
-                    <p class="text">Therefor I searched for an stock-data API, I can retrieve their
-                        values from the current day, week, ... I found the <code>Alpha Vantage API</code>, that was not deprecated and can
-                        retrieve realtime stock data like: open, close, low, high. To send the plotted summary via e-mail I used
-                        the <code>SMTP</code> protocol to send data to my personal e-mail. 
-                    </p>
-                    <pre class="prettyprint text fact">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="./code.css">
+    <title>Pascal Schlaak | Portfolio</title>
+    <link rel="icon" type="image/png" href="./imgs/icons/logo_small.svg">
+</head>
+
+<body>
+    <div id="app">
+        <navbar-normal></navbar-normal>
+        <navbar-small></navbar-small>
+        <hamburger></hamburger>
+        <section id="project">
+            <img src="./imgs/dots.png" id="dots">
+            <div class="container project-text">
+                <h1>Stock performance summary automation</h1>
+                <div class="flex-row">
+                    <div class="column-65">
+                        <p class="text">Since I'm interested in stocks, I wanted to dive deeper into stock analysis.
+                            My goal in this project was to build an stock visualization I can later automate, to send
+                            myself
+                            daily summaries of stock performances.
+                        </p>
+                        <p class="text">Therefor I searched for an stock-data API, I can retrieve their
+                            values from the current day, week, ... I found the <code>Alpha Vantage API</code>, that was
+                            not deprecated and can
+                            retrieve realtime stock data like: open, close, low, high. To send the plotted summary via
+                            e-mail I used
+                            the <code>SMTP</code> protocol to send data to my personal e-mail.
+                        </p>
+                        <pre class="prettyprint text fact">
                         <code class="lang-py">
     # Define message content
     msg = MIMEMultipart()
@@ -57,12 +66,13 @@
 
     print("E-Mail sent!")</code>
                     </pre>
-                    <p class="text">    
-                        For automation reasons, the <code>Python</code>
-                        script will wait to plot and send data at 19:00 o'clock, when stock market is closing. To run by itself I built a 
-                        <code>Docker</code> image to run my script in a container instance. 
-                    </p>
-                    <pre class="prettyprint text fact">
+                        <p class="text">
+                            For automation reasons, the <code>Python</code>
+                            script will wait to plot and send data at 19:00 o'clock, when stock market is closing. To
+                            run by itself I built a
+                            <code>Docker</code> image to run my script in a container instance.
+                        </p>
+                        <pre class="prettyprint text fact">
                         <code class="lang-xml">
     # Create python image
     FROM python:3
@@ -82,11 +92,11 @@
     # Run script
     CMD [ "python3", "./stock_analysis.py" ]</code>
                     </pre>
-                    <p class="text">    
-                        For visualizing data I used a so called
-                        candlestick graph to present all data in a compact way.
-                    </p>
-                    <pre class="prettyprint text fact">
+                        <p class="text">
+                            For visualizing data I used a so called
+                            candlestick graph to present all data in a compact way.
+                        </p>
+                        <pre class="prettyprint text fact">
                         <code class="lang-py">
     data_indexes = []
     # Get date needed for saving plot to file
@@ -100,9 +110,10 @@
     _, ax = plt.subplots()
 
     # Create candlesticks from data
-    candlestick_ohlc(ax, zip(data_indexes, current_data["1. open"], current_data["2. high"], 
-    current_data["3. low"], current_data["4. close"]), width=1./(24*60)*3, colorup="g", 
-    colordown="r")
+    candlestick_ohlc(ax, zip(data_indexes, current_data["1. open"], 
+    current_data["2. high"], 
+    current_data["3. low"], current_data["4. close"]), width=1./(24*60)*3, 
+    colorup="g", colordown="r")
 
     # Plot hours as x-ticks and autoscale
     ax.xaxis_date()
@@ -123,29 +134,53 @@
         plt.savefig(plot_name, dpi=400)
         plt.close()
     else:
-        print("\nError: Wrong save_plot value! Should be 0 or 1 see help() of function!")</code>
+        print("\nError: Wrong save_plot value! 
+        Should be 0 or 1 see help() of function!")</code>
                     </pre>
-                    <p class="text">    
-                        In the following you can see generated plots of
-                        Apple and Walt Disney on 30 July 2019.
-                    </p>
-                    <div class="grid">
-                        <img src="./imgs/project_6/example_plot_apple.png" alt="Example plot apple stock">
-                        <img src="./imgs/project_6/example_plot_disney.png" alt="Example plot walt disney stock">
+                        <p class="text">
+                            In the following you can see generated plots of
+                            Apple and Walt Disney on 30 July 2019.
+                        </p>
+                        <div class="grid">
+                            <img src="./imgs/project_6/example_plot_apple.png" alt="Example plot apple stock">
+                            <img src="./imgs/project_6/example_plot_disney.png" alt="Example plot walt disney stock">
+                        </div>
+                        <p class="text">You can find the complete code on my <a
+                                href="https://github.com/Schlagoo/stock_data_analysis" style="color: #2F58F7">Github
+                                repository</a>!</p>
+
                     </div>
-                    <p class="text">You can find the complete code on my <a href="https://github.com/Schlagoo/stock_data_analysis" style="color: #0366d6">Github repository</a>!</p>
+                    <div>
+                        <div class="information border">
+                            <p class="text"><b>Type</b></p>
+                            <p class="text">Private project</p>
+                            <p class="text"><b>Tools</b></p>
+                            <p class="text">Python, Docker, Pandas, Numpy, Alpha Vantage API</p>
+                            <p class="text"><b>Partners</b></p>
+                            <p class="text">-</p>
+                            <p class="text"><b>Date</b></p>
+                            <p class="text">2019-06-31</p>
+                            <p class="text"><b>Source</b></p>
+                            <p class="text">
+                                <a href="https://github.com/Schlagoo/stock_data_analysis" style="color: #2F58F7">Github
+                                    repository</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </section>
-            <footer-portfolio></footer-portfolio>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $('#hamburger, #home, #proj, abo').click(function(){
-                    $("#hamburger").toggleClass('open');
-                });
+            </div>
+        </section>
+        <footer-portfolio></footer-portfolio>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#hamburger, #home, #proj, abo').click(function () {
+                $("#hamburger").toggleClass('open');
             });
-        </script>
-        <script type="text/javascript" src="./main.js"></script>
-    </body>
+        });
+    </script>
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+
 </html>

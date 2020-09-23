@@ -1,32 +1,42 @@
 <html lang="en">
-    <head>  
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link rel="stylesheet" href="./style.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-        <link rel="stylesheet" href="./code.css">
-        <title>Pascal Schlaak | Portfolio</title>
-        <link rel="icon" type="image/png" href="./imgs/icons/logo_small.svg"> 
-    </head>
-    <body>
-        <div id="app">
-            <navbar-normal></navbar-normal>
-            <navbar-small></navbar-small>
-            <hamburger></hamburger>
-            <section id="project-5">
-                <div class="container project-text">
-                    <h1>WhatsApp chat history analysis & visualization</h1>
-                    <p class="text">In my freetime I wanted to analyze an old <code>WhatsApp</code> group chat and compare it with its new one to see things like
-                        difference in activity. <code>WhatsApp</code> offers functionality to download group chats as <code>.txt</code> files. I wrote 
-                        a <code>Python</code> script to read group chat content in data structures and analyze all messages on things I was interested in. 
-                        Following algorithm was build to fetch content of every participants message and split it into <code>datetime</code>, <code>sender</code> and <code>message</code>.
-                    </p>
-                    <pre class="prettyprint text fact">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="./code.css">
+    <title>Pascal Schlaak | Portfolio</title>
+    <link rel="icon" type="image/png" href="./imgs/icons/logo_small.svg">
+</head>
+
+<body>
+    <div id="app">
+        <navbar-normal></navbar-normal>
+        <navbar-small></navbar-small>
+        <hamburger></hamburger>
+        <section id="project">
+            <img src="./imgs/dots.png" id="dots">
+            <div class="container project-text">
+                <h1>WhatsApp chat history analysis & visualization</h1>
+                <div class="flex-row">
+                    <div class="column-65">
+                        <p class="text">In my freetime I wanted to analyze an old <code>WhatsApp</code> group chat and
+                            compare it with its new one to see things like
+                            difference in activity. <code>WhatsApp</code> offers functionality to download group chats
+                            as <code>.txt</code> files. I wrote
+                            a <code>Python</code> script to read group chat content in data structures and analyze all
+                            messages on things I was interested in.
+                            Following algorithm was build to fetch content of every participants message and split it
+                            into <code>datetime</code>, <code>sender</code> and <code>message</code>.
+                        </p>
+                        <pre class="prettyprint text fact">
                         <code class="lang-py">
     ...
     # Add all senders by name to name array
@@ -46,7 +56,8 @@
         item = element.split("]")
         # Get date
         datetime = item[0]
-        # Check if message was writted by name of a sender which should be analysed
+        # Check if message was writted by name of a sender which 
+        # should be analysed
         for name in name_set:
             # Get sender and content (equals last element in item array)
             content = item[-1]
@@ -57,7 +68,8 @@
                 message = content[2:]
                 break
         
-        chat_messages[message_number] = {"datetime": datetime, "sender":sender, "message":message}
+        chat_messages[message_number] = {"datetime": datetime, 
+        "sender":sender, "message":message}
         message_number += 1
     
     print("\nNumber of messages:\t%d\n" % message_number)
@@ -65,99 +77,124 @@
     return chat_messages, name_set
     ...</code>
                     </pre>
-                    <p class="text">
-                        For example I was interested in the number of messages every participant was writing and how many words he used in his messages, because
-                        there are some participants that are relatively quit.
-                    </p>
-                    <div class="graph">
-                        <p class="text bold">Number of words and messages by group member</p>
-                        <canvas id="plot_wm"></canvas>
+                        <p class="text">
+                            For example I was interested in the number of messages every participant was writing and how
+                            many words he used in his messages, because
+                            there are some participants that are relatively quit.
+                        </p>
+                        <div class="graph">
+                            <p class="text bold">Number of words and messages by group member</p>
+                            <canvas id="plot_wm"></canvas>
+                        </div>
+                        <p class="text">
+                            I also wanted to know, which time is the best time to ask questions depending on the
+                            activity of all participants. I often found myself
+                            in situations where I asked a question and waited a long period of time since nobody was
+                            active.
+                        </p>
+                        <div class="graph">
+                            <p class="text bold">Activity by number of messages at specific daytime</p>
+                            <canvas id="plot_daytime"></canvas>
+                        </div>
+                        <p class="text">
+                            I got some very interesting results like in the plots above. You can find the complete code
+                            on my <a href="https://github.com/Schlagoo/whatsapp_data_analysis"
+                                style="color: #2F58F7">Github repository</a>!</p>
                     </div>
-                    <p class="text">
-                        I also wanted to know, which time is the best time to ask questions depending on the activity of all participants. I often found myself
-                        in situations where I asked a question and waited a long period of time since nobody was active.
-                    </p>
-                    <div class="graph">
-                        <p class="text bold">Activity by number of messages at specific daytime</p>
-                        <canvas id="plot_daytime"></canvas>
+                    <div>
+                        <div class="information border">
+                            <p class="text"><b>Type</b></p>
+                            <p class="text">Private project</p>
+                            <p class="text"><b>Tools</b></p>
+                            <p class="text">Python, Matplotlib</p>
+                            <p class="text"><b>Partners</b></p>
+                            <p class="text">-</p>
+                            <p class="text"><b>Date</b></p>
+                            <p class="text">2019-06-27</p>
+                            <p class="text"><b>Source</b></p>
+                            <p class="text">
+                                <a href="https://github.com/Schlagoo/stock_data_analysis" style="color: #2F58F7">Github
+                                    repository</a>
+                            </p>
+                        </div>
                     </div>
-                    <p class="text">
-                        I got some very interesting results like in the plots above. You can find the complete code on my <a href="https://github.com/Schlagoo/whatsapp_data_analysis" style="color: #0366d6">Github repository</a>!</p>
                 </div>
-            </section>
-            <footer-portfolio></footer-portfolio>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $('#hamburger, #home, #proj, abo').click(function(){
-                    $("#hamburger").toggleClass('open');
-                });
+            </div>
+        </section>
+        <footer-portfolio></footer-portfolio>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#hamburger, #home, #proj, abo').click(function () {
+                $("#hamburger").toggleClass('open');
             });
-        </script>
-        <script type="text/javascript" src="./main.js"></script>
-        <script>
-            // Number of words and messages
-            var ye = document.getElementById("plot_wm").getContext("2d");
-            var plot_wm = new Chart(ye, {
-                type: "bar",
-                data: {
-                    labels: ["Pers. 1", "Pers. 2", "Pers. 3", "Pers. 4", "Pers. 5", "Pers. 6", "Pers. 7", "Pers. 8"],
-                    datasets: [{
-                        label: "Messages",
-                        backgroundColor: "#E6AC5C",
-                        borderColor: "#E6AC5C",
-                        borderWidth: 2,
-                        data: [484, 254, 838, 615, 320, 894, 819, 524]
-                    }, {
-                        label: "Words",
-                        backgroundColor: "#2269E3",
-                        borderColor: "#2269E3",
-                        borderWidth: 2,
-                        data: [2693, 1580, 4004, 4319, 2974, 7356, 5446, 3115]
-                        }
-                    ]
-                },
-                options: {
-                    legend: {
-                        display: false
-                    },
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
+        });
+    </script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script>
+        // Number of words and messages
+        var ye = document.getElementById("plot_wm").getContext("2d");
+        var plot_wm = new Chart(ye, {
+            type: "bar",
+            data: {
+                labels: ["Pers. 1", "Pers. 2", "Pers. 3", "Pers. 4", "Pers. 5", "Pers. 6", "Pers. 7", "Pers. 8"],
+                datasets: [{
+                    label: "Messages",
+                    backgroundColor: "#E6AC5C",
+                    borderColor: "#E6AC5C",
+                    borderWidth: 2,
+                    data: [484, 254, 838, 615, 320, 894, 819, 524]
+                }, {
+                    label: "Words",
+                    backgroundColor: "#2269E3",
+                    borderColor: "#2269E3",
+                    borderWidth: 2,
+                    data: [2693, 1580, 4004, 4319, 2974, 7356, 5446, 3115]
                 }
-            });
-
-            // Daytime plot
-            var dte = document.getElementById("plot_daytime").getContext("2d");
-            var plot_daytime = new Chart(dte, {
-                type: "line",
-                data: {
-                    labels: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
-                    datasets: [{
-                        backgroundColor: "#2269E3",
-                        borderColor: "#2269E3",
-                        borderWidth: 2,
-                        data: [58, 39, 24, 22, 1, 6, 19, 31, 55, 120, 168, 227, 282, 439, 332, 266, 367, 467, 447, 411, 370, 345, 183, 96]
+                ]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
                     }]
+                }
+            }
+        });
+
+        // Daytime plot
+        var dte = document.getElementById("plot_daytime").getContext("2d");
+        var plot_daytime = new Chart(dte, {
+            type: "line",
+            data: {
+                labels: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
+                datasets: [{
+                    backgroundColor: "#2269E3",
+                    borderColor: "#2269E3",
+                    borderWidth: 2,
+                    data: [58, 39, 24, 22, 1, 6, 19, 31, 55, 120, 168, 227, 282, 439, 332, 266, 367, 467, 447, 411, 370, 345, 183, 96]
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
                 },
-                options: {
-                    legend: {
-                        display: false
-                    },
-                    tooltips: {
-                        callbacks: {
-                        label: function(tooltipItem) {
-                                return tooltipItem.yLabel;
-                        }
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem) {
+                            return tooltipItem.yLabel;
                         }
                     }
                 }
-            });
-        </script>
-    </body>
+            }
+        });
+    </script>
+</body>
+
 </html>

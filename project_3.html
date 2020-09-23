@@ -1,68 +1,105 @@
 <html lang="en">
-    <head>  
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link rel="stylesheet" href="./style.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-        <link rel="stylesheet" href="./code.css">
-        <title>Pascal Schlaak | Portfolio</title>
-        <link rel="icon" type="image/png" href="./imgs/icons/logo_small.svg"> 
-    </head>
-    <body>
-        <div id="app">
-            <navbar-normal></navbar-normal>
-            <navbar-small></navbar-small>
-            <hamburger></hamburger>
-            <section id="project-3">
-                <div class="container project-text">
-                    <h1>Charging station head unit interface</h1>
-                    <p class="text">In this lecture our task was to build an user interface within an Internet of Things (IoT) use case.
-                        For that matter we had to build an interdisciplinary team consisting of at least one IoT-design student.
-                        However our IoT-design partner quit her education whereby we needed to design everything by ourselfs.</p>
-                    <p class="text">The idea we finally realized was an user interface by which an electric car driver can easily find a charging station.
-                        Our added value should be a search algorithm to find the best charging station suited for the current situation.
-                        Existing systems observe purely technical aspects needed for charging a car. Same applies for filters within the applicatons.
-                        We wanted to recognice the drivers and passengers needs by user inputs i.e. if a person needs to go to the toilet
-                        our systems pays attention and looks for a suitable charging station. For displaying this informations in a car we use
-                        car interfaces like Apple CarPlay or Android Auto.
-                    </p>
-                    <p class="text">At the top the user should be able to specify his situation by non technical situational requirements.
-                        This can be done by selecting a filter everyone should be able to personalize. Multiple filter can be selected to find
-                        the best charging station. At the bottom suitable charging stations are listed to get informations about them. At first
-                        only technical information will be shown. For further information the user needs to click on a charging station to
-                        get all details.
-                    </p>
-                    <div class="graph">
-                        <p class="text bold">Landing page with personal filters and suited charging stations</p>
-                        <img src="./imgs/project_3/filter.jpg" style="margin: 0;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="./code.css">
+    <title>Pascal Schlaak | Portfolio</title>
+    <link rel="icon" type="image/png" href="./imgs/icons/logo_small.svg">
+</head>
+
+<body>
+    <div id="app">
+        <navbar-normal></navbar-normal>
+        <navbar-small></navbar-small>
+        <hamburger></hamburger>
+        <section id="project">
+            <img src="./imgs/dots.png" id="dots">
+            <div class="container project-text">
+                <h1>Charging station head unit interface</h1>
+                <div class="flex-row">
+                    <div class="column-65">
+                        <p class="text">In this lecture our task was to build an user interface within an Internet of
+                            Things (IoT) use case.
+                            For that matter we had to build an interdisciplinary team consisting of at least one
+                            IoT-design student.
+                            However our IoT-design partner quit her education whereby we needed to design everything by
+                            ourselfs.</p>
+                        <p class="text">The idea we finally realized was an user interface by which an electric car
+                            driver can easily find a charging station.
+                            Our added value should be a search algorithm to find the best charging station suited for
+                            the current situation.
+                            Existing systems observe purely technical aspects needed for charging a car. Same applies
+                            for filters within the applicatons.
+                            We wanted to recognice the drivers and passengers needs by user inputs i.e. if a person
+                            needs to go to the toilet
+                            our systems pays attention and looks for a suitable charging station. For displaying this
+                            informations in a car we use
+                            car interfaces like Apple CarPlay or Android Auto.
+                        </p>
+                        <p class="text">At the top the user should be able to specify his situation by non technical
+                            situational requirements.
+                            This can be done by selecting a filter everyone should be able to personalize. Multiple
+                            filter can be selected to find
+                            the best charging station. At the bottom suitable charging stations are listed to get
+                            informations about them. At first
+                            only technical information will be shown. For further information the user needs to click on
+                            a charging station to
+                            get all details.
+                        </p>
+                        <div class="graph">
+                            <p class="text bold">Landing page with personal filters and suited charging stations</p>
+                            <img src="./imgs/project_3/filter.jpg" style="margin: 0;">
+                        </div>
+                        <p class="text">At this view every detail is shown to the user this means technical parameters
+                            and situation dependent requirements
+                            depending on the selected filters.
+                        </p>
+                        <div class="graph">
+                            <p class="text bold">Detail view of suites charging stations</p>
+                            <img src="./imgs/project_3/details.jpg" style="margin: 0;">
+                        </div>
+                        <p class="text">
+                            For our final pitch we developed a web based prototype to show working parts of the
+                            functionality.
+                        </p>
                     </div>
-                    <p class="text">At this view every detail is shown to the user this means technical parameters and situation dependent requirements
-                        depending on the selected filters.
-                    </p>
-                    <div class="graph">
-                        <p class="text bold">Detail view of suites charging stations</p>
-                        <img src="./imgs/project_3/details.jpg" style="margin: 0;">
+                    <div>
+                        <div class="information border">
+                            <p class="text"><b>Type</b></p>
+                            <p class="text">Bachelor studies lecture</p>
+                            <p class="text"><b>Tools</b></p>
+                            <p class="text">Adobe Illustrator, InDesign, JavaScript, JQuery</p>
+                            <p class="text"><b>Partners</b></p>
+                            <p class="text">Joachim Kull</p>
+                            <p class="text"><b>Date</b></p>
+                            <p class="text">2018-06-04</p>
+                            <p class="text"><b>Source</b></p>
+                            <p class="text">Private</p>
+                        </div>
                     </div>
-                    <p class="text">
-                        For our final pitch we developed a web based prototype to show working parts of the functionality.
-                    </p>
                 </div>
-            </section>
-            <footer-portfolio></footer-portfolio>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $('#hamburger, #home, #proj, abo').click(function(){
-                    $("#hamburger").toggleClass('open');
-                });
+            </div>
+        </section>
+        <footer-portfolio></footer-portfolio>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#hamburger, #home, #proj, abo').click(function () {
+                $("#hamburger").toggleClass('open');
             });
-        </script>
-        <script type="text/javascript" src="./main.js"></script>
-    </body>
+        });
+    </script>
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+
 </html>
