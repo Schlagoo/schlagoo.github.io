@@ -18,18 +18,18 @@ var app = new Vue({
   el: '#app'
 })
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-  if ((window.innerWidth <= 800) && (prevScrollpos > currentScrollPos)) {
-    document.getElementById("navbar").style.top = "0";
-    document.getElementById("hamburger").style.top = "20px";
-  } else if ((window.innerWidth <= 800) && (prevScrollpos < currentScrollPos)) {
-    document.getElementById("navbar").style.top = "-70px";
-    document.getElementById("hamburger").style.top = "-70px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function () {
+//   var currentScrollPos = window.pageYOffset;
+//   if ((window.innerWidth <= 800) && (prevScrollpos > currentScrollPos)) {
+//     document.getElementById("navbar").style.top = "0";
+//     document.getElementById("hamburger").style.top = "20px";
+//   } else if ((window.innerWidth <= 800) && (prevScrollpos < currentScrollPos)) {
+//     document.getElementById("navbar").style.top = "-70px";
+//     document.getElementById("hamburger").style.top = "-70px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// }
 
 function handle_menu() {
   /**
