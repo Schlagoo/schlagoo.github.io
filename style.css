@@ -946,19 +946,19 @@ ABOUT AREA
 }
 
 
-#work-description div:not(#description-in-outdoorshop) {
+#work-description div:not(#description-cadflex) {
     display: none;
     padding: 50px;
     animation: fadeIn 0.3s ease-in;
 }
 
-#description-in-outdoorshop {
+#description-cadflex {
     display: block;
     padding: 50px;
     animation: fadeIn 0.3s ease-in;
 }
 
-#in-outdoorshop {
+#cadflex {
     color: #2F58F7;
 }
 

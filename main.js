@@ -54,7 +54,7 @@ function show_description(idx) {
   * idx = name of clicked element
   */
 
-  var elements = ["in-outdoorshop", "master", "bachelor", "bmw", "daimler", "mapal", "cadflex", "abitur", "forum"];
+  var elements = ["cadflex", "master", "bachelor", "bmw", "daimler", "mapal", "abitur", "forum"];
 
   // Set color to standard and remove all description-elements
   for (var i = 0; i < elements.length; i++) {
