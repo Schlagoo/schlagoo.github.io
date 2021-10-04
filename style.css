@@ -946,19 +946,19 @@ ABOUT AREA
 }
 
 
-#work-description div:not(#description-cadflex) {
+#work-description div:not(#description-mercedes) {
     display: none;
     padding: 50px;
     animation: fadeIn 0.3s ease-in;
 }
 
-#description-cadflex {
+#description-mercedes {
     display: block;
     padding: 50px;
     animation: fadeIn 0.3s ease-in;
 }
 
-#cadflex {
+#mercedes {
     color: #2F58F7;
 }
 
